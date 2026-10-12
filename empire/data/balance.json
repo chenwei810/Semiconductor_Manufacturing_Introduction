@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "start": { "money": 5000, "rep": 20 },
+  "lotSize": 25,
+  "invCap": 600,
+  "demandCap": 120,
+  "ticksPerDay": 24,
+  "tickMs": { "1": 250, "2": 125 },
+  "priceWalk": { "min": 0.9, "max": 1.1, "step": 0.05 },
+  "yield": { "levelFactor": 0.8, "starHalf": 0.5, "dMax": 0.5, "yMin": 0.05, "yMax": 0.99 },
+  "equip": { "maxLevel": 5, "speedPerLevel": 0.15, "upgradeBase": 1.8, "baseHours": 4, "sellRefund": 0.5 },
+  "rep": { "neutralYield": 0.75, "perLotFactor": 2, "dailyCap": 3, "min": 0, "max": 100 },
+  "fabMult": [1, 2, 4, 10, 25],
+  "fabOrder": ["f1", "f2", "f3", "f4", "f5"],
+  "fabs": {
+    "f1": { "node": "180 nm", "zh": "Fab 1", "wafer": "200 mm", "cost": 30,  "price": 60,   "unlockMoney": 0,       "unlockRep": 0,  "maintenance": 100,  "D0": 0.050, "puzzleLevels": 3, "factId": "fact#8",  "slots": ["cleaning","thin_film","lithography","etching"] },
+    "f2": { "node": "90 nm",  "zh": "Fab 2", "wafer": "200 mm", "cost": 50,  "price": 115,  "unlockMoney": 12000,   "unlockRep": 15, "maintenance": 300,  "D0": 0.060, "puzzleLevels": 4, "factId": "fact#25", "slots": ["cleaning","thin_film","lithography","etching","ion_implantation"] },
+    "f3": { "node": "28 nm",  "zh": "Fab 3", "wafer": "300 mm", "cost": 85,  "price": 220,  "unlockMoney": 60000,   "unlockRep": 30, "maintenance": 900,  "D0": 0.070, "puzzleLevels": 4, "factId": "fact#47", "slots": ["cleaning","thin_film","lithography","etching","ion_implantation","cmp"] },
+    "f4": { "node": "7 nm",   "zh": "Fab 4", "wafer": "300 mm", "cost": 190, "price": 540,  "unlockMoney": 300000,  "unlockRep": 50, "maintenance": 3000, "D0": 0.085, "puzzleLevels": 5, "factId": "fact#17", "slots": ["cleaning","thin_film","lithography","etching","ion_implantation","cmp","metallization"] },
+    "f5": { "node": "3 nm",   "zh": "Fab 5", "wafer": "300 mm", "cost": 400, "price": 1250, "unlockMoney": 1500000, "unlockRep": 70, "maintenance": 9000, "D0": 0.100, "puzzleLevels": 5, "factId": "fact#46", "slots": ["cleaning","thin_film","lithography","etching","ion_implantation","cmp","metallization","lithography"] }
+  },
+  "categories": {
+    "cleaning": "清洗", "thin_film": "薄膜", "lithography": "微影", "etching": "蝕刻",
+    "ion_implantation": "離子佈植", "cmp": "CMP", "metallization": "金屬化"
+  },
+  "equipment": {
+    "wet_bench":            { "category": "cleaning",         "price": 600,  "speed": 1.2, "defMul": 1.15 },
+    "single_wafer_cleaner": { "category": "cleaning",         "price": 900,  "speed": 1.0, "defMul": 0.90 },
+    "furnace":              { "category": "thin_film",        "price": 700,  "speed": 1.3, "defMul": 1.20 },
+    "cvd_chamber":          { "category": "thin_film",        "price": 1000, "speed": 1.0, "defMul": 0.95 },
+    "pvd_sputter":          { "category": "thin_film",        "price": 900,  "speed": 1.0, "defMul": 1.00 },
+    "coater_developer":     { "category": "lithography",      "price": 1200, "speed": 1.0, "defMul": 1.00, "fabs": ["f1","f2","f3"] },
+    "scanner":              { "category": "lithography",      "price": 2500, "speed": 1.0, "defMul": 0.85, "fabs": ["f4","f5"] },
+    "etch_chamber":         { "category": "etching",          "price": 1000, "speed": 1.0, "defMul": 1.00 },
+    "implanter":            { "category": "ion_implantation", "price": 900,  "speed": 1.0, "defMul": 1.00 },
+    "rta":                  { "category": "ion_implantation", "price": 700,  "speed": 1.1, "defMul": 1.05 },
+    "cmp_tool":             { "category": "cmp",              "price": 1100, "speed": 1.0, "defMul": 1.00 },
+    "electroplating_tool":  { "category": "metallization",    "price": 1300, "speed": 1.0, "defMul": 1.00 }
+  },
+  "events": {
+    "dailyChance": 0.08,
+    "protectDays": 3,
+    "upsCostPerMult": 2000,
+    "cleanCostPerMult": 400,
+    "cleanHaltTicks": 4,
+    "repairFactor": 0.15,
+    "particleDef": 0.5,
+    "particleDays": 3,
+    "rushDays": 3,
+    "rushPriceMul": 2.5,
+    "rushTimeMul": 1.25,
+    "toolFailureDays": 3,
+    "outageHaltTicks": 24,
+    "repLoss": { "power_outage": 2, "particle": 1, "tool_failure": 1 }
+  }
+}

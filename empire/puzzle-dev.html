@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>製程解謎 — 開發測試頁</title>
+<style>
+  body { margin: 0; font: 15px/1.5 system-ui, "Noto Sans TC", "Microsoft JhengHei", sans-serif; background: #e9edf5; color: #1b2233; }
+  @media (prefers-color-scheme: dark) { body { background: #0b101a; color: #e6ebf7; } }
+  .dev-bar { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; padding: 10px 16px; background: #1f2740; color: #fff; }
+  .dev-bar select, .dev-bar button { min-height: 44px; font: inherit; padding: 4px 10px; border-radius: 8px; }
+  .dev-bar label { display: inline-flex; gap: 6px; align-items: center; }
+  .dev-log { margin: 0; padding: 8px 16px; font: 12px/1.4 ui-monospace, Menlo, Consolas, monospace; white-space: pre-wrap; word-break: break-all; }
+</style>
+</head>
+<body>
+<div class="dev-bar">
+  <strong>解謎測試</strong>
+  <label>關卡 <select id="level" aria-label="選擇關卡"></select></label>
+  <button id="go" type="button">開始／重來</button>
+  <label><input type="checkbox" id="menu"> 從廠區選單進入</label>
+  <label><input type="checkbox" id="nobridge"> 不使用 EmpireBridge（降級模式）</label>
+  <span id="money" aria-live="polite"></span>
+  <button id="clear" type="button">清除星數</button>
+</div>
+<div id="pz-mount"></div>
+<pre class="dev-log" id="log"></pre>
+<script type="module">
+  import { startPuzzleSet, loadLevels } from './js/puzzle/ui.js';
+
+  const $ = (id) => document.getElementById(id);
+  const KEY = 'pzdev.stars';
+  let money = 9999;
+  const load = () => { try { return JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { return {}; } };
+  const save = (o) => { try { localStorage.setItem(KEY, JSON.stringify(o)); } catch (e) { /* ignore */ } };
+  const log = (m) => { $('log').textContent = m + '\n' + $('log').textContent; };
+  const showMoney = () => { $('money').textContent = window.EmpireBridge ? `金錢 $${money}` : '（無 Bridge：提示免費）'; };
+
+  function installBridge() {
+    window.EmpireBridge = {
+      getMoney: () => money,
+      spendMoney: (n, why) => { if (n > money) return false; money -= n; log(`spendMoney(${n}, ${why})`); showMoney(); return true; },
+      getStars: (fab) => { const s = load(); return Object.fromEntries(Object.entries(s).filter(([k]) => k.startsWith(fab + '-'))); },
+      getFactText: () => '',
+      markFactSeen: (id) => log('markFactSeen ' + id),
+      pauseClock: () => log('pauseClock'),
+      resumeClock: () => log('resumeClock'),
+      getSettings: () => ({ diffHighlight: true, reduceMotion: false, sound: 0.5 }),
+    };
+  }
+  function syncBridge() { if ($('nobridge').checked) delete window.EmpireBridge; else installBridge(); showMoney(); }
+
+  const levels = await loadLevels();
+  for (const l of levels) $('level').append(new Option(`${l.id}  ${l.title}（標準 ${l.par} 步）`, l.id));
+  const q = new URLSearchParams(location.search).get('level');
+  if (q && levels.some((l) => l.id === q)) $('level').value = q;
+
+  async function go() {
+    const open = document.querySelector('[data-tut="btn-exit"]');
+    if (open) { open.click(); await new Promise((r) => setTimeout(r, 50)); }
+    syncBridge();
+    const id = $('level').value;
+    const fab = id.split('-')[0];
+    document.getElementById('pz-mount').innerHTML = '';
+    const res = await startPuzzleSet(fab, { mount: $('pz-mount'), levelId: $('menu').checked ? undefined : id });
+    if (window.EmpireBridge) { const s = load(); for (const [k, v] of Object.entries(res.stars)) s[k] = Math.max(s[k] || 0, v); save(s); }
+    log('resolve ' + JSON.stringify(res));
+  }
+  $('go').addEventListener('click', go);
+  $('nobridge').addEventListener('change', syncBridge);
+  $('clear').addEventListener('click', () => { save({}); log('已清除星數'); });
+  syncBridge();
+  go();
+</script>
+</body>
+</html>

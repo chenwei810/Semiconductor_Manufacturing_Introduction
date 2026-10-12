@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "events": {
+    "power_outage": {
+      "name": "停電",
+      "effect": "產線停擺 1 日，在製 Lot 全部報廢，聲望 -2。",
+      "effectUps": "已安裝 UPS：產線停擺 1 日，但只損失 1 個 Lot，聲望 -2。",
+      "factId": "fact#54",
+      "choices": [ { "id": "ok", "label": "確定" } ]
+    },
+    "particle": {
+      "name": "微粒污染",
+      "effect": "3 日內缺陷率 x1.5（良率下降），聲望 -1。",
+      "factId": "fact#4",
+      "choices": [
+        { "id": "clean", "label": "停線清洗（停 4 小時後立即解除）" },
+        { "id": "keep", "label": "硬撐下去" }
+      ]
+    },
+    "rush_order": {
+      "name": "急件訂單",
+      "effect": "3 日內第一個出貨的 Lot 以 2.5 倍價格賣出；但期間所有製程時間 x1.25。",
+      "factId": "fact#7",
+      "choices": [
+        { "id": "accept", "label": "接單" },
+        { "id": "decline", "label": "拒絕（無影響）" }
+      ]
+    },
+    "tool_failure": {
+      "name": "機台故障",
+      "effect": "「{tool}」故障停擺，聲望 -1。",
+      "factId": "fact#6",
+      "choices": [
+        { "id": "repair", "label": "立刻修復" },
+        { "id": "wait", "label": "等待自行修復（3 日）" }
+      ]
+    }
+  }
+}

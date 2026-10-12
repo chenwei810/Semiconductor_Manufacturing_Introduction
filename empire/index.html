@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c111c">
+  <meta name="description" content="晶圓帝國 Wafer Empire：經營晶圓廠、解製程謎題，邊玩邊學半導體製造。">
+  <title>晶圓帝國 Wafer Empire</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%231d2740' stroke='%23ffc933' stroke-width='2'/%3E%3Cpath d='M8 12h16M8 20h16M12 7v18M20 7v18' stroke='%23ffc933' stroke-opacity='.6'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/tycoon.css">
+  <link rel="stylesheet" href="css/puzzle.css" data-pz-css>
+</head>
+<body class="we-body ty-body">
+  <!-- 標題 -->
+  <section id="screen-title" class="we-title" data-screen="title" aria-labelledby="we-h1">
+    <svg class="we-wafer" viewBox="0 0 200 200" aria-hidden="true">
+      <defs>
+        <clipPath id="we-wc"><circle cx="100" cy="100" r="90"/></clipPath>
+        <pattern id="we-die" width="15" height="15" patternUnits="userSpaceOnUse"><rect x="1.5" y="1.5" width="12" height="12" rx="1.5" fill="none" stroke="#ffc933" stroke-opacity=".5"/></pattern>
+        <radialGradient id="we-wg" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#6d7ea8"/><stop offset="1" stop-color="#1a2342"/></radialGradient>
+        <linearGradient id="we-lg" x1="0" x2="1"><stop offset="0" stop-color="#ffc933" stop-opacity="0"/><stop offset=".5" stop-color="#ffc933" stop-opacity=".5"/><stop offset="1" stop-color="#ffc933" stop-opacity="0"/></linearGradient>
+      </defs>
+      <circle cx="100" cy="100" r="94" fill="url(#we-wg)" stroke="#ffc933" stroke-opacity=".7" stroke-width="2"/>
+      <rect width="200" height="200" fill="url(#we-die)" clip-path="url(#we-wc)"/>
+      <g clip-path="url(#we-wc)"><g class="we-sweep"><rect x="96" y="6" width="8" height="188" fill="url(#we-lg)"/><rect x="100" y="6" width="90" height="188" fill="url(#we-lg)" opacity=".25"/></g></g>
+      <path d="M92 192 q8 -7 16 0" fill="#0c111c" stroke="#ffc933" stroke-opacity=".7"/>
+    </svg>
+    <h1 id="we-h1" class="we-h1">晶圓<em>帝國</em></h1>
+    <p class="we-sub">WAFER EMPIRE</p>
+    <p class="we-lead">從 180 nm 的小廠起家：買機台、排產線、賣晶圓；通過製程解謎，開通更先進的晶圓廠。</p>
+    <div class="we-menu" id="title-menu"><button class="we-btn we-btn--primary" disabled>載入中…</button></div>
+    <p class="we-err" id="title-err" role="alert" hidden></p>
+    <p class="we-foot">純 HTML / CSS / JS · 存檔保存在本機瀏覽器 · 內容取自《半導體製造概論》</p>
+  </section>
+
+  <!-- 遊戲 -->
+  <div id="screen-game" class="ty-wrap" data-screen="game" hidden>
+    <div class="we-bar" id="we-bar"></div>
+    <div id="hud"></div>
+    <main class="we-main">
+      <section id="view-hub" data-view="hub" aria-label="總覽" hidden>
+        <h2 class="we-h2">晶圓廠總覽</h2>
+        <div class="we-hub" id="hub-cards"></div>
+        <p class="ty-muted">點「進入產線」管理機台；未開通的廠先看解鎖條件、玩製程解謎。</p>
+      </section>
+      <section id="view-fab" data-view="fab" aria-label="產線" hidden><div id="fab" class="ty-root"></div></section>
+    </main>
+  </div>
+
+  <div id="puzzle-root"></div>
+  <noscript>需要啟用 JavaScript 才能遊玩。</noscript>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

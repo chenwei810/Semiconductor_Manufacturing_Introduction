@@ -15,6 +15,22 @@
 
 An open, beginner-friendly book that follows one silicon wafer from sand, through the fab, test and packaging, until it becomes a chip. It skips heavy physics and focuses on process flow, terminology and know-how from the fab floor, with term boxes and know-how boxes in every chapter. No background in semiconductor physics is needed.
 
+## 🎮 晶圓帝國 Wafer Empire
+
+A free browser game that goes with the book: run a fab, solve process-flow puzzles (deposition, lithography, etching, implant, CMP, metallization) and unlock more advanced nodes, learning real fab facts along the way. Plays on phones and desktops, no install needed.
+
+- **Play:** <https://paul931130.github.io/Semiconductor_Manufacturing_Introduction/empire/>
+- **Run locally:**
+
+  ```bash
+  python -m http.server 8000 --directory empire
+  # then open http://localhost:8000/
+  ```
+
+  (Use a local server rather than double-clicking `index.html`, because the game loads JSON files with `fetch`.)
+
+More details are in [empire/README.md](empire/README.md).
+
 ---
 
 ## 目錄 · Contents · 目次 · 목차

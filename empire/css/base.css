@@ -1,0 +1,99 @@
+/* 晶圓帝國 — 共用設計代幣（--we-*）與外殼樣式（.we-）。
+   tycoon.css（.ty-）與 puzzle.css（.pz-）都讀取這些變數，因此兩層外觀一致。
+   主題：深色科技底 + 無塵室黃光（amber）強調色。純 CSS / SVG，無外部資源。 */
+:root {
+  color-scheme: dark;
+  --we-bg: #0c111c;
+  --we-panel: #151d2f;
+  --we-panel2: #1d2740;
+  --we-line: #2a3652;
+  --we-fg: #e9eefb;
+  --we-mut: #9aa8c6;
+  --we-accent: #ffc933;      /* 無塵室黃光 */
+  --we-accent-ink: #1a1300;
+  --we-info: #4aa8ff;
+  --we-good: #45d49a;
+  --we-bad: #ff6b6b;
+  --we-warn: #ffb347;
+  --we-star: #ffc933;
+  --we-radius: 12px;
+  --we-hint-bg: #3a3110; --we-hint-fg: #ffe9a0; --we-hint-line: #6b5a1c;
+  --we-font: system-ui, -apple-system, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+body.we-body {
+  margin: 0; min-height: 100vh; overflow-x: hidden;
+  background:
+    radial-gradient(900px 380px at 50% -120px, rgba(255, 201, 51, .12), transparent 70%),
+    linear-gradient(180deg, #0c111c, #090d16 60%);
+  background-attachment: fixed;
+  color: var(--we-fg); font-family: var(--we-font);
+}
+[hidden] { display: none !important; }
+.we-btn, .ty-btn, .pz-btn { -webkit-tap-highlight-color: transparent; }
+.ty-btn--primary, .pz-btn-primary { box-shadow: 0 0 0 1px rgba(255, 201, 51, .25), 0 2px 12px rgba(255, 201, 51, .18); }
+
+/* ---------- 標題畫面 ---------- */
+.we-title { min-height: 100vh; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px 16px calc(24px + env(safe-area-inset-bottom)); position: relative; overflow: hidden; }
+.we-title::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px; background: repeating-linear-gradient(90deg, var(--we-accent) 0 28px, transparent 28px 40px); opacity: .8; }
+.we-wafer { width: min(58vw, 220px); height: auto; filter: drop-shadow(0 0 22px rgba(255, 201, 51, .25)); }
+.we-wafer .we-sweep { transform-origin: 100px 100px; animation: we-spin 9s linear infinite; }
+@keyframes we-spin { to { transform: rotate(360deg); } }
+.we-h1 { margin: 14px 0 0; font-size: clamp(30px, 9vw, 44px); letter-spacing: .08em; }
+.we-h1 em { font-style: normal; color: var(--we-accent); }
+.we-sub { margin: 4px 0 18px; color: var(--we-mut); font-size: 14px; letter-spacing: .12em; }
+.we-lead { max-width: 30em; color: var(--we-mut); margin: 0 0 18px; font-size: 14px; }
+.we-menu { display: grid; gap: 10px; width: min(320px, 100%); }
+.we-btn { min-height: 48px; padding: 10px 16px; border: 1px solid var(--we-line); border-radius: 12px; background: var(--we-panel2); color: var(--we-fg); font: inherit; font-weight: 600; cursor: pointer; touch-action: manipulation; }
+.we-btn:disabled { opacity: .5; cursor: not-allowed; }
+.we-btn:focus-visible, .we-card button:focus-visible { outline: 2px solid var(--we-accent); outline-offset: 2px; }
+.we-btn--primary { background: var(--we-accent); border-color: var(--we-accent); color: var(--we-accent-ink); box-shadow: 0 0 18px rgba(255, 201, 51, .3); }
+.we-btn--danger { border-color: var(--we-bad); color: var(--we-bad); }
+.we-foot { margin-top: 18px; font-size: 12px; color: var(--we-mut); }
+.we-err { color: var(--we-warn); margin: 12px 0 0; font-size: 14px; }
+
+/* ---------- 遊戲外殼 ---------- */
+.we-bar { display: flex; align-items: center; gap: 6px; padding: 8px 0 0; flex-wrap: wrap; }
+.we-brand { font-weight: 800; letter-spacing: .06em; margin-right: auto; font-size: 15px; }
+.we-brand i { font-style: normal; color: var(--we-accent); }
+.we-bar .we-btn { min-height: 44px; min-width: 44px; padding: 6px 12px; font-size: 14px; }
+.we-bar .we-btn[aria-pressed="true"] { border-color: var(--we-accent); color: var(--we-accent); }
+.we-main { padding-top: 8px; }
+.we-h2 { font-size: 16px; margin: 12px 0 6px; }
+
+/* ---------- 總覽 ---------- */
+.we-hub { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); margin: 6px 0 18px; }
+.we-card { background: var(--we-panel); border: 1px solid var(--we-line); border-radius: var(--we-radius); padding: 12px 14px; display: grid; gap: 6px; position: relative; overflow: hidden; }
+.we-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: var(--we-accent); opacity: .9; }
+.we-card.is-locked::before { background: var(--we-line); }
+.we-card.is-locked { border-style: dashed; }
+.we-card h3 { margin: 0; font-size: 16px; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.we-card h3 small { color: var(--we-mut); font-weight: 400; font-size: 12px; }
+.we-card dl { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 12px; font-size: 13px; }
+.we-card dt { color: var(--we-mut); font-size: 11.5px; }
+.we-card dd { margin: 0 0 4px; font-variant-numeric: tabular-nums; }
+.we-card .we-btn { width: 100%; }
+.we-tag { font-size: 11.5px; border: 1px solid var(--we-line); border-radius: 999px; padding: 1px 8px; color: var(--we-mut); }
+.we-tag--on { border-color: var(--we-good); color: var(--we-good); }
+.we-stars { color: var(--we-star); letter-spacing: 1px; }
+.we-list { padding-left: 18px; margin: 6px 0; font-size: 14px; }
+.we-list li { margin: 8px 0; }
+
+/* ---------- 教學 ---------- */
+.we-tut { position: fixed; inset: 0; z-index: 3000; pointer-events: none; }
+.we-tut-dim { position: fixed; background: rgba(4, 8, 16, .74); pointer-events: auto; }
+.we-tut-ring { position: fixed; border: 3px solid var(--we-accent); border-radius: 12px; box-shadow: 0 0 0 2px rgba(0, 0, 0, .4), 0 0 18px var(--we-accent); pointer-events: none; animation: we-pulse 1.3s ease-in-out infinite; }
+@keyframes we-pulse { 50% { box-shadow: 0 0 0 2px rgba(0, 0, 0, .4), 0 0 30px var(--we-accent); } }
+.we-tut-card { position: fixed; left: 12px; right: 12px; margin: 0 auto; max-width: 440px; box-sizing: border-box; background: var(--we-panel); border: 1px solid var(--we-accent); border-radius: 14px; padding: 12px 14px calc(12px + env(safe-area-inset-bottom)); box-shadow: 0 8px 30px rgba(0, 0, 0, .55); pointer-events: auto; font-size: 14px; }
+.we-tut-card.at-bottom { bottom: 12px; } .we-tut-card.at-top { top: 12px; }
+.we-tut-card h3 { margin: 0 0 4px; font-size: 15px; color: var(--we-accent); }
+.we-tut-card p { margin: 0 0 8px; }
+.we-tut-row { display: flex; gap: 8px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.we-tut-row .we-btn { min-height: 44px; padding: 6px 14px; }
+.we-tut-prog { font-size: 12px; color: var(--we-mut); }
+@media (prefers-reduced-motion: reduce) { .we-tut-ring, .we-wafer .we-sweep { animation: none; } }
+
+@media (max-width: 420px) {
+  .we-bar .we-btn { padding: 6px 8px; }
+}

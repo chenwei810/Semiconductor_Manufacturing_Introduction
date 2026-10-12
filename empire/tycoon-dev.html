@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>晶圓帝國 · 經營層開發頁</title>
+  <link rel="stylesheet" href="css/tycoon.css">
+</head>
+<body class="ty-body">
+  <main class="ty-wrap">
+    <h1>晶圓帝國 Wafer Empire — 經營層（開發頁）</h1>
+    <p class="ty-muted">獨立測試頁：若解謎層（<code>window.startPuzzleSet</code>）尚未載入，「開始解謎」會使用 stub（確認後直接給每關 2 星）。</p>
+    <div id="hud"></div>
+    <div id="fab" class="ty-root"></div>
+    <div class="ty-dev" id="dev">
+      <h2>開發工具（不屬於正式遊戲）</h2>
+    </div>
+    <noscript>需要啟用 JavaScript。</noscript>
+  </main>
+  <div id="puzzle-root"></div>
+  <script type="module">
+    import { bootTycoon } from './js/tycoon/boot.js';
+    const { S } = await bootTycoon({ hudRoot: document.getElementById('hud'), fabRoot: document.getElementById('fab') });
+    const dev = document.getElementById('dev');
+    const add = (label, fn) => {
+      const b = document.createElement('button');
+      b.className = 'ty-btn'; b.textContent = label; b.addEventListener('click', fn); dev.append(b);
+    };
+    add('+$100,000', () => { S.earn(100000); });
+    add('+$2,000,000', () => { S.earn(2000000); });
+    add('聲望 +20', () => { S.addRep(20); S.commit(); });
+    add('星數 stub：3 星', () => { window.EmpireStubStars = 3; });
+    add('星數 stub：1 星', () => { window.EmpireStubStars = 1; });
+    window.EmpireDev = S;
+  </script>
+</body>
+</html>

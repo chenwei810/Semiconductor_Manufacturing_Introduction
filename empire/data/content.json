@@ -1,0 +1,2177 @@
+{
+  "processes": [
+    {
+      "id": "lithography",
+      "zh": "微影",
+      "en": "Lithography",
+      "summary": "利用光把光罩上的電路圖形轉移到晶圓表面的光阻上。",
+      "effect": "pattern",
+      "source": "zh-TW/2-process-modules/04-lithography/README.md"
+    },
+    {
+      "id": "thin_film",
+      "zh": "薄膜沉積",
+      "en": "Thin Film Deposition",
+      "summary": "在晶圓表面鋪上絕緣、導電或輔助用的薄膜，包括熱氧化、CVD、PVD、ALD 與磊晶。",
+      "effect": "add",
+      "source": "zh-TW/2-process-modules/05-thin-films/README.md"
+    },
+    {
+      "id": "etching",
+      "zh": "蝕刻",
+      "en": "Etching",
+      "summary": "依照光阻上的圖形，把底下沒有被保護的材料挖掉。",
+      "effect": "remove",
+      "source": "zh-TW/2-process-modules/06-etching/README.md"
+    },
+    {
+      "id": "ion_implantation",
+      "zh": "離子佈植與熱處理",
+      "en": "Ion Implantation and Annealing",
+      "summary": "把雜質離子加速射入矽中改變導電特性，再以退火修復晶格並活化雜質。",
+      "effect": "modify",
+      "source": "zh-TW/2-process-modules/07-ion-implantation/README.md"
+    },
+    {
+      "id": "cmp",
+      "zh": "化學機械研磨",
+      "en": "Chemical Mechanical Planarization (CMP)",
+      "summary": "結合化學作用與機械研磨，把晶圓表面磨平或去除多餘的材料。",
+      "effect": "remove",
+      "source": "zh-TW/2-process-modules/08-cmp/README.md"
+    },
+    {
+      "id": "cleaning",
+      "zh": "清洗與污染控制",
+      "en": "Cleaning and Contamination Control",
+      "summary": "去除晶圓表面的微粒、金屬、有機物與原生氧化層，幾乎出現在每個製程步驟前後。",
+      "effect": "remove",
+      "source": "zh-TW/2-process-modules/09-cleaning/README.md"
+    },
+    {
+      "id": "metallization",
+      "zh": "金屬化",
+      "en": "Metallization",
+      "summary": "以接觸窗與導通孔連接電晶體，並用大馬士革製程做出多層銅導線。",
+      "effect": "add",
+      "source": "zh-TW/2-process-modules/10-metallization/README.md"
+    }
+  ],
+  "equipment": [
+    {
+      "id": "scanner",
+      "zh": "曝光機",
+      "en": "Scanner",
+      "process_id": "lithography",
+      "purpose": "把光罩圖形縮小投影到晶圓上，一次曝光一個曝光區，逐區重複直到整片曝完。",
+      "source": "zh-TW/2-process-modules/04-lithography/README.md"
+    },
+    {
+      "id": "reticle",
+      "zh": "光罩",
+      "en": "Reticle / Mask",
+      "process_id": "lithography",
+      "purpose": "帶有一層電路圖形的石英板，每一層電路需要一片，由曝光機投影。",
+      "source": "zh-TW/2-process-modules/04-lithography/README.md"
+    },
+    {
+      "id": "coater_developer",
+      "zh": "塗佈與顯影機台",
+      "en": "TODO",
+      "process_id": "lithography",
+      "purpose": "負責在晶圓上塗佈光阻與曝光後的顯影，與曝光機直接相連，晶圓在中間自動傳送。",
+      "source": "zh-TW/2-process-modules/04-lithography/README.md"
+    },
+    {
+      "id": "furnace",
+      "zh": "爐管",
+      "en": "Furnace",
+      "process_id": "thin_film",
+      "purpose": "高溫批次式機台，用於熱氧化與部分 CVD，一次可處理上百片晶圓。",
+      "source": "zh-TW/2-process-modules/05-thin-films/README.md"
+    },
+    {
+      "id": "cvd_chamber",
+      "zh": "CVD 腔體",
+      "en": "TODO",
+      "process_id": "thin_film",
+      "purpose": "讓氣體在晶圓表面反應形成固態薄膜，廢氣由抽氣系統排出（LPCVD、PECVD）。",
+      "source": "zh-TW/2-process-modules/05-thin-films/README.md"
+    },
+    {
+      "id": "pvd_sputter",
+      "zh": "濺鍍機台（PVD）",
+      "en": "Sputtering (PVD) tool",
+      "process_id": "thin_film",
+      "purpose": "在真空腔體中用氬離子撞擊靶材，使被撞出的原子沉積成金屬薄膜。",
+      "source": "zh-TW/2-process-modules/05-thin-films/README.md"
+    },
+    {
+      "id": "etch_chamber",
+      "zh": "蝕刻機（電漿腔體）",
+      "en": "Etch chamber",
+      "process_id": "etching",
+      "purpose": "通入特定氣體並以射頻電力產生電漿進行乾蝕刻；腔體發出的光可用於終點偵測。",
+      "source": "zh-TW/2-process-modules/06-etching/README.md"
+    },
+    {
+      "id": "implanter",
+      "zh": "離子佈植機",
+      "en": "Implanter",
+      "process_id": "ion_implantation",
+      "purpose": "經離子源產生離子、質量分析、加速與掃描後，把雜質離子射入晶圓指定區域。",
+      "source": "zh-TW/2-process-modules/07-ion-implantation/README.md"
+    },
+    {
+      "id": "rta",
+      "zh": "快速熱退火機台（RTA）",
+      "en": "RTA (Rapid Thermal Anneal)",
+      "process_id": "ion_implantation",
+      "purpose": "用強光在幾秒內把晶圓加熱到高溫，完成雜質活化。",
+      "source": "zh-TW/2-process-modules/07-ion-implantation/README.md"
+    },
+    {
+      "id": "cmp_tool",
+      "zh": "CMP 機台",
+      "en": "CMP tool",
+      "process_id": "cmp",
+      "purpose": "由研磨墊、研磨液、研磨頭與修整器組成，研磨後通常整合清洗模組。",
+      "source": "zh-TW/2-process-modules/08-cmp/README.md"
+    },
+    {
+      "id": "wet_bench",
+      "zh": "批次式濕式清洗槽",
+      "en": "Wet bench",
+      "process_id": "cleaning",
+      "purpose": "把整批晶圓依序浸入化學槽與清水槽，像洗車的流水線。",
+      "source": "zh-TW/2-process-modules/09-cleaning/README.md"
+    },
+    {
+      "id": "single_wafer_cleaner",
+      "zh": "單片式清洗機",
+      "en": "Single-wafer cleaner",
+      "process_id": "cleaning",
+      "purpose": "一次處理一片晶圓，旋轉時噴灑化學品，控制精準且可避免晶圓間互相污染。",
+      "source": "zh-TW/2-process-modules/09-cleaning/README.md"
+    },
+    {
+      "id": "electroplating_tool",
+      "zh": "電鍍機台",
+      "en": "TODO",
+      "process_id": "metallization",
+      "purpose": "把晶圓放進電鍍液，讓銅填滿導通孔與溝槽。",
+      "source": "zh-TW/2-process-modules/10-metallization/README.md"
+    },
+    {
+      "id": "cd_sem",
+      "zh": "線寬量測電子顯微鏡（CD-SEM）",
+      "en": "CD-SEM",
+      "process_id": "TODO",
+      "purpose": "用電子顯微鏡從上方量測線寬（屬量測與檢測，非製程模組）。",
+      "source": "zh-TW/4-yield-and-quality/15-metrology/README.md"
+    },
+    {
+      "id": "ocd_tool",
+      "zh": "光學關鍵尺寸量測機台（OCD）",
+      "en": "OCD",
+      "process_id": "TODO",
+      "purpose": "分析光的散射，搭配模型推算立體結構的輪廓。",
+      "source": "zh-TW/4-yield-and-quality/15-metrology/README.md"
+    },
+    {
+      "id": "defect_inspection",
+      "zh": "缺陷掃描機台",
+      "en": "TODO",
+      "process_id": "TODO",
+      "purpose": "用光學或電子束掃描整片晶圓，比對相鄰晶粒找出差異，標出缺陷位置。",
+      "source": "zh-TW/4-yield-and-quality/15-metrology/README.md"
+    },
+    {
+      "id": "probe_card",
+      "zh": "探針卡",
+      "en": "Probe card",
+      "process_id": "TODO",
+      "purpose": "上有極細探針，排列對應晶粒焊墊位置，用於晶圓針測（CP）。",
+      "source": "zh-TW/5-backend/19-wafer-test/README.md"
+    },
+    {
+      "id": "prober",
+      "zh": "針測機",
+      "en": "Prober",
+      "process_id": "TODO",
+      "purpose": "移動晶圓，讓探針精準落在每一顆晶粒的焊墊上。",
+      "source": "zh-TW/5-backend/19-wafer-test/README.md"
+    },
+    {
+      "id": "tester",
+      "zh": "測試機",
+      "en": "Tester",
+      "process_id": "TODO",
+      "purpose": "送出測試訊號並判斷晶粒或晶片的反應是否正確。",
+      "source": "zh-TW/5-backend/19-wafer-test/README.md"
+    },
+    {
+      "id": "handler",
+      "zh": "分類機",
+      "en": "Handler",
+      "process_id": "TODO",
+      "purpose": "最終測試時搬運封裝好的晶片進出測試座，並依結果分類。",
+      "source": "zh-TW/5-backend/22-final-test-and-reliability/README.md"
+    },
+    {
+      "id": "foup",
+      "zh": "前開式晶圓傳送盒（FOUP）",
+      "en": "FOUP",
+      "process_id": "TODO",
+      "purpose": "300 mm 晶圓的密封搬運盒，最多裝 25 片，裝滿約八公斤。",
+      "source": "zh-TW/0-before-you-start/01-how-a-fab-works/README.md"
+    },
+    {
+      "id": "oht",
+      "zh": "天車（OHT）",
+      "en": "Overhead Hoist Transport (OHT)",
+      "process_id": "TODO",
+      "purpose": "在天花板軌道上行駛，把 FOUP 從一台機台送到另一台。",
+      "source": "zh-TW/0-before-you-start/01-how-a-fab-works/README.md"
+    },
+    {
+      "id": "stocker",
+      "zh": "倉儲（Stocker）",
+      "en": "Stocker",
+      "process_id": "TODO",
+      "purpose": "暫時存放還在等待的 FOUP。",
+      "source": "zh-TW/0-before-you-start/01-how-a-fab-works/README.md"
+    },
+    {
+      "id": "load_port",
+      "zh": "晶圓盒裝載埠（Load Port）",
+      "en": "Load Port",
+      "process_id": "TODO",
+      "purpose": "機台前方放置 FOUP 的平台，機台從這裡取出晶圓。",
+      "source": "zh-TW/0-before-you-start/01-how-a-fab-works/README.md"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "180 nm",
+      "note": "節點名稱數列之一（早期名稱大致對應閘極長度或最密線寬）。",
+      "source": "zh-TW/3-integration/14-process-nodes/README.md"
+    },
+    {
+      "name": "130 nm",
+      "note": "節點名稱數列之一。",
+      "source": "zh-TW/3-integration/14-process-nodes/README.md"
+    },
+    {
+      "name": "90 nm",
+      "note": "節點名稱數列之一。",
+      "source": "zh-TW/3-integration/14-process-nodes/README.md"
+    },
+    {
+      "name": "65 nm",
+      "note": "節點名稱數列之一。",
+      "source": "zh-TW/3-integration/14-process-nodes/README.md"
+    },
+    {
+      "name": "45 nm",
+      "note": "節點名稱數列之一。",
+      "source": "zh-TW/3-integration/14-process-nodes/README.md"
+    },
+    {
+      "name": "40 nm",
+      "note": "半世代節點，書中提及。",
+      "source": "zh-TW/3-integration/14-process-nodes/README.md"
+    },
+    {
+      "name": "32 nm",
+      "note": "節點名稱數列之一。",
+      "source": "zh-TW/3-integration/14-process-nodes/README.md"
+    },
+    {
+      "name": "28 nm",
+      "note": "半世代節點，書中提及；屬於現場常說的成熟製程範圍（二十多奈米以上）。",
+      "source": "zh-TW/3-integration/14-process-nodes/README.md"
+    },
+    {
+      "name": "22 nm",
+      "note": "節點名稱數列之一。",
+      "source": "zh-TW/3-integration/14-process-nodes/README.md"
+    },
+    {
+      "name": "20 nm",
+      "note": "半世代節點，書中提及。",
+      "source": "zh-TW/3-integration/14-process-nodes/README.md"
+    },
+    {
+      "name": "16 nm",
+      "note": "半世代節點，書中提及。",
+      "source": "zh-TW/3-integration/14-process-nodes/README.md"
+    },
+    {
+      "name": "14 nm",
+      "note": "節點名稱數列之一。",
+      "source": "zh-TW/3-integration/14-process-nodes/README.md"
+    },
+    {
+      "name": "10 nm",
+      "note": "節點名稱數列之一；DRAM 的 1x 至 1γ 世代也屬於 10 奈米級。",
+      "source": "zh-TW/3-integration/14-process-nodes/README.md"
+    },
+    {
+      "name": "7 nm",
+      "note": "節點名稱數列之一。",
+      "source": "zh-TW/3-integration/14-process-nodes/README.md"
+    },
+    {
+      "name": "5 nm",
+      "note": "節點名稱數列之一。",
+      "source": "zh-TW/3-integration/14-process-nodes/README.md"
+    },
+    {
+      "name": "3 nm",
+      "note": "節點名稱數列的最後一個數字；書中指出此世代的閘極間距約四、五十奈米，晶片上找不到 3 奈米的結構。",
+      "source": "zh-TW/3-integration/14-process-nodes/README.md"
+    },
+    {
+      "name": "埃（Å，0.1 nm）世代",
+      "note": "部分公司改用埃作為新世代的命名單位，仍只是世代代號。",
+      "source": "zh-TW/3-integration/14-process-nodes/README.md"
+    },
+    {
+      "name": "汞燈 436 / 365 nm 微影",
+      "note": "早期微影光源波長。",
+      "source": "zh-TW/2-process-modules/04-lithography/README.md"
+    },
+    {
+      "name": "KrF 雷射 248 nm（DUV）",
+      "note": "深紫外光微影光源。",
+      "source": "zh-TW/2-process-modules/04-lithography/README.md"
+    },
+    {
+      "name": "ArF 雷射 193 nm（DUV）",
+      "note": "深紫外光微影光源，用了很多年，之後靠浸潤式與多重曝光繼續微縮。",
+      "source": "zh-TW/2-process-modules/04-lithography/README.md"
+    },
+    {
+      "name": "EUV 13.5 nm",
+      "note": "極紫外光微影，最先進製程的關鍵層使用；從研究到量產花了二十多年。",
+      "source": "zh-TW/2-process-modules/04-lithography/README.md"
+    },
+    {
+      "name": "150 mm（6 吋）晶圓",
+      "note": "功率元件、化合物半導體等特殊產品常用。",
+      "source": "zh-TW/1-fundamentals/03-sand-to-wafer/README.md"
+    },
+    {
+      "name": "200 mm（8 吋）晶圓",
+      "note": "成熟製程常用，例如類比、功率與感測器。",
+      "source": "zh-TW/1-fundamentals/03-sand-to-wafer/README.md"
+    },
+    {
+      "name": "300 mm（12 吋）晶圓",
+      "note": "先進邏輯、記憶體與大量成熟製程使用，是目前最先進工廠的主流尺寸。",
+      "source": "zh-TW/1-fundamentals/03-sand-to-wafer/README.md"
+    },
+    {
+      "name": "450 mm 晶圓（未普及）",
+      "note": "產業曾研究，但因設備開發成本太高而沒有普及。",
+      "source": "zh-TW/1-fundamentals/03-sand-to-wafer/README.md"
+    },
+    {
+      "name": "DRAM 1x / 1y / 1z / 1α / 1β / 1γ 世代",
+      "note": "DRAM 的世代代號，都屬於 10 奈米級，不能直接和邏輯製程的「幾奈米」比較。",
+      "source": "zh-TW/3-integration/13-memory/README.md"
+    },
+    {
+      "name": "平面電晶體（一面閘極）",
+      "note": "閘極只從上方控制通道；縮小後出現短通道效應與閘極漏電問題。",
+      "source": "zh-TW/3-integration/12-advanced-transistors/README.md"
+    },
+    {
+      "name": "FinFET（三面閘極）",
+      "note": "2010 年代初進入量產，成為十多年先進製程的主流。",
+      "source": "zh-TW/3-integration/12-advanced-transistors/README.md"
+    },
+    {
+      "name": "GAA 奈米片（四面閘極）",
+      "note": "2020 年代開始進入量產，通道為幾片水平堆疊的薄片。",
+      "source": "zh-TW/3-integration/12-advanced-transistors/README.md"
+    },
+    {
+      "name": "背面供電世代",
+      "note": "把電源網路搬到晶圓背面，2020 年代中期開始導入量產。",
+      "source": "zh-TW/3-integration/12-advanced-transistors/README.md"
+    },
+    {
+      "name": "SLC / MLC / TLC / QLC 儲存單元世代",
+      "note": "NAND 每個記憶單元分別存 1、2、3、4 個位元；位元越多，可抹寫次數越少、所需 ECC 越強。",
+      "source": "zh-TW/6-beyond-the-fab/24-process-and-firmware/README.md"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "活化",
+      "en": "Activation",
+      "definition": "透過退火讓植入的雜質原子進入晶格位置、開始導電",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "先進製程控制",
+      "en": "Advanced Process Control (APC)",
+      "definition": "R2R、FDC 等自動化製程控制方法的統稱",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "顯影後檢查",
+      "en": "After Develop Inspection (ADI)",
+      "definition": "微影完成後量測線寬、對準與缺陷",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "蝕刻後檢查",
+      "en": "After Etch Inspection (AEI)",
+      "definition": "蝕刻完成後量測線寬與缺陷",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "對準記號",
+      "en": "Alignment Mark",
+      "definition": "前一層留下、供曝光機確認位置的圖形",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "埃",
+      "en": "Angstrom (Å)",
+      "definition": "0.1 奈米，部分新世代節點的命名單位",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "非等向",
+      "en": "Anisotropic",
+      "definition": "主要往單一方向進行的蝕刻",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "退火",
+      "en": "Anneal",
+      "definition": "加熱修復晶格並活化雜質",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "去光阻（灰化）",
+      "en": "Ashing",
+      "definition": "用氧電漿去除光阻",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "深寬比",
+      "en": "Aspect Ratio",
+      "definition": "孔洞或溝槽的深度與寬度之比",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "原子層沉積",
+      "en": "Atomic Layer Deposition (ALD)",
+      "definition": "一次只長一層原子、極均勻的沉積方法",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "自動物料搬運系統",
+      "en": "Automated Material Handling System (AMHS)",
+      "definition": "由天車與倉儲組成，自動搬運晶圓盒",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "後段製程",
+      "en": "Back End of Line (BEOL)",
+      "definition": "晶圓廠內製作多層金屬導線的階段",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "背面供電",
+      "en": "Backside Power Delivery",
+      "definition": "把電源導線做在晶圓背面",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "壞區塊管理",
+      "en": "Bad Block Management",
+      "definition": "標記並避開 NAND 中無法使用的區塊",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "球柵陣列",
+      "en": "Ball Grid Array (BGA)",
+      "definition": "底部布滿錫球的封裝形式",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "阻障層",
+      "en": "Barrier Layer",
+      "definition": "防止銅擴散到絕緣層與矽中的薄層",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "批次式機台",
+      "en": "Batch Tool",
+      "definition": "一次處理多片晶圓的機台，例如爐管",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "浴缸曲線",
+      "en": "Bathtub Curve",
+      "definition": "失效率隨時間變化的曲線，兩端高、中間低",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "偏壓溫度不穩定性",
+      "en": "Bias Temperature Instability (BTI)",
+      "definition": "高溫與電壓讓 Vt 隨時間漂移",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "分類",
+      "en": "Bin",
+      "definition": "測試後依結果把晶粒分成的類別",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "分級",
+      "en": "Binning",
+      "definition": "依速度或功耗把同一種晶片分成不同等級",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "位元線",
+      "en": "Bit Line",
+      "definition": "記憶陣列中負責讀寫資料的導線",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "焊墊",
+      "en": "Bond Pad (Pad)",
+      "definition": "晶片上供測試探針與封裝連接的金屬接點",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "凸塊",
+      "en": "Bump",
+      "definition": "覆晶封裝中連接晶粒與基板的金屬凸點",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "預燒",
+      "en": "Burn-in",
+      "definition": "在高溫與較高電壓下運作，篩除早期失效",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "覆蓋層",
+      "en": "Cap Layer",
+      "definition": "銅 CMP 後蓋在銅表面、防止氧化與擴散的薄膜",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "線寬量測電子顯微鏡",
+      "en": "CD-SEM",
+      "definition": "用電子顯微鏡從上方量測線寬",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "腔體",
+      "en": "Chamber",
+      "definition": "機台中實際進行製程的密閉空間",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "通道",
+      "en": "Channel",
+      "definition": "電晶體中源極與汲極之間、受閘極控制的區域",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "通道孔",
+      "en": "Channel Hole",
+      "definition": "3D NAND 中貫穿整個堆疊的垂直孔",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "通道效應",
+      "en": "Channeling",
+      "definition": "離子沿著晶格的空隙鑽得太深的現象",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "化學機械研磨",
+      "en": "Chemical Mechanical Planarization (CMP)",
+      "definition": "結合化學與機械作用，把表面磨平或去除多餘材料",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "化學氣相沉積",
+      "en": "Chemical Vapor Deposition (CVD)",
+      "definition": "讓氣體在晶圓表面反應形成薄膜",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "晶圓針測",
+      "en": "Chip Probing (CP)",
+      "definition": "在晶圓上逐顆測試晶粒的功能",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "小晶片",
+      "en": "Chiplet",
+      "definition": "把大型晶片拆成多顆功能獨立的小晶片",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "無塵室（潔淨室）",
+      "en": "Cleanroom",
+      "definition": "嚴格控制微粒與環境的生產空間",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "共通性分析",
+      "en": "Commonality Analysis",
+      "definition": "找出異常晶圓共同經過的機台、腔體或時間",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "互補式金屬氧化物半導體",
+      "en": "Complementary Metal-Oxide-Semiconductor (CMOS)",
+      "definition": "NMOS 與 PMOS 成對使用的電路技術",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "接觸窗",
+      "en": "Contact",
+      "definition": "連接電晶體與第一層金屬的金屬孔",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "閘極間距",
+      "en": "Contacted Poly Pitch (CPP)",
+      "definition": "相鄰兩個閘極之間的距離",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "管制界限",
+      "en": "Control Limit",
+      "definition": "根據製程平常的表現算出的範圍，用來判斷製程是否異常",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "關鍵尺寸",
+      "en": "Critical Dimension (CD)",
+      "definition": "圖形最需要控制的尺寸，例如線寬",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "生產週期",
+      "en": "Cycle Time",
+      "definition": "一批晶圓從投片到完成所需的時間",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "柴可拉斯基長晶法",
+      "en": "Czochralski Method (CZ)",
+      "definition": "從熔融矽中拉出單晶晶棒的方法",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "大馬士革製程",
+      "en": "Damascene",
+      "definition": "先挖溝、再填金屬、最後研磨的導線做法",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "每層光罩天數",
+      "en": "Days per Mask Layer",
+      "definition": "生產週期除以光罩層數，用來比較生產效率",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "深紫外光",
+      "en": "Deep Ultraviolet (DUV)",
+      "definition": "248 nm 與 193 nm 的微影光源",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "缺陷",
+      "en": "Defect",
+      "definition": "晶圓上任何不該出現的異常",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "複檢",
+      "en": "Defect Review",
+      "definition": "用電子顯微鏡拍攝缺陷近照並分類",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "實驗設計",
+      "en": "Design of Experiments (DOE)",
+      "definition": "系統化地同時改變多個因子，找出最佳條件",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "設計與製程共同最佳化",
+      "en": "Design-Technology Co-Optimization (DTCO)",
+      "definition": "同時調整設計與製程，提升密度與效能",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "顯影",
+      "en": "Develop",
+      "definition": "用顯影液溶掉不要的光阻，讓圖形出現",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "切割",
+      "en": "Dicing",
+      "definition": "沿著切割道把晶圓切成晶粒",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "晶粒",
+      "en": "Die",
+      "definition": "晶圓上一個個相同的電路單元",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "碟化",
+      "en": "Dishing",
+      "definition": "寬金屬導線中央被磨得凹陷",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "摻雜",
+      "en": "Doping",
+      "definition": "刻意加入少量元素，改變半導體的導電特性",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "劑量",
+      "en": "Dose",
+      "definition": "離子佈植時單位面積植入的原子數量",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "汲極",
+      "en": "Drain",
+      "definition": "電晶體中電流流出的一端",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "乾蝕刻",
+      "en": "Dry Etch",
+      "definition": "用電漿進行的蝕刻",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "假圖形",
+      "en": "Dummy Fill",
+      "definition": "為了讓圖形密度均勻而加入的不通電圖形",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "擋片",
+      "en": "Dummy Wafer",
+      "definition": "用來填補機台空位或調整機台狀態的非產品晶圓",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "動態隨機存取記憶體",
+      "en": "Dynamic Random Access Memory (DRAM)",
+      "definition": "以電容存放電荷、需要定期刷新的記憶體",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "早期失效",
+      "en": "Early Failure",
+      "definition": "使用初期就發生的失效，可用預燒篩除",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "電遷移",
+      "en": "Electromigration (EM)",
+      "definition": "電流長期推動金屬原子，造成導線斷裂",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "電鍍",
+      "en": "Electroplating",
+      "definition": "在電鍍液中讓金屬沉積到晶圓上",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "靜電放電",
+      "en": "Electrostatic Discharge (ESD)",
+      "definition": "靜電瞬間放電造成的損傷，也是可靠度測試項目",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "終點偵測",
+      "en": "Endpoint Detection",
+      "definition": "判斷蝕刻或研磨是否到達目標的方法",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "工程變更通知",
+      "en": "Engineering Change Notice (ECN)",
+      "definition": "工廠內部的變更申請與審核流程",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "磊晶",
+      "en": "Epitaxy",
+      "definition": "長出延續底層晶格的單晶薄膜",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "侵蝕",
+      "en": "Erosion",
+      "definition": "導線密集的整個區域被磨得比周圍低",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "勘誤表",
+      "en": "Errata",
+      "definition": "晶片已知問題與避開方法的清單",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "錯誤更正碼",
+      "en": "Error Correction Code (ECC)",
+      "definition": "偵測並更正少量位元錯誤的編碼",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "蝕刻率",
+      "en": "Etch Rate",
+      "definition": "單位時間內蝕刻的深度",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "蝕刻停止層",
+      "en": "Etch Stop Layer",
+      "definition": "讓蝕刻停在正確位置的耐蝕刻薄層",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "曝光區",
+      "en": "Exposure Field (Shot)",
+      "definition": "曝光機一次曝光的區域",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "極紫外光",
+      "en": "Extreme Ultraviolet (EUV)",
+      "definition": "波長 13.5 nm 的微影光源",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "晶圓廠",
+      "en": "Fab",
+      "definition": "製造晶圓的工廠",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "IC 設計公司",
+      "en": "Fabless",
+      "definition": "只設計晶片、沒有自己工廠的公司",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "故障分析",
+      "en": "Failure Analysis (FA)",
+      "definition": "找出晶片失效位置與原因的分析",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "TODO",
+      "en": "Failures In Time (FIT)",
+      "definition": "每十億個元件小時中發生的失效次數",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "扇出型封裝",
+      "en": "Fan-Out Packaging",
+      "definition": "用重佈線層把接點擴展到晶粒範圍外的封裝",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "錯誤偵測與分類",
+      "en": "Fault Detection and Classification (FDC)",
+      "definition": "即時監控機台感測器數據、偵測異常的系統",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "鰭式場效電晶體",
+      "en": "Fin Field-Effect Transistor (FinFET)",
+      "definition": "閘極從三面包覆鰭狀通道的電晶體",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "最終測試",
+      "en": "Final Test (FT)",
+      "definition": "封裝後、出貨前的功能與電性測試",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "快閃記憶體轉換層",
+      "en": "Flash Translation Layer (FTL)",
+      "definition": "管理 NAND 邏輯位址與實體位址對應的韌體",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "覆晶",
+      "en": "Flip Chip",
+      "definition": "晶粒正面朝下，以凸塊直接連接基板",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "聚焦離子束",
+      "en": "Focused Ion Beam (FIB)",
+      "definition": "在指定位置精準切割的分析工具",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "晶圓代工",
+      "en": "Foundry",
+      "definition": "替客戶製造晶片的商業模式",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "前段製程",
+      "en": "Front End of Line (FEOL)",
+      "definition": "晶圓廠內製作電晶體的階段",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "前開式晶圓傳送盒",
+      "en": "Front Opening Unified Pod (FOUP)",
+      "definition": "300 mm 晶圓的密封搬運盒，最多裝 25 片",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "爐管",
+      "en": "Furnace",
+      "definition": "用於氧化、退火與部分 CVD 的高溫批次式機台",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "熔絲",
+      "en": "Fuse",
+      "definition": "用來切換備用電路或記錄晶片資料的可程式元件",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "預約 Hold",
+      "en": "Future Hold",
+      "definition": "讓晶圓走到指定步驟時自動被擋下",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "垃圾回收",
+      "en": "Garbage Collection",
+      "definition": "NAND 韌體整理無效資料、回收可用空間的機制",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "閘極",
+      "en": "Gate",
+      "definition": "控制電晶體開關的電極",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "閘極氧化層",
+      "en": "Gate Oxide",
+      "definition": "閘極與通道之間的薄絕緣層",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "環繞式閘極",
+      "en": "Gate-All-Around (GAA)",
+      "definition": "閘極從四面包覆通道的電晶體結構",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "半間距",
+      "en": "Half Pitch",
+      "definition": "間距的一半",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "分類機",
+      "en": "Handler",
+      "definition": "最終測試時搬運並分類封裝晶片的機台",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "硬遮罩",
+      "en": "Hard Mask",
+      "definition": "比光阻更耐蝕刻的遮罩薄膜",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "高頻寬記憶體",
+      "en": "High Bandwidth Memory (HBM)",
+      "definition": "以 TSV 堆疊多顆 DRAM 的記憶體",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "高溫操作壽命測試",
+      "en": "High Temperature Operating Life (HTOL)",
+      "definition": "在高溫下長時間通電運作的可靠度測試",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "高介電常數金屬閘極",
+      "en": "High-k Metal Gate (HKMG)",
+      "definition": "高介電常數絕緣層搭配金屬閘極的結構",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "高加速溫濕度測試",
+      "en": "Highly Accelerated Stress Test (HAST)",
+      "definition": "以高溫、高濕與加壓加速濕氣入侵的可靠度測試",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "扣留",
+      "en": "Hold",
+      "definition": "暫停晶圓或機台的生產，現場直接說 Hold",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "熱載子注入",
+      "en": "Hot Carrier Injection (HCI)",
+      "definition": "高能量電子進入閘極絕緣層，造成電晶體老化",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "急件",
+      "en": "Hot Lot",
+      "definition": "被設定為優先生產的批次",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "混合鍵合",
+      "en": "Hybrid Bonding",
+      "definition": "銅接點與絕緣層同時直接接合的晶片堆疊技術",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "浸潤式微影",
+      "en": "Immersion Lithography",
+      "definition": "在鏡頭與晶圓之間加水，提升解析能力",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "晶棒",
+      "en": "Ingot",
+      "definition": "長晶拉出的圓柱狀單晶矽",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "內側間隔物",
+      "en": "Inner Spacer",
+      "definition": "GAA 結構中隔開閘極與源極、汲極的內部絕緣層",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "檢測",
+      "en": "Inspection",
+      "definition": "在晶圓上尋找缺陷",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "整合元件製造廠",
+      "en": "Integrated Device Manufacturer (IDM)",
+      "definition": "自行設計、製造與銷售晶片的公司",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "防呆",
+      "en": "Interlock",
+      "definition": "讓錯誤操作無法發生的系統檢查規則",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "中介層",
+      "en": "Interposer",
+      "definition": "連接多顆晶片與封裝基板的轉接板",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "離子佈植",
+      "en": "Ion Implantation",
+      "definition": "把雜質離子加速後射入矽中",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "等向",
+      "en": "Isotropic",
+      "definition": "往各方向速度相同的蝕刻",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "致命缺陷",
+      "en": "Killer Defect",
+      "definition": "會造成晶片失效的缺陷",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "已知良好晶粒",
+      "en": "Known Good Die (KGD)",
+      "definition": "經過測試確認良好的晶粒",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "導線架",
+      "en": "Leadframe",
+      "definition": "承載晶粒並提供外部接腳的金屬框架",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "微影",
+      "en": "Lithography",
+      "definition": "用光把光罩圖形轉移到光阻上的製程，現場常叫黃光",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "晶圓盒裝載埠",
+      "en": "Load Port",
+      "definition": "機台前方放置晶圓盒的平台",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "負載效應",
+      "en": "Loading Effect",
+      "definition": "圖形疏密不同，造成蝕刻速度不同",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "批",
+      "en": "Lot",
+      "definition": "一起生產的一組晶圓，最多 25 片",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "履歷",
+      "en": "Lot History",
+      "definition": "晶圓經過的步驟、機台、時間與量測結果的完整紀錄",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "低壓化學氣相沉積",
+      "en": "Low Pressure CVD (LPCVD)",
+      "definition": "靠高溫提供能量、薄膜品質好的 CVD",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "低介電常數材料",
+      "en": "Low-k Dielectric (Low-k)",
+      "definition": "用來降低導線之間干擾的絕緣材料",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "製造執行系統",
+      "en": "Manufacturing Execution System (MES)",
+      "definition": "管理生產現場、記錄晶圓狀態與歷程的核心系統",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "光罩",
+      "en": "Mask / Reticle",
+      "definition": "帶有一層電路圖形的石英板",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "物料審查會議",
+      "en": "Material Review Board (MRB)",
+      "definition": "跨部門判定不合格品處置方式的會議",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "成熟製程",
+      "en": "Mature Node",
+      "definition": "已量產多年、成本較低的製程世代",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "金屬氧化物半導體場效電晶體",
+      "en": "Metal-Oxide-Semiconductor Field-Effect Transistor (MOSFET)",
+      "definition": "以閘極電壓控制通道導通的電晶體",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "量測",
+      "en": "Metrology",
+      "definition": "測量膜厚、線寬等具體數值",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "微凸塊",
+      "en": "Micro Bump",
+      "definition": "間距約數十微米的細小凸塊，用於晶片堆疊",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "中段製程",
+      "en": "Middle of Line (MOL)",
+      "definition": "把電晶體接到金屬層的階段",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "迷你環境",
+      "en": "Mini-environment",
+      "definition": "只讓晶圓所在的小空間維持極高潔淨度的設計",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "最小金屬間距",
+      "en": "Minimum Metal Pitch (MMP)",
+      "definition": "最密集那層金屬導線的間距",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "濕度敏感等級",
+      "en": "Moisture Sensitivity Level (MSL)",
+      "definition": "依封裝對濕氣的敏感程度所做的分級",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "控片",
+      "en": "Monitor Wafer",
+      "definition": "用來檢查機台狀態的非產品晶圓",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "摩爾定律",
+      "en": "Moore's Law",
+      "definition": "晶片上的電晶體數量大約每兩年增加一倍的趨勢",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "NAND 快閃記憶體",
+      "en": "NAND Flash",
+      "definition": "斷電後資料仍會保留的記憶體",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "奈米片",
+      "en": "Nanosheet",
+      "definition": "GAA 電晶體中水平堆疊的薄片通道",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "原生氧化層",
+      "en": "Native Oxide",
+      "definition": "矽表面接觸空氣後自然長出的薄氧化層",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "晶圓缺口",
+      "en": "Notch",
+      "definition": "晶圓邊緣標示方向的小缺口",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "光學關鍵尺寸量測",
+      "en": "Optical Critical Dimension (OCD)",
+      "definition": "分析光的散射，搭配模型推算立體輪廓",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "光學鄰近效應修正",
+      "en": "Optical Proximity Correction (OPC)",
+      "definition": "修改光罩圖形，補償成像時的變形",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "超出管制界限",
+      "en": "Out of Control (OOC)",
+      "definition": "數據超出管制界限，代表製程出現異常訊號",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "異常處理計畫",
+      "en": "Out of Control Action Plan (OCAP)",
+      "definition": "異常發生時事先規定好的處理步驟",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "超出規格",
+      "en": "Out of Spec (OOS)",
+      "definition": "數據超出規格界限，代表產品不合格",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "封裝測試廠",
+      "en": "Outsourced Semiconductor Assembly and Test (OSAT)",
+      "definition": "提供封裝與測試服務的公司",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "過度蝕刻",
+      "en": "Over Etch",
+      "definition": "到達終點後再多蝕刻一點，確保材料清乾淨",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "天車",
+      "en": "Overhead Hoist Transport (OHT)",
+      "definition": "在天花板軌道上搬運晶圓盒的設備",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "疊對誤差",
+      "en": "Overlay",
+      "definition": "上下兩層圖形之間的對準誤差",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "微粒",
+      "en": "Particle",
+      "definition": "落在晶圓上的微小顆粒，是最常見的缺陷來源",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "保護層",
+      "en": "Passivation",
+      "definition": "晶片最上方保護電路、只在焊墊處開口的絕緣層",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "光阻",
+      "en": "Photoresist (PR)",
+      "definition": "對光敏感、用來轉印圖形的材料",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "物理氣相沉積",
+      "en": "Physical Vapor Deposition (PVD)",
+      "definition": "以濺鍍等物理方式沉積薄膜",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "間距",
+      "en": "Pitch",
+      "definition": "重複圖形中一條線加上一個間隔的總寬度",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "電漿",
+      "en": "Plasma",
+      "definition": "被激發成離子、電子與活潑原子團混合的氣體",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "電漿輔助化學氣相沉積",
+      "en": "Plasma-Enhanced CVD (PECVD)",
+      "definition": "用電漿提供能量、可以在較低溫度進行的 CVD",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "PN 接面",
+      "en": "PN Junction",
+      "definition": "P 型與 N 型區域的交界",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "多晶矽",
+      "en": "Polysilicon (Poly)",
+      "definition": "由許多排列方向不同的小晶粒組成的矽",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "曝後烤",
+      "en": "Post-Exposure Bake (PEB)",
+      "definition": "曝光後加熱，讓光阻的化學反應完成",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "預測性保養",
+      "en": "Predictive Maintenance",
+      "definition": "從機台數據預測零件何時需要更換",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "預防保養",
+      "en": "Preventive Maintenance (PM)",
+      "definition": "定期停機保養機台",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "探針卡",
+      "en": "Probe Card",
+      "definition": "晶圓測試時接觸晶粒焊墊的探針組",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "針測機",
+      "en": "Prober",
+      "definition": "CP 測試時移動晶圓、讓探針對準晶粒的機台",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "製程能力指標",
+      "en": "Process Capability Index (Cpk)",
+      "definition": "描述製程落在規格內的從容程度",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "製程設計套件",
+      "en": "Process Design Kit (PDK)",
+      "definition": "晶圓廠提供給設計者的設計規則與電性模型",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "製程節點",
+      "en": "Process Node",
+      "definition": "代表某一代製程技術的名稱",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "產品／製程變更通知",
+      "en": "Product / Process Change Notification (PCN)",
+      "definition": "通知客戶產品或製程的變更",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "等待時間限制",
+      "en": "Queue Time (Q-Time)",
+      "definition": "兩個步驟之間允許等待的最長時間",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "快速熱退火",
+      "en": "Rapid Thermal Anneal (RTA)",
+      "definition": "在幾秒內完成的高溫退火",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "重複進入流程",
+      "en": "Re-entrant Flow",
+      "definition": "晶圓在流程中多次回到同一類機台的生產方式",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "配方",
+      "en": "Recipe",
+      "definition": "機台執行製程時使用的參數組合",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "重佈線層",
+      "en": "Redistribution Layer (RDL)",
+      "definition": "把接點重新分佈到其他位置的導線層",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "修補",
+      "en": "Redundancy Repair",
+      "definition": "用備用電路取代壞掉的記憶單元",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "刷新",
+      "en": "Refresh",
+      "definition": "定期重寫 DRAM 資料，避免電荷流失",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "放行",
+      "en": "Release",
+      "definition": "解除 Hold，讓晶圓繼續生產",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "可靠度",
+      "en": "Reliability",
+      "definition": "晶片在預定的使用條件下能正常工作多久",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "重工",
+      "en": "Rework",
+      "definition": "去除部分結果後重新製作",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "根本原因",
+      "en": "Root Cause",
+      "definition": "造成異常的最根本原因",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "流程",
+      "en": "Route",
+      "definition": "產品從頭到尾要經過的步驟與順序",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "TODO",
+      "en": "Row Hammer",
+      "definition": "反覆存取 DRAM 的同一列，造成相鄰列的位元翻轉",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "批次間控制",
+      "en": "Run-to-Run Control (R2R)",
+      "definition": "根據量測結果自動調整下一批的製程參數",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "犧牲層",
+      "en": "Sacrificial Layer",
+      "definition": "先做出來佔住位置、之後再移除的材料",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "抽樣",
+      "en": "Sampling",
+      "definition": "只量測部分批次、晶圓或位置",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "曝光機",
+      "en": "Scanner",
+      "definition": "把光罩圖形縮小投影到晶圓上的機台",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "報廢",
+      "en": "Scrap",
+      "definition": "晶圓不再繼續生產",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "切割道",
+      "en": "Scribe Line",
+      "definition": "晶粒之間預留給切割與測試鍵的區域",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "腔體調理",
+      "en": "Seasoning",
+      "definition": "保養後先跑擋片，讓腔體狀態穩定",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "機台通訊標準",
+      "en": "SECS/GEM",
+      "definition": "機台與工廠系統之間的共同通訊標準",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "晶種層",
+      "en": "Seed Layer",
+      "definition": "電鍍前先鋪的一層薄金屬，作為電鍍的起點",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "選擇比",
+      "en": "Selectivity",
+      "definition": "目標材料與其他材料的蝕刻速度比",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "淺溝槽隔離",
+      "en": "Shallow Trench Isolation (STI)",
+      "definition": "以填滿絕緣材料的淺溝槽隔開元件",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "片電阻",
+      "en": "Sheet Resistance (Rs)",
+      "definition": "薄層的電阻值，反映摻雜或膜厚",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "短通道效應",
+      "en": "Short-Channel Effect (SCE)",
+      "definition": "通道太短時閘極控制力下降、漏電增加",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "金屬矽化物",
+      "en": "Silicide",
+      "definition": "金屬與矽反應形成的低電阻化合物",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "絕緣層上覆矽",
+      "en": "Silicon on Insulator (SOI)",
+      "definition": "薄矽層下方埋有絕緣層的晶圓",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "單層／多層／三層／四層式儲存單元",
+      "en": "SLC / MLC / TLC / QLC",
+      "definition": "NAND 每個記憶單元分別存 1、2、3、4 個位元",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "研磨液",
+      "en": "Slurry",
+      "definition": "CMP 使用、含研磨顆粒與化學品的液體",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "軟錯誤",
+      "en": "Soft Error",
+      "definition": "由輻射粒子等造成、非永久性的位元錯誤",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "源極",
+      "en": "Source",
+      "definition": "電晶體中電流流入的一端",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "側壁間隔物",
+      "en": "Spacer",
+      "definition": "閘極兩側的絕緣結構",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "規格界限",
+      "en": "Specification Limit",
+      "definition": "產品要求的範圍，超出就代表不合格",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "分批實驗",
+      "en": "Split Lot",
+      "definition": "把同一批晶圓分組，使用不同條件的實驗",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "濺鍍",
+      "en": "Sputtering",
+      "definition": "用離子撞擊靶材，沉積金屬薄膜",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "階梯結構",
+      "en": "Staircase",
+      "definition": "3D NAND 邊緣一階一階的結構，讓接觸窗分別接到每一層",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "靜態隨機存取記憶體",
+      "en": "Static Random-Access Memory (SRAM)",
+      "definition": "常被拿來比較製程密度的記憶單元",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "統計製程管制",
+      "en": "Statistical Process Control (SPC)",
+      "definition": "以管制圖監控製程的穩定性",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "隱形切割",
+      "en": "Stealth Dicing",
+      "definition": "用雷射在晶圓內部形成改質層，再讓晶粒分開",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "階梯覆蓋",
+      "en": "Step Coverage",
+      "definition": "薄膜在高低起伏表面上的覆蓋均勻度",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "晶片版本",
+      "en": "Stepping",
+      "definition": "晶片修正設計後的版本代號",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "倉儲",
+      "en": "Stocker",
+      "definition": "暫時存放晶圓盒的自動倉庫",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "應變矽",
+      "en": "Strained Silicon",
+      "definition": "讓矽晶格輕微變形，使電子或電洞跑得更快",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "系統級測試",
+      "en": "System Level Test (SLT)",
+      "definition": "在接近實際產品的環境中測試晶片",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "靶材",
+      "en": "Target",
+      "definition": "PVD 濺鍍時被離子撞擊的材料來源",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "溫度循環",
+      "en": "Temperature Cycling (TC)",
+      "definition": "反覆在高溫與低溫之間切換的可靠度測試",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "測試鍵",
+      "en": "Test Key",
+      "definition": "切割道上專供電性量測的測試結構",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "測試機",
+      "en": "Tester",
+      "definition": "送出測試訊號並判斷晶片反應的機台",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "熱預算",
+      "en": "Thermal Budget",
+      "definition": "晶圓在製程中經歷的高溫總量",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "熱氧化",
+      "en": "Thermal Oxidation",
+      "definition": "在高溫下讓矽表面長出氧化層",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "臨界電壓",
+      "en": "Threshold Voltage (Vt)",
+      "definition": "讓電晶體導通所需的最低閘極電壓",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "矽穿孔",
+      "en": "Through-Silicon Via (TSV)",
+      "definition": "垂直貫穿晶片的金屬導線",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "時間相依介電崩潰",
+      "en": "Time-Dependent Dielectric Breakdown (TDDB)",
+      "definition": "絕緣層長期承受電場後被擊穿",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "進站與出站",
+      "en": "Track-in / Track-out",
+      "definition": "在系統上登記開始加工與完成加工",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "超純水",
+      "en": "Ultrapure Water (UPW)",
+      "definition": "幾乎不含任何雜質的清洗用水",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "底部填充",
+      "en": "Underfill",
+      "definition": "填入覆晶晶粒與基板之間的膠材",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "導通孔",
+      "en": "Via",
+      "definition": "連接上下兩層金屬的金屬孔",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "虛擬量測",
+      "en": "Virtual Metrology (VM)",
+      "definition": "用機台加工時的數據推估量測結果",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "晶圓",
+      "en": "Wafer",
+      "definition": "用來製造晶片的圓形矽薄片",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "晶圓允收測試",
+      "en": "Wafer Acceptance Test (WAT)",
+      "definition": "量測切割道上的測試鍵，確認製程結果",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "晶圓編號",
+      "en": "Wafer ID",
+      "definition": "雷射刻在晶圓上、用來追蹤每一片晶圓的編號",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "晶圓圖",
+      "en": "Wafer Map",
+      "definition": "晶圓上每顆晶粒測試結果的分佈圖",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "投片",
+      "en": "Wafer Start",
+      "definition": "把空白晶圓投入生產",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "晶圓級封裝",
+      "en": "Wafer-Level Packaging (WLP)",
+      "definition": "直接在晶圓上完成封裝，尺寸接近晶粒本身",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "平均抹寫",
+      "en": "Wear Leveling",
+      "definition": "讓 NAND 各區塊磨損平均的韌體技術",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "井",
+      "en": "Well",
+      "definition": "為了做出 NMOS 或 PMOS 而摻雜的區域",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "濕蝕刻",
+      "en": "Wet Etch",
+      "definition": "用化學溶液進行的蝕刻",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "打線接合",
+      "en": "Wire Bonding",
+      "definition": "用細金屬線連接晶粒與封裝",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "字元線",
+      "en": "Word Line",
+      "definition": "記憶陣列中控制記憶單元開關的導線",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "在製品",
+      "en": "Work in Process (WIP)",
+      "definition": "還在生產線上、尚未完成的晶圓",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "良率",
+      "en": "Yield",
+      "definition": "好產品占全部產品的比例",
+      "source": "zh-TW/appendix/glossary.md"
+    },
+    {
+      "term": "良率學習曲線",
+      "en": "Yield Learning Curve",
+      "definition": "新製程良率隨時間逐步爬升的過程",
+      "source": "zh-TW/appendix/glossary.md"
+    }
+  ],
+  "facts": [
+    {
+      "text": "一顆指甲大小的晶片上，可能有數十億個電晶體，全部在一片矽晶圓上製造出來。",
+      "source": "zh-TW/README.md"
+    },
+    {
+      "text": "晶圓從沙子到可用的晶片，要經過數百到上千個步驟，前段製程通常要兩到三個月甚至更久。",
+      "source": "zh-TW/0-before-you-start/00-overview/README.md"
+    },
+    {
+      "text": "Lot 是一起移動、一起生產的一組晶圓，最多 25 片，裝在同一個晶圓盒裡。",
+      "source": "zh-TW/0-before-you-start/00-overview/README.md"
+    },
+    {
+      "text": "晶片要提前好幾個月投片，所以需求突然增加時，供貨無法馬上恢復。",
+      "source": "zh-TW/0-before-you-start/00-overview/README.md"
+    },
+    {
+      "text": "晶圓廠裡人是最大的污染源，皮屑、頭髮、汗水與化妝品都會帶來微粒，所以進無塵室前要穿無塵衣並經過風淋室。",
+      "source": "zh-TW/0-before-you-start/01-how-a-fab-works/README.md"
+    },
+    {
+      "text": "裝滿晶圓的 FOUP 大約有八公斤重，因此晶圓搬運交給天車與倉儲等自動化系統。",
+      "source": "zh-TW/0-before-you-start/01-how-a-fab-works/README.md"
+    },
+    {
+      "text": "機台保養完成後，要先跑測試晶圓確認合格（現場叫 Qual）才能開放跑產品；第一批產品若跑進有問題的機台，可能整批報廢。",
+      "source": "zh-TW/0-before-you-start/01-how-a-fab-works/README.md"
+    },
+    {
+      "text": "工廠裡的急件（Hot Lot）太多，會讓其他晶圓排隊更久；如果每批都是急件，等於沒有急件。",
+      "source": "zh-TW/0-before-you-start/01-how-a-fab-works/README.md"
+    },
+    {
+      "text": "矽是最主要的半導體材料，沙子的主要成分就是矽的氧化物，而矽表面能長出穩定的二氧化矽絕緣層。",
+      "source": "zh-TW/1-fundamentals/02-transistor-basics/README.md"
+    },
+    {
+      "text": "在幾百萬個矽原子中只加入一個雜質原子，導電能力就會大幅改變。",
+      "source": "zh-TW/1-fundamentals/02-transistor-basics/README.md"
+    },
+    {
+      "text": "同一製程常會提供不同臨界電壓（Vt）的電晶體：低 Vt 快但漏電多，高 Vt 慢但省電，設計者可在同一顆晶片上混用。",
+      "source": "zh-TW/1-fundamentals/02-transistor-basics/README.md"
+    },
+    {
+      "text": "電子級多晶矽的純度可達「11 個 9」，相當於一千億個矽原子中雜質不到一個。",
+      "source": "zh-TW/1-fundamentals/03-sand-to-wafer/README.md"
+    },
+    {
+      "text": "一根 300 mm 晶棒可以長達兩公尺左右、重達數百公斤，長晶時還會加入硼或磷來決定晶圓的導電型態。",
+      "source": "zh-TW/1-fundamentals/03-sand-to-wafer/README.md"
+    },
+    {
+      "text": "晶圓邊緣的小 V 形缺口（Notch）用來讓機台把晶圓轉到固定方向，因為矽在不同方向的性質不同。",
+      "source": "zh-TW/1-fundamentals/03-sand-to-wafer/README.md"
+    },
+    {
+      "text": "300 mm 晶圓的面積是 200 mm 的 2.25 倍，但加工成本沒有增加那麼多，所以平均每顆晶粒更便宜。",
+      "source": "zh-TW/1-fundamentals/03-sand-to-wafer/README.md"
+    },
+    {
+      "text": "工廠的很多晶圓不是產品：控片用來檢查機台，擋片用來填滿批次機台的空位，用過的可以研磨回收再用。",
+      "source": "zh-TW/1-fundamentals/03-sand-to-wafer/README.md"
+    },
+    {
+      "text": "微影區的燈光是黃色的，因為光阻對紫外光和藍光敏感，黃光幾乎不會讓它起反應。",
+      "source": "zh-TW/2-process-modules/04-lithography/README.md"
+    },
+    {
+      "text": "EUV 的波長只有 13.5 nm，空氣和玻璃都會吸收它，所以整台機器的光路要在真空中，並只能用反射鏡而不能用透鏡。",
+      "source": "zh-TW/2-process-modules/04-lithography/README.md"
+    },
+    {
+      "text": "微影是整個製程中唯一可以「重來」的關卡：光阻可以去除後重做（Rework），一旦進入蝕刻，錯誤圖形就會永久刻進材料。",
+      "source": "zh-TW/2-process-modules/04-lithography/README.md"
+    },
+    {
+      "text": "先進製程中，層與層之間容許的對準誤差只有幾奈米，大約是幾十個原子的寬度。",
+      "source": "zh-TW/2-process-modules/04-lithography/README.md"
+    },
+    {
+      "text": "原子層沉積（ALD）一次只長出約一層原子厚的薄膜，極均勻但速度慢，常用在先進電晶體的閘極絕緣層。",
+      "source": "zh-TW/2-process-modules/05-thin-films/README.md"
+    },
+    {
+      "text": "蝕刻的終點可以從電漿發出的光判斷：碰到下一層材料時，電漿成分改變，光的顏色和強度也跟著變。",
+      "source": "zh-TW/2-process-modules/06-etching/README.md"
+    },
+    {
+      "text": "記憶體的高深寬比蝕刻，孔深可以是孔寬的數十倍，是目前最困難的製程之一。",
+      "source": "zh-TW/2-process-modules/06-etching/README.md"
+    },
+    {
+      "text": "離子佈植的錯誤從外觀看不出來，往往要等幾週後的電性測試才會發現，而且無法重做。",
+      "source": "zh-TW/2-process-modules/07-ion-implantation/README.md"
+    },
+    {
+      "text": "佈植時會讓晶圓稍微傾斜，因為離子若沿著晶格的「隧道」方向射入，會一路滑得太深，稱為通道效應。",
+      "source": "zh-TW/2-process-modules/07-ion-implantation/README.md"
+    },
+    {
+      "text": "每一次高溫步驟都會讓先前佈植的雜質再擴散一點，因此需要高溫的步驟要盡量排在前面，這就是熱預算的概念。",
+      "source": "zh-TW/2-process-modules/07-ion-implantation/README.md"
+    },
+    {
+      "text": "CMP 的研磨墊、研磨液都是消耗品，研磨墊用久了研磨速度會慢慢改變，工廠會依前幾批的量測結果微調下一批的研磨時間。",
+      "source": "zh-TW/2-process-modules/08-cmp/README.md"
+    },
+    {
+      "text": "晶片上很多沒有連到電路的小方塊是「假圖形」，用來讓圖形密度平均，確保 CMP 磨得均勻。",
+      "source": "zh-TW/2-process-modules/08-cmp/README.md"
+    },
+    {
+      "text": "CMP 後晶圓要立刻清洗，因為研磨液一旦在表面乾掉，顆粒會牢牢黏住，很難再洗掉；很多 CMP 機台內建清洗模組，做到「乾進乾出」。",
+      "source": "zh-TW/2-process-modules/08-cmp/README.md"
+    },
+    {
+      "text": "RCA 清洗是 1960 年代發展出來的經典方法，至今仍是很多清洗配方的基礎。",
+      "source": "zh-TW/2-process-modules/09-cleaning/README.md"
+    },
+    {
+      "text": "汗水中的鈉離子若進入閘極氧化層，會到處移動，讓電晶體的 Vt 漂移。",
+      "source": "zh-TW/2-process-modules/09-cleaning/README.md"
+    },
+    {
+      "text": "Q-Time 不只用在清洗：銅 CMP 後到鋪覆蓋層之間同樣有等待時間限制。",
+      "source": "zh-TW/2-process-modules/09-cleaning/README.md"
+    },
+    {
+      "text": "銅在矽中擴散得非常快，一點點跑進電晶體區域就會造成漏電，所以銅製程的機台與晶圓盒要和前段嚴格分開。",
+      "source": "zh-TW/2-process-modules/09-cleaning/README.md"
+    },
+    {
+      "text": "「大馬士革製程」的名字來自古代大馬士革的鑲嵌工藝：在器物表面刻出凹槽、填入金屬，再把表面磨平。",
+      "source": "zh-TW/2-process-modules/10-metallization/README.md"
+    },
+    {
+      "text": "銅導線很難用乾蝕刻挖出圖形，所以產業改用「先挖溝、再填銅」的完全相反做法。",
+      "source": "zh-TW/2-process-modules/10-metallization/README.md"
+    },
+    {
+      "text": "電鍍銅時，電鍍液會加入特殊添加劑，讓孔洞底部的銅長得比開口快，才能由下往上填滿。",
+      "source": "zh-TW/2-process-modules/10-metallization/README.md"
+    },
+    {
+      "text": "一個簡單的 CMOS 製程大約需要二十層左右的光罩，最先進的製程加上多重曝光可以達到數十層以上。",
+      "source": "zh-TW/3-integration/11-cmos-process-flow/README.md"
+    },
+    {
+      "text": "業界常用「每層光罩天數」（生產週期除以光罩層數）來公平比較不同產品的生產效率，常見水準約每層一到兩天。",
+      "source": "zh-TW/3-integration/11-cmos-process-flow/README.md"
+    },
+    {
+      "text": "先進製程常用「先做假的、再換成真的」的做法：先用多晶矽做假閘極，高溫步驟後再換成金屬閘極。",
+      "source": "zh-TW/3-integration/11-cmos-process-flow/README.md"
+    },
+    {
+      "text": "GAA 製程中最關鍵的一步，是用選擇比極高的蝕刻把夾在中間的矽鍺層挖掉，留下懸空的矽通道。",
+      "source": "zh-TW/3-integration/12-advanced-transistors/README.md"
+    },
+    {
+      "text": "FinFET 的驅動能力取決於用了幾根鰭，所以設計時只能選「一根、兩根、三根」，無法任意調整。",
+      "source": "zh-TW/3-integration/12-advanced-transistors/README.md"
+    },
+    {
+      "text": "3D NAND 早期靠縮小不再可行，產業改為往上疊，現在的堆疊可達數百層。",
+      "source": "zh-TW/3-integration/13-memory/README.md"
+    },
+    {
+      "text": "現代 DRAM 的電容是高度為寬度數十倍的細長圓柱，像一根根摩天大樓。",
+      "source": "zh-TW/3-integration/13-memory/README.md"
+    },
+    {
+      "text": "數百層薄膜累積的應力足以讓整片晶圓翹曲，嚴重時機械手臂甚至無法正常取放晶圓。",
+      "source": "zh-TW/3-integration/13-memory/README.md"
+    },
+    {
+      "text": "HBM 把多顆 DRAM 垂直疊起來，晶片之間靠貫穿矽基板的 TSV 連接，常見 8 顆、12 顆甚至更多。",
+      "source": "zh-TW/3-integration/13-memory/README.md"
+    },
+    {
+      "text": "記憶體的備用行與列可以用熔絲切換來取代壞掉的單元，這就是修補（Repair），能把原本該報廢的晶片救回來。",
+      "source": "zh-TW/3-integration/13-memory/README.md"
+    },
+    {
+      "text": "「3 奈米製程」的晶片上找不到 3 奈米的結構，節點名稱只是世代代號，不同公司的名稱也無法直接比較。",
+      "source": "zh-TW/3-integration/14-process-nodes/README.md"
+    },
+    {
+      "text": "大量的晶片仍使用二十多奈米以上的成熟製程，例如汽車電子、電源管理、微控制器與感測器驅動晶片。",
+      "source": "zh-TW/3-integration/14-process-nodes/README.md"
+    },
+    {
+      "text": "PDK（製程設計套件）是晶圓廠提供給設計者的設計規則與電性模型，設計者依此設計才能確保晶片做得出來。",
+      "source": "zh-TW/3-integration/14-process-nodes/README.md"
+    },
+    {
+      "text": "每顆晶粒的 CP 結果會畫成晶圓圖，壞晶粒的形狀（中心、邊緣、刮痕、每個曝光區相同位置等）常是找出原因的第一條線索。",
+      "source": "zh-TW/4-yield-and-quality/16-yield-analysis/README.md"
+    },
+    {
+      "text": "整體良率是各階段良率相乘，例如 98% × 90% × 99%，整體只剩大約 87%。",
+      "source": "zh-TW/4-yield-and-quality/16-yield-analysis/README.md"
+    },
+    {
+      "text": "若每個曝光區的同一位置都壞掉，往往是光罩缺陷，因為曝光機每次都使用同一片光罩。",
+      "source": "zh-TW/4-yield-and-quality/16-yield-analysis/README.md"
+    },
+    {
+      "text": "製程控制中，管制界限通常比規格界限窄：超出管制界限是預警（OOC），超出規格界限才是產品不合格（OOS）。",
+      "source": "zh-TW/4-yield-and-quality/17-process-control/README.md"
+    },
+    {
+      "text": "R2R 會自動補償機台偏移，但補償可能掩蓋問題，所以也要監控調整量本身，避免機台持續惡化而不自知。",
+      "source": "zh-TW/4-yield-and-quality/17-process-control/README.md"
+    },
+    {
+      "text": "異常發生時，第一件事通常是 Hold：先擋住晶圓、停用機台，而不是邊查邊生產。",
+      "source": "zh-TW/4-yield-and-quality/18-abnormality-handling/README.md"
+    },
+    {
+      "text": "影響範圍要從機台「上一次確認正常」的時間點算起，因為異常可能早在被發現之前就開始了。",
+      "source": "zh-TW/4-yield-and-quality/18-abnormality-handling/README.md"
+    },
+    {
+      "text": "任何工程變更，即使只是調整一個溫度參數，都可能影響可靠度，所以都要經過評估與驗證。",
+      "source": "zh-TW/4-yield-and-quality/18-abnormality-handling/README.md"
+    },
+    {
+      "text": "WAT 全部合格不代表每顆晶粒都是好的，WAT 只量切割道上少數測試鍵，無法代表整片晶圓。",
+      "source": "zh-TW/5-backend/19-wafer-test/README.md"
+    },
+    {
+      "text": "通過 CP 的晶粒稱為已知良好晶粒（KGD），封裝時只挑出這些晶粒。",
+      "source": "zh-TW/5-backend/19-wafer-test/README.md"
+    },
+    {
+      "text": "封裝吸收的水氣在焊接時會瞬間汽化膨脹，造成內部脫層甚至爆裂，這種現象被形象地稱為「爆米花效應」。",
+      "source": "zh-TW/5-backend/20-packaging/README.md"
+    },
+    {
+      "text": "晶背研磨後晶圓可能只剩一百微米左右，薄得像紙一樣容易彎曲與破裂。",
+      "source": "zh-TW/5-backend/20-packaging/README.md"
+    },
+    {
+      "text": "隱形切割是用雷射在晶圓內部打出改質層，再撐開膠膜讓晶粒沿改質層分開。",
+      "source": "zh-TW/5-backend/20-packaging/README.md"
+    },
+    {
+      "text": "曝光機一次曝光的範圍約為 26 mm × 33 mm，這限制了單顆晶粒的大小，因此中介層有時需要多次曝光拼接。",
+      "source": "zh-TW/5-backend/21-advanced-packaging/README.md"
+    },
+    {
+      "text": "8 顆晶片每顆良率都是 99% 時，全部都好的機率只剩大約 92%，所以先進封裝一定要使用已知良好晶粒。",
+      "source": "zh-TW/5-backend/21-advanced-packaging/README.md"
+    },
+    {
+      "text": "晶片的失效率隨時間變化像一個浴缸：早期失效、穩定期、老化期；預燒就是把浴缸左邊那段先在工廠裡燒掉。",
+      "source": "zh-TW/5-backend/22-final-test-and-reliability/README.md"
+    },
+    {
+      "text": "可靠度常用 FIT 表示，代表每十億個元件小時中發生的失效次數，是從大量樣本推算出來的統計結果。",
+      "source": "zh-TW/5-backend/22-final-test-and-reliability/README.md"
+    },
+    {
+      "text": "車用晶片要求更寬的工作溫度與更長壽命，目標是「零缺陷」，驗證標準也比消費性產品嚴格。",
+      "source": "zh-TW/5-backend/22-final-test-and-reliability/README.md"
+    },
+    {
+      "text": "MES 中的 Track-in 和 Track-out 是系統上的登記；系統顯示與實體晶圓不一致，現場稱為「帳實不符」。",
+      "source": "zh-TW/6-beyond-the-fab/23-fab-systems/README.md"
+    },
+    {
+      "text": "工廠的防呆規則，很多都是從過去的事故學來的：規則看起來麻煩，往往是因為它擋下的錯誤很少再發生。",
+      "source": "zh-TW/6-beyond-the-fab/23-fab-systems/README.md"
+    },
+    {
+      "text": "DRAM 的電容會漏電，所以必須定期刷新，通常每幾十毫秒就要把所有資料刷新一輪；溫度越高，刷新越頻繁。",
+      "source": "zh-TW/6-beyond-the-fab/24-process-and-firmware/README.md"
+    },
+    {
+      "text": "2014 年公開發表的 Row Hammer 現象：反覆快速存取同一列記憶體，可能讓相鄰列的資料翻轉，也成為安全問題。",
+      "source": "zh-TW/6-beyond-the-fab/24-process-and-firmware/README.md"
+    },
+    {
+      "text": "晶片的 Stepping 版本號：字母改變代表底層電晶體也改了、需要重做大部分光罩；數字改變代表只改上層金屬導線。",
+      "source": "zh-TW/6-beyond-the-fab/24-process-and-firmware/README.md"
+    },
+    {
+      "text": "NAND 不能直接覆寫、必須先抹除，而每個單元存的位元越多，可抹寫的次數越少、所需的 ECC 越強。",
+      "source": "zh-TW/6-beyond-the-fab/24-process-and-firmware/README.md"
+    }
+  ]
+}

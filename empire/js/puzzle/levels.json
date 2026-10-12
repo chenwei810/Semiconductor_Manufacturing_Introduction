@@ -1,0 +1,2673 @@
+[
+ {
+  "schema": 1,
+  "id": "f1-1",
+  "fab": "f1",
+  "order": 1,
+  "title": "長一層氧化",
+  "intro": "矽表面能長出穩定的二氧化矽絕緣層。用「沉積」在晶圓上鋪一層 2 格厚的 SiO₂，讓剖面和右上的目標一樣。",
+  "teach": [
+   "thin_film"
+  ],
+  "factId": "fact#8",
+  "w": 12,
+  "h": 8,
+  "init": [ "............", "............", "............", "............", "............", "SSSSSSSSSSSS", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "target": [ "............", "............", "............", "OOOOOOOOOOOO", "OOOOOOOOOOOO", "SSSSSSSSSSSS", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "cards": [
+   {
+    "card": "deposit",
+    "mats": [
+     "O"
+    ],
+    "t": [
+     1,
+     2,
+     3
+    ]
+   }
+  ],
+  "masks": [],
+  "par": 1,
+  "minRemovals": 0,
+  "reference": [
+   {
+    "card": "deposit",
+    "mat": "O",
+    "t": 2
+   }
+  ],
+  "maxSteps": 20,
+  "tutorial": "t-card"
+ },
+ {
+  "schema": 1,
+  "id": "f1-2",
+  "fab": "f1",
+  "order": 2,
+  "title": "開窗",
+  "intro": "氧化層中央要開一個窗。微影五步：旋塗光阻、曝光、顯影、蝕刻、去光阻。注意：正光阻是「曝光處」變可溶，光罩透光的地方會被蝕刻。",
+  "teach": [
+   "lithography",
+   "etching"
+  ],
+  "factId": "fact#18",
+  "w": 12,
+  "h": 8,
+  "init": [ "............", "............", "............", "OOOOOOOOOOOO", "OOOOOOOOOOOO", "SSSSSSSSSSSS", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "target": [ "............", "............", "............", "OOOO....OOOO", "OOOO....OOOO", "SSSSSSSSSSSS", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "cards": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mats": [
+     "O"
+    ],
+    "depth": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "card": "strip"
+   }
+  ],
+  "masks": [
+   {
+    "id": "A",
+    "open": [
+     [
+      4,
+      7
+     ]
+    ]
+   },
+   {
+    "id": "B",
+    "open": [
+     [
+      0,
+      3
+     ],
+     [
+      8,
+      11
+     ]
+    ]
+   }
+  ],
+  "par": 5,
+  "minRemovals": 8,
+  "reference": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose",
+    "mask": "A"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mat": "O",
+    "depth": 2
+   },
+   {
+    "card": "strip"
+   }
+  ],
+  "maxSteps": 20,
+  "tutorial": "t-litho"
+ },
+ {
+  "schema": 1,
+  "id": "f1-3",
+  "fab": "f1",
+  "order": 3,
+  "title": "氧化層圖形化",
+  "intro": "先沉積氧化層，再用微影把它圖形化，只保留中間 4 欄。想一想：光罩 A 與 B 哪個透光區會被蝕刻掉？",
+  "teach": [
+   "thin_film",
+   "lithography",
+   "etching"
+  ],
+  "factId": "fact#18",
+  "w": 12,
+  "h": 8,
+  "init": [ "............", "............", "............", "............", "............", "SSSSSSSSSSSS", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "target": [ "............", "............", "............", "....OOOO....", "....OOOO....", "SSSSSSSSSSSS", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "cards": [
+   {
+    "card": "deposit",
+    "mats": [
+     "O"
+    ],
+    "t": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mats": [
+     "O"
+    ],
+    "depth": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "card": "strip"
+   }
+  ],
+  "masks": [
+   {
+    "id": "A",
+    "open": [
+     [
+      0,
+      3
+     ],
+     [
+      8,
+      11
+     ]
+    ]
+   },
+   {
+    "id": "B",
+    "open": [
+     [
+      4,
+      7
+     ]
+    ]
+   }
+  ],
+  "par": 6,
+  "minRemovals": 16,
+  "reference": [
+   {
+    "card": "deposit",
+    "mat": "O",
+    "t": 2
+   },
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose",
+    "mask": "A"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mat": "O",
+    "depth": 2
+   },
+   {
+    "card": "strip"
+   }
+  ],
+  "maxSteps": 20,
+  "tutorial": null
+ },
+ {
+  "schema": 1,
+  "id": "f2-1",
+  "fab": "f2",
+  "order": 1,
+  "title": "N 井佈植",
+  "intro": "離子佈植會把頂部的矽變成摻雜矽 D。光阻能擋住離子：在中間 6 欄佈植 2 格深，其餘位置要被光阻保護。",
+  "teach": [
+   "ion_implantation",
+   "lithography"
+  ],
+  "factId": "fact#24",
+  "w": 12,
+  "h": 8,
+  "init": [ "............", "............", "............", "............", "............", "SSSSSSSSSSSS", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "target": [ "............", "............", "............", "............", "............", "SSSDDDDDDSSS", "SSSDDDDDDSSS", "SSSSSSSSSSSS" ],
+  "cards": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "implant",
+    "depth": [
+     1,
+     2
+    ]
+   },
+   {
+    "card": "strip"
+   }
+  ],
+  "masks": [
+   {
+    "id": "A",
+    "open": [
+     [
+      3,
+      8
+     ]
+    ]
+   },
+   {
+    "id": "B",
+    "open": [
+     [
+      0,
+      2
+     ],
+     [
+      9,
+      11
+     ]
+    ]
+   }
+  ],
+  "par": 5,
+  "minRemovals": 0,
+  "reference": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose",
+    "mask": "A"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "implant",
+    "depth": 2
+   },
+   {
+    "card": "strip"
+   }
+  ],
+  "maxSteps": 20,
+  "tutorial": null
+ },
+ {
+  "schema": 1,
+  "id": "f2-2",
+  "fab": "f2",
+  "order": 2,
+  "title": "淺溝隔離 STI",
+  "intro": "先在矽上蝕出溝槽，再沉積氧化層填滿，最後用 CMP 磨平，停在矽上。溝槽要剛好被氧化層填滿並與矽表面齊平。",
+  "teach": [
+   "etching",
+   "thin_film",
+   "cmp"
+  ],
+  "factId": "fact#25",
+  "w": 12,
+  "h": 8,
+  "init": [ "............", "............", "............", "............", "............", "SSSSSSSSSSSS", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "target": [ "............", "............", "............", "............", "............", "SSOOSSSSOOSS", "SSOOSSSSOOSS", "SSSSSSSSSSSS" ],
+  "cards": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mats": [
+     "S"
+    ],
+    "depth": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "deposit",
+    "mats": [
+     "O"
+    ],
+    "t": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "card": "cmp",
+    "stops": [
+     "S",
+     "O"
+    ]
+   }
+  ],
+  "masks": [
+   {
+    "id": "A",
+    "open": [
+     [
+      2,
+      3
+     ],
+     [
+      8,
+      9
+     ]
+    ]
+   },
+   {
+    "id": "B",
+    "open": [
+     [
+      4,
+      7
+     ]
+    ]
+   }
+  ],
+  "par": 7,
+  "minRemovals": 24,
+  "reference": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose",
+    "mask": "A"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mat": "S",
+    "depth": 2
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "deposit",
+    "mat": "O",
+    "t": 2
+   },
+   {
+    "card": "cmp",
+    "stop": "S"
+   }
+  ],
+  "maxSteps": 20,
+  "tutorial": null
+ },
+ {
+  "schema": 1,
+  "id": "f2-3",
+  "fab": "f2",
+  "order": 3,
+  "title": "閘極堆疊",
+  "intro": "在矽上疊「閘極氧化層＋多晶矽」兩層，只留下中間 2 欄的閘極。蝕刻有選擇性：一次只吃一種材料，要先吃多晶矽，再吃氧化層。",
+  "teach": [
+   "thin_film",
+   "etching"
+  ],
+  "factId": "fact#38",
+  "w": 12,
+  "h": 8,
+  "init": [ "............", "............", "............", "............", "............", "SSSSSSSSSSSS", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "target": [ "............", "............", ".....PP.....", ".....PP.....", ".....OO.....", "SSSSSSSSSSSS", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "cards": [
+   {
+    "card": "deposit",
+    "mats": [
+     "O",
+     "P"
+    ],
+    "t": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mats": [
+     "P",
+     "O"
+    ],
+    "depth": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "card": "strip"
+   }
+  ],
+  "masks": [
+   {
+    "id": "A",
+    "open": [
+     [
+      0,
+      4
+     ],
+     [
+      7,
+      11
+     ]
+    ]
+   },
+   {
+    "id": "B",
+    "open": [
+     [
+      5,
+      6
+     ]
+    ]
+   },
+   {
+    "id": "C",
+    "open": [
+     [
+      2,
+      9
+     ]
+    ]
+   }
+  ],
+  "par": 8,
+  "minRemovals": 30,
+  "reference": [
+   {
+    "card": "deposit",
+    "mat": "O",
+    "t": 1
+   },
+   {
+    "card": "deposit",
+    "mat": "P",
+    "t": 2
+   },
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose",
+    "mask": "A"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mat": "P",
+    "depth": 2
+   },
+   {
+    "card": "etch",
+    "mat": "O",
+    "depth": 1
+   },
+   {
+    "card": "strip"
+   }
+  ],
+  "maxSteps": 20,
+  "tutorial": null
+ },
+ {
+  "schema": 1,
+  "id": "f2-4",
+  "fab": "f2",
+  "order": 4,
+  "title": "MOSFET",
+  "intro": "自對準源汲極：閘極本身就是佈植的遮罩。先疊出閘極，再佈植，兩側的矽變成源／汲極 D，閘極下方的通道維持 S。",
+  "teach": [
+   "thin_film",
+   "lithography",
+   "etching",
+   "ion_implantation"
+  ],
+  "factId": "fact#23",
+  "w": 12,
+  "h": 8,
+  "init": [ "............", "............", "............", "............", "............", "SSSSSSSSSSSS", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "target": [ "............", "............", "....PPPP....", "....PPPP....", "....OOOO....", "DDDDSSSSDDDD", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "cards": [
+   {
+    "card": "deposit",
+    "mats": [
+     "O",
+     "P"
+    ],
+    "t": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mats": [
+     "O",
+     "P"
+    ],
+    "depth": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "card": "implant",
+    "depth": [
+     1,
+     2
+    ]
+   },
+   {
+    "card": "strip"
+   }
+  ],
+  "masks": [
+   {
+    "id": "A",
+    "open": [
+     [
+      0,
+      3
+     ],
+     [
+      8,
+      11
+     ]
+    ]
+   },
+   {
+    "id": "B",
+    "open": [
+     [
+      4,
+      7
+     ]
+    ]
+   }
+  ],
+  "par": 9,
+  "minRemovals": 24,
+  "reference": [
+   {
+    "card": "deposit",
+    "mat": "O",
+    "t": 1
+   },
+   {
+    "card": "deposit",
+    "mat": "P",
+    "t": 2
+   },
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose",
+    "mask": "A"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mat": "P",
+    "depth": 2
+   },
+   {
+    "card": "etch",
+    "mat": "O",
+    "depth": 1
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "implant",
+    "depth": 1
+   }
+  ],
+  "maxSteps": 20,
+  "tutorial": null
+ },
+ {
+  "schema": 1,
+  "id": "f3-1",
+  "fab": "f3",
+  "order": 1,
+  "title": "兩次圖形化",
+  "intro": "兩道光罩、兩種佈植深度：左邊佈植 2 格深，右邊只佈植 1 格深。一次光阻只能做一件事，記得每輪之間要去光阻。",
+  "teach": [
+   "lithography",
+   "ion_implantation"
+  ],
+  "factId": "fact#36",
+  "w": 12,
+  "h": 8,
+  "init": [ "............", "............", "............", "............", "............", "SSSSSSSSSSSS", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "target": [ "............", "............", "............", "............", "............", "SDDDSSSSDDDS", "SDDDSSSSSSSS", "SSSSSSSSSSSS" ],
+  "cards": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "implant",
+    "depth": [
+     1,
+     2
+    ]
+   },
+   {
+    "card": "strip"
+   }
+  ],
+  "masks": [
+   {
+    "id": "A",
+    "open": [
+     [
+      1,
+      3
+     ]
+    ]
+   },
+   {
+    "id": "B",
+    "open": [
+     [
+      8,
+      10
+     ]
+    ]
+   },
+   {
+    "id": "C",
+    "open": [
+     [
+      1,
+      10
+     ]
+    ]
+   }
+  ],
+  "par": 8,
+  "minRemovals": 0,
+  "reference": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose",
+    "mask": "A"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "expose",
+    "mask": "B"
+   },
+   {
+    "card": "implant",
+    "depth": 2
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "implant",
+    "depth": 1
+   },
+   {
+    "card": "strip"
+   }
+  ],
+  "maxSteps": 20,
+  "tutorial": null
+ },
+ {
+  "schema": 1,
+  "id": "f3-2",
+  "fab": "f3",
+  "order": 2,
+  "title": "接觸孔",
+  "intro": "同一次蝕刻要同時打到兩種深度：左邊的孔要穿過全部氧化層到矽，右邊遇到多晶矽閘極就該停。這就是蝕刻的選擇比。孔打開後順便佈植源極。",
+  "teach": [
+   "etching",
+   "ion_implantation"
+  ],
+  "factId": "fact#21",
+  "w": 12,
+  "h": 8,
+  "init": [ "............", "............", "............", "OOOOOOOOOOOO", "OOOOOPPOOOOO", "OOOOOOOOOOOO", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "target": [ "............", "............", "............", "O..OO..OOOOO", "O..OOPPOOOOO", "O..OOOOOOOOO", "SDDSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "cards": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mats": [
+     "O"
+    ],
+    "depth": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "card": "implant",
+    "depth": [
+     1
+    ]
+   },
+   {
+    "card": "strip"
+   }
+  ],
+  "masks": [
+   {
+    "id": "A",
+    "open": [
+     [
+      1,
+      2
+     ],
+     [
+      5,
+      6
+     ]
+    ]
+   },
+   {
+    "id": "B",
+    "open": [
+     [
+      1,
+      2
+     ]
+    ]
+   },
+   {
+    "id": "C",
+    "open": [
+     [
+      5,
+      6
+     ]
+    ]
+   }
+  ],
+  "par": 6,
+  "minRemovals": 8,
+  "reference": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose",
+    "mask": "A"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mat": "O",
+    "depth": 3
+   },
+   {
+    "card": "implant",
+    "depth": 1
+   },
+   {
+    "card": "strip"
+   }
+  ],
+  "maxSteps": 20,
+  "tutorial": null
+ },
+ {
+  "schema": 1,
+  "id": "f3-3",
+  "fab": "f3",
+  "order": 3,
+  "title": "鎢栓塞",
+  "intro": "打開接觸孔後填入金屬做成栓塞。孔深不一，必須「過量沉積」才填得滿深孔，再用 CMP 停在氧化層把多餘的金屬磨掉。",
+  "teach": [
+   "etching",
+   "metallization",
+   "cmp"
+  ],
+  "factId": "fact#26",
+  "w": 12,
+  "h": 8,
+  "init": [ "............", "............", "............", "OOOOOOOOOOOO", "OOOOOOOPPOOO", "OOOOOOOOOOOO", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "target": [ "............", "............", "............", "OOMMOOOMMOOO", "OOMMOOOPPOOO", "OOMMOOOOOOOO", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "cards": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mats": [
+     "O"
+    ],
+    "depth": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "deposit",
+    "mats": [
+     "M"
+    ],
+    "t": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "card": "cmp",
+    "stops": [
+     "O",
+     "P",
+     "M"
+    ]
+   }
+  ],
+  "masks": [
+   {
+    "id": "A",
+    "open": [
+     [
+      2,
+      3
+     ],
+     [
+      7,
+      8
+     ]
+    ]
+   },
+   {
+    "id": "B",
+    "open": [
+     [
+      2,
+      3
+     ]
+    ]
+   },
+   {
+    "id": "C",
+    "open": [
+     [
+      7,
+      8
+     ]
+    ]
+   }
+  ],
+  "par": 7,
+  "minRemovals": 36,
+  "reference": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose",
+    "mask": "A"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mat": "O",
+    "depth": 3
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "deposit",
+    "mat": "M",
+    "t": 3
+   },
+   {
+    "card": "cmp",
+    "stop": "O"
+   }
+  ],
+  "maxSteps": 20,
+  "tutorial": null
+ },
+ {
+  "schema": 1,
+  "id": "f3-4",
+  "fab": "f3",
+  "order": 4,
+  "title": "銅大馬士革",
+  "intro": "銅很難蝕刻，所以改成「先挖溝、再填金屬、最後磨平」。溝槽有多深，沉積就剛好多厚——恰好填滿，不浪費材料。",
+  "teach": [
+   "etching",
+   "metallization",
+   "cmp"
+  ],
+  "factId": "fact#33",
+  "w": 12,
+  "h": 8,
+  "init": [ "............", "............", "............", "............", "OOOOOOOOOOOO", "OOOOOOOOOOOO", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "target": [ "............", "............", "............", "............", "OOOOMMMMOOOO", "OOOOMMMMOOOO", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "cards": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mats": [
+     "O"
+    ],
+    "depth": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "deposit",
+    "mats": [
+     "M"
+    ],
+    "t": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "card": "cmp",
+    "stops": [
+     "O",
+     "S",
+     "M"
+    ]
+   }
+  ],
+  "masks": [
+   {
+    "id": "A",
+    "open": [
+     [
+      4,
+      7
+     ]
+    ]
+   },
+   {
+    "id": "B",
+    "open": [
+     [
+      0,
+      3
+     ]
+    ]
+   },
+   {
+    "id": "C",
+    "open": [
+     [
+      0,
+      3
+     ],
+     [
+      8,
+      11
+     ]
+    ]
+   }
+  ],
+  "par": 7,
+  "minRemovals": 24,
+  "reference": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose",
+    "mask": "A"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mat": "O",
+    "depth": 2
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "deposit",
+    "mat": "M",
+    "t": 2
+   },
+   {
+    "card": "cmp",
+    "stop": "O"
+   }
+  ],
+  "maxSteps": 20,
+  "tutorial": null,
+  "note": "真實製程要「過量電鍍」確保填滿（底部先長），遊戲簡化為孔洞不會發生，所以最省料的是恰好填滿。"
+ },
+ {
+  "schema": 1,
+  "id": "f4-1",
+  "fab": "f4",
+  "order": 1,
+  "title": "薄氧化＋偽閘極",
+  "intro": "先用多晶矽做「假閘極」，完成自對準佈植與氧化層填充後，再把假閘極挖掉、換成真正的金屬閘極。",
+  "teach": [
+   "thin_film",
+   "etching",
+   "cmp",
+   "metallization"
+  ],
+  "factId": "fact#38",
+  "w": 12,
+  "h": 8,
+  "init": [ "............", "............", "PPPPPPPPPPPP", "PPPPPPPPPPPP", "OOOOOOOOOOOO", "SSSSSSSSSSSS", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "target": [ "............", "............", "............", "OOOOOMMOOOOO", "OOOOOOOOOOOO", "DDDDDSSDDDDD", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "cards": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mats": [
+     "P",
+     "O"
+    ],
+    "depth": [
+     1,
+     2
+    ]
+   },
+   {
+    "card": "implant",
+    "depth": [
+     1
+    ]
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "deposit",
+    "mats": [
+     "O",
+     "M"
+    ],
+    "t": [
+     1,
+     2
+    ]
+   },
+   {
+    "card": "cmp",
+    "stops": [
+     "P",
+     "O"
+    ]
+   }
+  ],
+  "masks": [
+   {
+    "id": "A",
+    "open": [
+     [
+      0,
+      4
+     ],
+     [
+      7,
+      11
+     ]
+    ]
+   },
+   {
+    "id": "B",
+    "open": [
+     [
+      5,
+      6
+     ]
+    ]
+   }
+  ],
+  "par": 12,
+  "minRemovals": 48,
+  "reference": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose",
+    "mask": "A"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mat": "P",
+    "depth": 2
+   },
+   {
+    "card": "etch",
+    "mat": "O",
+    "depth": 1
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "implant",
+    "depth": 1
+   },
+   {
+    "card": "deposit",
+    "mat": "O",
+    "t": 2
+   },
+   {
+    "card": "cmp",
+    "stop": "P"
+   },
+   {
+    "card": "etch",
+    "mat": "P",
+    "depth": 2
+   },
+   {
+    "card": "deposit",
+    "mat": "M",
+    "t": 1
+   },
+   {
+    "card": "cmp",
+    "stop": "O"
+   }
+  ],
+  "maxSteps": 20,
+  "tutorial": null
+ },
+ {
+  "schema": 1,
+  "id": "f4-2",
+  "fab": "f4",
+  "order": 2,
+  "title": "鰭 Fin",
+  "intro": "先蝕刻矽留下兩根窄鰭，填入氧化層後磨平到鰭頂，再把氧化層回蝕一格，讓鰭突出來。",
+  "teach": [
+   "etching",
+   "cmp"
+  ],
+  "factId": "fact#40",
+  "w": 12,
+  "h": 8,
+  "init": [ "............", "............", "............", "............", "SSSSSSSSSSSS", "SSSSSSSSSSSS", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "target": [ "............", "............", "............", "............", "...SS..SS...", "OOOSSOOSSOOO", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "cards": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mats": [
+     "S",
+     "O"
+    ],
+    "depth": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "deposit",
+    "mats": [
+     "O"
+    ],
+    "t": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "card": "cmp",
+    "stops": [
+     "S",
+     "O"
+    ]
+   }
+  ],
+  "masks": [
+   {
+    "id": "A",
+    "open": [
+     [
+      0,
+      2
+     ],
+     [
+      5,
+      6
+     ],
+     [
+      9,
+      11
+     ]
+    ]
+   },
+   {
+    "id": "B",
+    "open": [
+     [
+      3,
+      4
+     ],
+     [
+      7,
+      8
+     ]
+    ]
+   }
+  ],
+  "par": 7,
+  "minRemovals": 20,
+  "reference": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose",
+    "mask": "A"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mat": "S",
+    "depth": 2
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "deposit",
+    "mat": "O",
+    "t": 1
+   },
+   {
+    "card": "cmp",
+    "stop": "S"
+   }
+  ],
+  "maxSteps": 20,
+  "tutorial": null
+ },
+ {
+  "schema": 1,
+  "id": "f4-3",
+  "fab": "f4",
+  "order": 3,
+  "title": "兩層導線",
+  "intro": "重複大馬士革模組：先做第一層導線，再蓋一層氧化層，在另一個位置做第二層導線。每一層都要「挖溝、填金屬、磨平」。",
+  "teach": [
+   "etching",
+   "metallization",
+   "cmp"
+  ],
+  "factId": "fact#34",
+  "w": 12,
+  "h": 8,
+  "init": [ "............", "............", "............", "............", "OOOOOOOOOOOO", "OOOOOOOOOOOO", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "target": [ "............", "............", "OOOOOOOMMMMO", "OOOOOOOMMMMO", "OMMMMOOOOOOO", "OMMMMOOOOOOO", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "cards": [
+   {
+    "card": "deposit",
+    "mats": [
+     "O",
+     "M"
+    ],
+    "t": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mats": [
+     "O"
+    ],
+    "depth": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "cmp",
+    "stops": [
+     "O",
+     "S",
+     "M"
+    ]
+   }
+  ],
+  "masks": [
+   {
+    "id": "A",
+    "open": [
+     [
+      1,
+      4
+     ]
+    ]
+   },
+   {
+    "id": "B",
+    "open": [
+     [
+      7,
+      10
+     ]
+    ]
+   },
+   {
+    "id": "C",
+    "open": [
+     [
+      1,
+      4
+     ],
+     [
+      7,
+      10
+     ]
+    ]
+   }
+  ],
+  "par": 13,
+  "minRemovals": 48,
+  "reference": [
+   {
+    "card": "deposit",
+    "mat": "O",
+    "t": 2
+   },
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose",
+    "mask": "A"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "expose",
+    "mask": "B"
+   },
+   {
+    "card": "etch",
+    "mat": "O",
+    "depth": 2
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mat": "O",
+    "depth": 2
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "deposit",
+    "mat": "M",
+    "t": 2
+   },
+   {
+    "card": "cmp",
+    "stop": "O"
+   },
+   {
+    "card": "deposit",
+    "mat": "O",
+    "t": 2
+   },
+   {
+    "card": "cmp",
+    "stop": "M"
+   }
+  ],
+  "maxSteps": 20,
+  "tutorial": null
+ },
+ {
+  "schema": 1,
+  "id": "f4-4",
+  "fab": "f4",
+  "order": 4,
+  "title": "通孔＋導線",
+  "intro": "雙大馬士革：先蝕出通孔打到下層導線，再蝕出較淺的溝槽，最後一次填金屬並磨平。溝槽只蝕 1 格——蝕刻深度要拿捏。",
+  "teach": [
+   "etching",
+   "metallization",
+   "cmp"
+  ],
+  "factId": "fact#35",
+  "w": 12,
+  "h": 8,
+  "init": [ "............", "............", "............", "............", "OOMMMMOOOOOO", "OOMMMMOOOOOO", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "target": [ "............", "............", "OOOMMMMMMOOO", "OOOMMOOOOOOO", "OOMMMMOOOOOO", "OOMMMMOOOOOO", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "cards": [
+   {
+    "card": "deposit",
+    "mats": [
+     "O",
+     "M"
+    ],
+    "t": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mats": [
+     "O"
+    ],
+    "depth": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "cmp",
+    "stops": [
+     "O",
+     "M"
+    ]
+   }
+  ],
+  "masks": [
+   {
+    "id": "V",
+    "open": [
+     [
+      3,
+      4
+     ]
+    ]
+   },
+   {
+    "id": "T",
+    "open": [
+     [
+      3,
+      8
+     ]
+    ]
+   },
+   {
+    "id": "X",
+    "open": [
+     [
+      2,
+      5
+     ]
+    ]
+   }
+  ],
+  "par": 11,
+  "minRemovals": 24,
+  "reference": [
+   {
+    "card": "deposit",
+    "mat": "O",
+    "t": 2
+   },
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose",
+    "mask": "V"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "expose",
+    "mask": "T"
+   },
+   {
+    "card": "etch",
+    "mat": "O",
+    "depth": 1
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mat": "O",
+    "depth": 1
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "deposit",
+    "mat": "M",
+    "t": 2
+   },
+   {
+    "card": "cmp",
+    "stop": "O"
+   }
+  ],
+  "maxSteps": 20,
+  "tutorial": null
+ },
+ {
+  "schema": 1,
+  "id": "f4-5",
+  "fab": "f4",
+  "order": 5,
+  "title": "完整 MOSFET＋金屬",
+  "intro": "前段＋後段整合：先做閘極與自對準源汲極，再蓋層間氧化層、打接觸孔、填金屬，最後 CMP 停在閘極多晶矽，讓接觸和閘極頂面齊平。",
+  "teach": [
+   "thin_film",
+   "ion_implantation",
+   "etching",
+   "metallization",
+   "cmp"
+  ],
+  "factId": "fact#36",
+  "w": 12,
+  "h": 8,
+  "init": [ "............", "............", "............", "............", "............", "............", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "target": [ "............", "............", "............", "............", "OMMOOPPOOMMO", "OMMOOOOOOMMO", "DDDDDSSDDDDD", "SSSSSSSSSSSS" ],
+  "cards": [
+   {
+    "card": "deposit",
+    "mats": [
+     "O",
+     "P",
+     "M"
+    ],
+    "t": [
+     1,
+     2
+    ]
+   },
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mats": [
+     "O",
+     "P"
+    ],
+    "depth": [
+     1,
+     2
+    ]
+   },
+   {
+    "card": "implant",
+    "depth": [
+     1
+    ]
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "cmp",
+    "stops": [
+     "P",
+     "O"
+    ]
+   }
+  ],
+  "masks": [
+   {
+    "id": "A",
+    "open": [
+     [
+      0,
+      4
+     ],
+     [
+      7,
+      11
+     ]
+    ]
+   },
+   {
+    "id": "C",
+    "open": [
+     [
+      1,
+      2
+     ],
+     [
+      9,
+      10
+     ]
+    ]
+   }
+  ],
+  "par": 17,
+  "minRemovals": 48,
+  "reference": [
+   {
+    "card": "deposit",
+    "mat": "O",
+    "t": 1
+   },
+   {
+    "card": "deposit",
+    "mat": "P",
+    "t": 1
+   },
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose",
+    "mask": "A"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mat": "P",
+    "depth": 1
+   },
+   {
+    "card": "etch",
+    "mat": "O",
+    "depth": 1
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "implant",
+    "depth": 1
+   },
+   {
+    "card": "deposit",
+    "mat": "O",
+    "t": 2
+   },
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose",
+    "mask": "C"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mat": "O",
+    "depth": 2
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "deposit",
+    "mat": "M",
+    "t": 2
+   },
+   {
+    "card": "cmp",
+    "stop": "P"
+   }
+  ],
+  "maxSteps": 20,
+  "tutorial": null
+ },
+ {
+  "schema": 1,
+  "id": "f5-1",
+  "fab": "f5",
+  "order": 1,
+  "title": "雙重圖形：深淺兩道",
+  "intro": "一道光罩一個任務：第一道把左邊氧化層蝕穿，第二道只把右邊蝕掉一半。兩個圖形不能擠在同一次曝光裡。",
+  "teach": [
+   "lithography",
+   "etching"
+  ],
+  "factId": "fact#46",
+  "w": 12,
+  "h": 8,
+  "init": [ "............", "............", "............", "OOOOOOOOOOOO", "OOOOOOOOOOOO", "SSSSSSSSSSSS", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "target": [ "............", "............", "............", "O..OOO..OOOO", "O..OOOOOOOOO", "SSSSSSSSSSSS", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "cards": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mats": [
+     "O"
+    ],
+    "depth": [
+     1,
+     2
+    ]
+   },
+   {
+    "card": "strip"
+   }
+  ],
+  "masks": [
+   {
+    "id": "A",
+    "open": [
+     [
+      1,
+      2
+     ]
+    ]
+   },
+   {
+    "id": "B",
+    "open": [
+     [
+      6,
+      7
+     ]
+    ]
+   },
+   {
+    "id": "C",
+    "open": [
+     [
+      1,
+      2
+     ],
+     [
+      6,
+      7
+     ]
+    ]
+   }
+  ],
+  "par": 8,
+  "minRemovals": 6,
+  "reference": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose",
+    "mask": "A"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "expose",
+    "mask": "B"
+   },
+   {
+    "card": "etch",
+    "mat": "O",
+    "depth": 1
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mat": "O",
+    "depth": 1
+   },
+   {
+    "card": "strip"
+   }
+  ],
+  "maxSteps": 20,
+  "tutorial": null
+ },
+ {
+  "schema": 1,
+  "id": "f5-2",
+  "fab": "f5",
+  "order": 2,
+  "title": "零浪費：雙深度溝槽",
+  "intro": "左邊溝槽深 3 格、右邊深 1 格，要一次填滿金屬並磨平。每多磨掉一格材料就多一分浪費，挑戰零浪費。",
+  "teach": [
+   "etching",
+   "metallization",
+   "cmp"
+  ],
+  "factId": "fact#39",
+  "w": 12,
+  "h": 8,
+  "init": [ "............", "............", "............", "OOOOOOOOOOOO", "OOOOOOOOOOOO", "OOOOOOOOOOOO", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "target": [ "............", "............", "............", "OMMMOOOOMMMO", "OMMMOOOOOOOO", "OMMMOOOOOOOO", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "cards": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mats": [
+     "O"
+    ],
+    "depth": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "deposit",
+    "mats": [
+     "M"
+    ],
+    "t": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "card": "cmp",
+    "stops": [
+     "O",
+     "S",
+     "M"
+    ]
+   }
+  ],
+  "masks": [
+   {
+    "id": "A",
+    "open": [
+     [
+      1,
+      3
+     ]
+    ]
+   },
+   {
+    "id": "B",
+    "open": [
+     [
+      8,
+      10
+     ]
+    ]
+   },
+   {
+    "id": "C",
+    "open": [
+     [
+      1,
+      3
+     ],
+     [
+      8,
+      10
+     ]
+    ]
+   }
+  ],
+  "par": 10,
+  "minRemovals": 36,
+  "reference": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose",
+    "mask": "A"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "expose",
+    "mask": "B"
+   },
+   {
+    "card": "etch",
+    "mat": "O",
+    "depth": 2
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mat": "O",
+    "depth": 1
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "deposit",
+    "mat": "M",
+    "t": 3
+   },
+   {
+    "card": "cmp",
+    "stop": "O"
+   }
+  ],
+  "maxSteps": 20,
+  "tutorial": null
+ },
+ {
+  "schema": 1,
+  "id": "f5-3",
+  "fab": "f5",
+  "order": 3,
+  "title": "鰭式閘極",
+  "intro": "做出鰭之後，鋪上閘極介電層與多晶矽，再用微影把多晶矽只留在左邊那根鰭上。",
+  "teach": [
+   "etching",
+   "cmp",
+   "thin_film",
+   "lithography"
+  ],
+  "factId": "fact#43",
+  "w": 12,
+  "h": 8,
+  "init": [ "............", "............", "............", "............", "SSSSSSSSSSSS", "SSSSSSSSSSSS", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "target": [ "............", "............", "...PP.......", "..POOP.OO...", "OOOSSOOSSOOO", "OOOSSOOSSOOO", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "cards": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mats": [
+     "S",
+     "O",
+     "P"
+    ],
+    "depth": [
+     1,
+     2
+    ]
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "deposit",
+    "mats": [
+     "O",
+     "P"
+    ],
+    "t": [
+     1,
+     2
+    ]
+   },
+   {
+    "card": "cmp",
+    "stops": [
+     "S",
+     "O"
+    ]
+   }
+  ],
+  "masks": [
+   {
+    "id": "A",
+    "open": [
+     [
+      0,
+      2
+     ],
+     [
+      5,
+      6
+     ],
+     [
+      9,
+      11
+     ]
+    ]
+   },
+   {
+    "id": "B",
+    "open": [
+     [
+      3,
+      4
+     ],
+     [
+      7,
+      8
+     ]
+    ]
+   },
+   {
+    "id": "G",
+    "open": [
+     [
+      0,
+      1
+     ],
+     [
+      6,
+      11
+     ]
+    ]
+   }
+  ],
+  "par": 14,
+  "minRemovals": 28,
+  "reference": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose",
+    "mask": "A"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mat": "S",
+    "depth": 2
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "deposit",
+    "mat": "O",
+    "t": 1
+   },
+   {
+    "card": "cmp",
+    "stop": "S"
+   },
+   {
+    "card": "deposit",
+    "mat": "O",
+    "t": 1
+   },
+   {
+    "card": "deposit",
+    "mat": "P",
+    "t": 1
+   },
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose",
+    "mask": "G"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mat": "P",
+    "depth": 1
+   },
+   {
+    "card": "strip"
+   }
+  ],
+  "maxSteps": 20,
+  "tutorial": null
+ },
+ {
+  "schema": 1,
+  "id": "f5-4",
+  "fab": "f5",
+  "order": 4,
+  "title": "STI＋MOSFET 全流程",
+  "intro": "先做隔離（STI），再做閘極與自對準源汲極。隔離區的氧化層會擋住佈植，所以只有中間的矽會變成源／汲極。",
+  "teach": [
+   "etching",
+   "cmp",
+   "thin_film",
+   "ion_implantation"
+  ],
+  "factId": "fact#47",
+  "w": 12,
+  "h": 8,
+  "init": [ "............", "............", "............", "............", "SSSSSSSSSSSS", "SSSSSSSSSSSS", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "target": [ "............", "............", ".....PP.....", ".....OO.....", "OODDDSSDDDOO", "OOSSSSSSSSOO", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "cards": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mats": [
+     "S",
+     "O",
+     "P"
+    ],
+    "depth": [
+     1,
+     2
+    ]
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "deposit",
+    "mats": [
+     "O",
+     "P"
+    ],
+    "t": [
+     1,
+     2
+    ]
+   },
+   {
+    "card": "cmp",
+    "stops": [
+     "S",
+     "O"
+    ]
+   },
+   {
+    "card": "implant",
+    "depth": [
+     1
+    ]
+   }
+  ],
+  "masks": [
+   {
+    "id": "T",
+    "open": [
+     [
+      0,
+      1
+     ],
+     [
+      10,
+      11
+     ]
+    ]
+   },
+   {
+    "id": "A",
+    "open": [
+     [
+      0,
+      4
+     ],
+     [
+      7,
+      11
+     ]
+    ]
+   }
+  ],
+  "par": 16,
+  "minRemovals": 44,
+  "reference": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose",
+    "mask": "T"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mat": "S",
+    "depth": 2
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "deposit",
+    "mat": "O",
+    "t": 2
+   },
+   {
+    "card": "cmp",
+    "stop": "S"
+   },
+   {
+    "card": "deposit",
+    "mat": "O",
+    "t": 1
+   },
+   {
+    "card": "deposit",
+    "mat": "P",
+    "t": 1
+   },
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose",
+    "mask": "A"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mat": "P",
+    "depth": 1
+   },
+   {
+    "card": "etch",
+    "mat": "O",
+    "depth": 1
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "implant",
+    "depth": 1
+   }
+  ],
+  "maxSteps": 20,
+  "tutorial": null
+ },
+ {
+  "schema": 1,
+  "id": "f5-5",
+  "fab": "f5",
+  "order": 5,
+  "title": "後閘極＋接觸 全流程",
+  "intro": "終章：假閘極換真閘極，再蓋層間介電層……不，這次直接在平坦表面打接觸孔、填金屬、磨平。步數上限很緊，每一步都要有意義。",
+  "teach": [
+   "thin_film",
+   "ion_implantation",
+   "etching",
+   "cmp",
+   "metallization"
+  ],
+  "factId": "fact#46",
+  "w": 12,
+  "h": 8,
+  "init": [ "............", "............", "PPPPPPPPPPPP", "PPPPPPPPPPPP", "OOOOOOOOOOOO", "SSSSSSSSSSSS", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "target": [ "............", "............", "............", "OMMOOMMOOMMO", "OMMOOOOOOMMO", "DDDDDSSDDDDD", "SSSSSSSSSSSS", "SSSSSSSSSSSS" ],
+  "cards": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mats": [
+     "P",
+     "O"
+    ],
+    "depth": [
+     1,
+     2
+    ]
+   },
+   {
+    "card": "implant",
+    "depth": [
+     1
+    ]
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "deposit",
+    "mats": [
+     "O",
+     "M"
+    ],
+    "t": [
+     1,
+     2
+    ]
+   },
+   {
+    "card": "cmp",
+    "stops": [
+     "P",
+     "O"
+    ]
+   }
+  ],
+  "masks": [
+   {
+    "id": "A",
+    "open": [
+     [
+      0,
+      4
+     ],
+     [
+      7,
+      11
+     ]
+    ]
+   },
+   {
+    "id": "B",
+    "open": [
+     [
+      5,
+      6
+     ]
+    ]
+   },
+   {
+    "id": "C",
+    "open": [
+     [
+      1,
+      2
+     ],
+     [
+      9,
+      10
+     ]
+    ]
+   }
+  ],
+  "par": 16,
+  "minRemovals": 60,
+  "reference": [
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose",
+    "mask": "A"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mat": "P",
+    "depth": 2
+   },
+   {
+    "card": "etch",
+    "mat": "O",
+    "depth": 1
+   },
+   {
+    "card": "implant",
+    "depth": 1
+   },
+   {
+    "card": "cmp",
+    "stop": "O"
+   },
+   {
+    "card": "deposit",
+    "mat": "O",
+    "t": 2
+   },
+   {
+    "card": "spin"
+   },
+   {
+    "card": "expose",
+    "mask": "B"
+   },
+   {
+    "card": "expose",
+    "mask": "C"
+   },
+   {
+    "card": "develop"
+   },
+   {
+    "card": "etch",
+    "mat": "O",
+    "depth": 2
+   },
+   {
+    "card": "strip"
+   },
+   {
+    "card": "deposit",
+    "mat": "M",
+    "t": 2
+   },
+   {
+    "card": "cmp",
+    "stop": "O"
+   }
+  ],
+  "maxSteps": 20,
+  "tutorial": null
+ }
+]
