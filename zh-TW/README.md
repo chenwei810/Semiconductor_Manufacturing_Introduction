@@ -6,7 +6,7 @@
 
 **跟著一片晶圓，走完從沙子到晶片的旅程**
 
-🌐 **繁體中文** ｜ [English](../en/README.md) ｜ [日本語](../ja/README.md) ｜ [한국어](../ko/README.md) ｜ [總覽首頁](../README.md)
+🌐 [簡體中文](../zh-CN/README.md) ｜ **繁體中文** ｜ [English](../en/README.md) ｜ [日本語](../ja/README.md) ｜ [한국어](../ko/README.md) ｜ [總覽首頁](../README.md)
 
 </div>
 

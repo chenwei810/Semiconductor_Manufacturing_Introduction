@@ -1,4 +1,4 @@
-<!-- source: zh-TW/README.md | sha: 0a324b6ccd61 -->
+<!-- source: zh-TW/README.md | sha: fa04466ddffc -->
 
 <div align="center">
 
@@ -8,7 +8,7 @@
 
 **Follow one wafer on its journey from sand to chip**
 
-🌐 [繁體中文](../zh-TW/README.md) ｜ **English** ｜ [日本語](../ja/README.md) ｜ [한국어](../ko/README.md) ｜ [Home](../README.md)
+🌐 [简体中文](../zh-CN/README.md) ｜ [繁體中文](../zh-TW/README.md) ｜ **English** ｜ [日本語](../ja/README.md) ｜ [한국어](../ko/README.md) ｜ [Home](../README.md)
 
 </div>
 

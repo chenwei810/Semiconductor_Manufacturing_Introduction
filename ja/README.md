@@ -1,4 +1,4 @@
-<!-- source: zh-TW/README.md | sha: 0a324b6ccd61 -->
+<!-- source: zh-TW/README.md | sha: fa04466ddffc -->
 
 <div align="center">
 
@@ -8,7 +8,7 @@
 
 **1 枚のウェーハを追いかけて、砂からチップまでの旅をたどる**
 
-🌐 [繁體中文](../zh-TW/README.md) ｜ [English](../en/README.md) ｜ **日本語** ｜ [한국어](../ko/README.md) ｜ [ホーム](../README.md)
+🌐 [简体中文](../zh-CN/README.md) ｜ [繁體中文](../zh-TW/README.md) ｜ [English](../en/README.md) ｜ **日本語** ｜ [한국어](../ko/README.md) ｜ [ホーム](../README.md)
 
 </div>
 

@@ -1,4 +1,4 @@
-<!-- source: zh-TW/README.md | sha: 0a324b6ccd61 -->
+<!-- source: zh-TW/README.md | sha: fa04466ddffc -->
 
 <div align="center">
 
@@ -8,7 +8,7 @@
 
 **웨이퍼 한 장을 따라 모래에서 칩까지의 여정을 걸어 봅니다**
 
-🌐 [繁體中文](../zh-TW/README.md) ｜ [English](../en/README.md) ｜ [日本語](../ja/README.md) ｜ **한국어** ｜ [홈](../README.md)
+🌐 [简体中文](../zh-CN/README.md) ｜ [繁體中文](../zh-TW/README.md) ｜ [English](../en/README.md) ｜ [日本語](../ja/README.md) ｜ **한국어** ｜ [홈](../README.md)
 
 </div>
 
