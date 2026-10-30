@@ -1,0 +1,389 @@
+{
+  "notes": {
+    "README.md": {
+      "id": "oH3n0QUtQBils5KxHVKMDA",
+      "title": "半導體製造概論<br>Introduction to Semiconductor Manufacturing",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/Hkc7ifG6zg"
+    },
+    "zh-TW/0-before-you-start/00-overview/README.md": {
+      "id": "pfXTKMnLQzeza6vGHw455g",
+      "title": "第 0 章　半導體製造全景：一顆晶片的一生",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/HyhQifMTGx"
+    },
+    "zh-TW/0-before-you-start/01-how-a-fab-works/README.md": {
+      "id": "ptNVuMKGRZuWsI7QuX6y6A",
+      "title": "第 1 章　晶圓廠如何運作：無塵室、自動搬運、機台與人",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/S1CmoMfafl"
+    },
+    "zh-TW/0-before-you-start/README.md": {
+      "id": "DLfzDhFySky6IQarvF6YYQ",
+      "title": "第 0 部　開始之前",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/ByeViGz6zx"
+    },
+    "zh-TW/1-fundamentals/02-transistor-basics/README.md": {
+      "id": "PKSVqc-sQLy32ggHZtKKKA",
+      "title": "第 2 章　從物理到電晶體：認識我們要製造的東西",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/S1zVsGfTMl"
+    },
+    "zh-TW/1-fundamentals/03-sand-to-wafer/README.md": {
+      "id": "NMHEUwGhTbalwrW2RNEDjA",
+      "title": "第 3 章　從沙子到晶圓：一切的起點",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/H1XNszG6fg"
+    },
+    "zh-TW/1-fundamentals/README.md": {
+      "id": "PsljT2cwS6uaqGpjXUsgYA",
+      "title": "第 1 部　基礎",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/B1HVsGGpfe"
+    },
+    "zh-TW/2-process-modules/04-lithography/README.md": {
+      "id": "O_icUcywRbOLUK-qWAsKSA",
+      "title": "第 4 章　微影：把電路圖「印」到晶圓上",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/HJvEoMG6fe"
+    },
+    "zh-TW/2-process-modules/05-thin-films/README.md": {
+      "id": "iLMANXCKTUqS7zdQnKb41A",
+      "title": "第 5 章　薄膜：一層一層鋪上材料",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/HJt4oMzpGl"
+    },
+    "zh-TW/2-process-modules/06-etching/README.md": {
+      "id": "F8xg6EjESQOlOUEg-24IMA",
+      "title": "第 6 章　蝕刻：照著圖形把材料挖掉",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/BkoVszzaMl"
+    },
+    "zh-TW/2-process-modules/07-ion-implantation/README.md": {
+      "id": "RE8lxRk5TIC17bwZ7EMzQA",
+      "title": "第 7 章　離子佈植與熱處理：改變矽的電性",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/SJTNiMfTfx"
+    },
+    "zh-TW/2-process-modules/08-cmp/README.md": {
+      "id": "rMGXeLnwS2e3YgjIx3AQAg",
+      "title": "第 8 章　CMP：把晶圓磨平",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/Hy1rszGaGx"
+    },
+    "zh-TW/2-process-modules/09-cleaning/README.md": {
+      "id": "0ja3h5RvR7m_LnUtl9MeQA",
+      "title": "第 9 章　清洗與污染控制：看不見的敵人",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/BJgBjfzpzx"
+    },
+    "zh-TW/2-process-modules/10-metallization/README.md": {
+      "id": "SR5C9e0jTwOXhE_xOgjnrg",
+      "title": "第 10 章　金屬化：把電晶體連起來",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/SyMHjMM6Me"
+    },
+    "zh-TW/2-process-modules/README.md": {
+      "id": "ZHm5foqlQVSu2kNAWld9rQ",
+      "title": "第 2 部　製程模組",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/B1VriGzTMl"
+    },
+    "zh-TW/3-integration/11-cmos-process-flow/README.md": {
+      "id": "dLBXOW6ORb-18-DLL5WNrw",
+      "title": "第 11 章　走一遍完整的 CMOS 流程：把模組串起來",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/r18Bofz6Gl"
+    },
+    "zh-TW/3-integration/12-advanced-transistors/README.md": {
+      "id": "joeD073DQBafnayemoHInQ",
+      "title": "第 12 章　先進電晶體結構：從平面到立體",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/SyOHofGafe"
+    },
+    "zh-TW/3-integration/13-memory/README.md": {
+      "id": "nnyqj55XQ0WAD5HCNAJFXA",
+      "title": "第 13 章　記憶體製程：DRAM、3D NAND 與 HBM",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/Hk9rsMfTGx"
+    },
+    "zh-TW/3-integration/14-process-nodes/README.md": {
+      "id": "q614ysKwSRS-tkmG5hF8nQ",
+      "title": "第 14 章　「幾奈米」是什麼意思：讀懂製程節點",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/Hk3rszM6zx"
+    },
+    "zh-TW/3-integration/README.md": {
+      "id": "bNbXuJoFSQGUjBqctspV6Q",
+      "title": "第 3 部　製程整合",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/rkpHiMzTGg"
+    },
+    "zh-TW/4-yield-and-quality/15-metrology/README.md": {
+      "id": "HY-R37iKT2yI67PI_oaK3w",
+      "title": "第 15 章　量測與檢測：工廠的眼睛",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/BkJLsGzazl"
+    },
+    "zh-TW/4-yield-and-quality/16-yield-analysis/README.md": {
+      "id": "5QO3DhURQb-jMatefVYqDg",
+      "title": "第 16 章　良率與故障分析：找出晶片壞掉的原因",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/SyWIsfzpMg"
+    },
+    "zh-TW/4-yield-and-quality/17-process-control/README.md": {
+      "id": "1f2PzW6dRxus65t7mvmQOA",
+      "title": "第 17 章　製程控制：用數據讓製程保持穩定",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/Bkm8oGzpGx"
+    },
+    "zh-TW/4-yield-and-quality/18-abnormality-handling/README.md": {
+      "id": "PC2rrzUZQ_aifkdV6fmMWQ",
+      "title": "第 18 章　異常處理與工程變更：出事時工廠怎麼反應",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/SkSUjMMpMx"
+    },
+    "zh-TW/4-yield-and-quality/README.md": {
+      "id": "CvEex50GTNy1Tj8AUAXeyg",
+      "title": "第 4 部　品質與良率",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/B1UUszzTfl"
+    },
+    "zh-TW/5-backend/19-wafer-test/README.md": {
+      "id": "itlA7q5vRV2vrMW4e2tuHQ",
+      "title": "第 19 章　晶圓測試：WAT 與 CP",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/Byu8jzM6fg"
+    },
+    "zh-TW/5-backend/20-packaging/README.md": {
+      "id": "v-PoYc49Q9q92-uw4z3f5w",
+      "title": "第 20 章　封裝：讓晶片能被使用",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/BycIsGf6Gx"
+    },
+    "zh-TW/5-backend/21-advanced-packaging/README.md": {
+      "id": "G0x9I931Qb2f23OhxpI5kw",
+      "title": "第 21 章　先進封裝：把多顆晶片整合在一起",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/Sk38iGfTGx"
+    },
+    "zh-TW/5-backend/22-final-test-and-reliability/README.md": {
+      "id": "kn3TYCTDSO6P84ucLhOsgw",
+      "title": "第 22 章　最終測試與可靠度：確保晶片能用很多年",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/HJ0LjGzpzg"
+    },
+    "zh-TW/5-backend/README.md": {
+      "id": "o1nG833JR5eNjstGoRORzA",
+      "title": "第 5 部　後段：測試與封裝",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/BklPjzfaGx"
+    },
+    "zh-TW/6-beyond-the-fab/23-fab-systems/README.md": {
+      "id": "kOrEHQ3WSGqlPIjKCEzl_A",
+      "title": "第 23 章　工廠如何被系統管理：一片晶圓為什麼不會走錯路",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/Sybvszz6Gg"
+    },
+    "zh-TW/6-beyond-the-fab/24-process-and-firmware/README.md": {
+      "id": "xpWgH0C7QcKWGDgsL97DIw",
+      "title": "第 24 章　製程如何影響韌體：給軟韌體工程師的硬體真相",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/S1mPszfpzl"
+    },
+    "zh-TW/6-beyond-the-fab/README.md": {
+      "id": "CXS8cUPxSGK-4HE3e89meA",
+      "title": "第 6 部　走出晶圓廠",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/SySwoGMpzl"
+    },
+    "zh-TW/README.md": {
+      "id": "j_FlaEhWRl6v00gAlB_yyg",
+      "title": "半導體製造概論",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/rJvPjfMTzl"
+    },
+    "zh-TW/appendix/README.md": {
+      "id": "IovbubYBTkOHohbR0Lpq9g",
+      "title": "附錄",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/SJYPjMM6Mg"
+    },
+    "zh-TW/appendix/fab-jargon.md": {
+      "id": "4cCE0qCMRHSZJ43MTLa20Q",
+      "title": "附錄 B　現場行話",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/Hysvozf6Me"
+    },
+    "zh-TW/appendix/further-reading.md": {
+      "id": "W1WYl8_BRu-wC_z3lVz9DA",
+      "title": "附錄 C　延伸閱讀",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/Sy3wiGG6zg"
+    },
+    "zh-TW/appendix/glossary.md": {
+      "id": "TCFoYQU5QZKrpOcb2URNhQ",
+      "title": "附錄 A　術語總表",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/Hy0woMGafe"
+    },
+    "en/0-before-you-start/00-overview/README.md": {
+      "id": "PyIE_kpIRUK5yVSokiDBNA",
+      "title": "Chapter 0: The Big Picture — The Life of a Chip",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/Bkx_oGfaGg"
+    },
+    "en/0-before-you-start/01-how-a-fab-works/README.md": {
+      "id": "qtuKzjgxQzKFTV85g2LSoQ",
+      "title": "Chapter 1: How a Fab Works — Cleanrooms, Automation, Tools and People",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/rkGdifMpfg"
+    },
+    "en/0-before-you-start/README.md": {
+      "id": "yYMoaUvBQvGaZI87NKFQCw",
+      "title": "Part 0: Before You Start",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/SkVujfMpGx"
+    },
+    "en/1-fundamentals/02-transistor-basics/README.md": {
+      "id": "7KjmUtfiRo-mcW7nQsmL8g",
+      "title": "Chapter 2: From Physics to Transistors — Meet What We Are Building",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/SJIujfz6ze"
+    },
+    "en/1-fundamentals/03-sand-to-wafer/README.md": {
+      "id": "l0vJ3vYyS_GI60_MNJyBjQ",
+      "title": "Chapter 3: From Sand to Wafer — Where It All Begins",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/SJDujzGTMe"
+    },
+    "en/1-fundamentals/README.md": {
+      "id": "TUwXVepDQmC9ceisyvt3EQ",
+      "title": "Part 1: Fundamentals",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/BJYOsfzTMx"
+    },
+    "en/2-process-modules/04-lithography/README.md": {
+      "id": "HJlFOfNlSpqqJKY5KWIiJw",
+      "title": "Chapter 4: Lithography — Printing the Circuit onto the Wafer",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/SkoOsffpzl"
+    },
+    "en/2-process-modules/05-thin-films/README.md": {
+      "id": "5fv3oecTSuOYkQGdOjAeeA",
+      "title": "Chapter 5: Thin Films — Building Up Layer by Layer",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/BypujMzaMe"
+    },
+    "en/2-process-modules/06-etching/README.md": {
+      "id": "NmugqfQkQSe_sS84MXlGnw",
+      "title": "Chapter 6: Etching — Carving Out the Pattern",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/rJ1KoffTzg"
+    },
+    "en/2-process-modules/07-ion-implantation/README.md": {
+      "id": "Q7Idd-mNR-OKAJxavgQ0Pg",
+      "title": "Chapter 7: Ion Implantation and Thermal Processing — Changing How Silicon Conducts",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/S1lYofM6fx"
+    },
+    "en/2-process-modules/08-cmp/README.md": {
+      "id": "Cr6nkkvrQ36ottCPoul5ow",
+      "title": "Chapter 8: CMP — Polishing the Wafer Flat",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/ryfFoffTMl"
+    },
+    "en/2-process-modules/09-cleaning/README.md": {
+      "id": "JfRKl-yOQj-3KHpr9v40gw",
+      "title": "Chapter 9: Cleaning and Contamination Control — The Invisible Enemy",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/Hk4FizMaGl"
+    },
+    "en/2-process-modules/10-metallization/README.md": {
+      "id": "wTXIeT5xSYq44R7-FpEePw",
+      "title": "Chapter 10: Metallization — Wiring the Transistors Together",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/BkIFjMGpfl"
+    },
+    "en/2-process-modules/README.md": {
+      "id": "Of1SpBdoRn6DR5vhVrAgxw",
+      "title": "Part 2: Process Modules",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/BkuYsfzpMe"
+    },
+    "en/3-integration/11-cmos-process-flow/README.md": {
+      "id": "8-_VU-2cQWyiXOhDljWozQ",
+      "title": "Chapter 11: A Complete CMOS Process Flow — Putting the Modules Together",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/S19KjGfaMg"
+    },
+    "en/3-integration/12-advanced-transistors/README.md": {
+      "id": "SYeMaSI1SEOt2M6LVieGCA",
+      "title": "Chapter 12: Advanced Transistor Structures — From Planar to 3D",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/H1nFszMTMl"
+    },
+    "en/3-integration/13-memory/README.md": {
+      "id": "fcN8G7d1RzixL4FvBSo_Vg",
+      "title": "Chapter 13: Memory Processes — DRAM, 3D NAND and HBM",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/HJaYjMGpMl"
+    },
+    "en/3-integration/14-process-nodes/README.md": {
+      "id": "QlwvTcLHTD6x6HKX7dDBqg",
+      "title": "Chapter 14: What Does \"3 nm\" Really Mean? — Understanding Process Nodes",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/rJyqiGGpGe"
+    },
+    "en/3-integration/README.md": {
+      "id": "ASQ7HyckRlOJbsu7DVOyQQ",
+      "title": "Part 3: Process Integration",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/S1ZqszzTGl"
+    },
+    "en/4-yield-and-quality/15-metrology/README.md": {
+      "id": "pIGPotUdTaOpfyS3QeqEVw",
+      "title": "Chapter 15: Metrology and Inspection — The Eyes of the Fab",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/SyQqsfG6Gl"
+    },
+    "en/4-yield-and-quality/16-yield-analysis/README.md": {
+      "id": "fomas_6_Su2bYiseJORM5w",
+      "title": "Chapter 16: Yield and Failure Analysis — Finding Out Why Chips Fail",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/SJHciMf6zl"
+    },
+    "en/4-yield-and-quality/17-process-control/README.md": {
+      "id": "q3KmwKFhTcys_lobjyOyxQ",
+      "title": "Chapter 17: Process Control — Keeping the Process Stable with Data",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/SyLqiffpMe"
+    },
+    "en/4-yield-and-quality/18-abnormality-handling/README.md": {
+      "id": "h3fHjz3OQeCk_CHkp2xV8A",
+      "title": "Chapter 18: Handling Abnormalities and Engineering Changes — How the Fab Responds When Things Go Wrong",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/r1_qoGGaMe"
+    },
+    "en/4-yield-and-quality/README.md": {
+      "id": "wYVT7sWMSLmcNd1q9J7UfQ",
+      "title": "Part 4: Quality and Yield",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/Syq5ozz6zl"
+    },
+    "en/5-backend/19-wafer-test/README.md": {
+      "id": "W5izUl_JQm6GVucA96WONQ",
+      "title": "Chapter 19: Wafer Test — WAT and CP",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/Sy2cjGz6Me"
+    },
+    "en/5-backend/20-packaging/README.md": {
+      "id": "m_7VWKK7So2oZePO1wMcug",
+      "title": "Chapter 20: Packaging — Making the Chip Usable",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/Hy0ciGGTMx"
+    },
+    "en/5-backend/21-advanced-packaging/README.md": {
+      "id": "MPLz1kjnTO-o7To-cmda9w",
+      "title": "Chapter 21: Advanced Packaging — Integrating Multiple Chips into One",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/SJlooGfpMx"
+    },
+    "en/5-backend/22-final-test-and-reliability/README.md": {
+      "id": "pPdr_ekuT9Wmsg7517W8OQ",
+      "title": "Chapter 22: Final Test and Reliability — Making Sure Chips Last for Years",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/ByZojMMpGe"
+    },
+    "en/5-backend/README.md": {
+      "id": "UpQLRxynTnqYUyB8bCv5Eg",
+      "title": "Part 5: Back End — Test and Packaging",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/BJQjizGpMg"
+    },
+    "en/6-beyond-the-fab/23-fab-systems/README.md": {
+      "id": "PFbu89zISBaVHVfz7hi7tQ",
+      "title": "Chapter 23: How Systems Run the Fab — Why a Wafer Never Takes a Wrong Turn",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/rkSosfGaMe"
+    },
+    "en/6-beyond-the-fab/24-process-and-firmware/README.md": {
+      "id": "ekoFcFToQ46OhB676NP50A",
+      "title": "Chapter 24: How the Process Shapes Firmware — Hardware Truths for Software and Firmware Engineers",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/HJPoozGazx"
+    },
+    "en/6-beyond-the-fab/README.md": {
+      "id": "QjaSoi0qThmUIs2sd8nTtw",
+      "title": "Part 6: Beyond the Fab",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/SJKiizMafe"
+    },
+    "en/README.md": {
+      "id": "9Ff2rRSITEeQoVNfj5ub4w",
+      "title": "Introduction to Semiconductor Manufacturing",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/Byoosff6Me"
+    },
+    "en/appendix/README.md": {
+      "id": "WJaK27WpQvGovXUqwlMlnQ",
+      "title": "Appendices",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/HkpojMzafx"
+    },
+    "en/appendix/fab-jargon.md": {
+      "id": "m9LbJCHdT4ykGL4pcGdb5Q",
+      "title": "Appendix B: Fab Jargon",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/BJAosffpMl"
+    },
+    "en/appendix/further-reading.md": {
+      "id": "fSw0nXR3SHaoG0FsMcTjEw",
+      "title": "Appendix C: Further Reading",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/ryl3jzGTze"
+    },
+    "en/appendix/glossary.md": {
+      "id": "KPP4QGD9T42kAfDb34QucA",
+      "title": "Appendix A: Glossary",
+      "publishLink": "https://hackmd.io/@sA391cz7Syaqz3sxIO3oWQ/r1zniGz6Gx"
+    }
+  },
+  "books": {
+    "zh-TW": {
+      "id": "3RhnDA3ZTiiKRw95eNFljA",
+      "title": "半導體製造概論（目錄）"
+    },
+    "en": {
+      "id": "HWD3J9VhRUq4wh9b14QwUw",
+      "title": "Introduction to Semiconductor Manufacturing (Contents)"
+    }
+  }
+}
