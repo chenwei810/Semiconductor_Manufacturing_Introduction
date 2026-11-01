@@ -2,7 +2,7 @@
 slug: "Introduction-to-Semiconductor-Manufacturing" # names the EPUB file
 output_dir: "dist"
 # online copy of the book folder: links to files outside the book point here
-source_url: "https://github.com/geoyee/Semiconductor_Manufacturing_Introduction/blob/feature-ebook/zh-CN/"
+source_url: "https://github.com/geoyee/Semiconductor_Manufacturing_Introduction_Ebook/blob/master/zh-CN/"
 
 metadata:
   title: "Introduction to Semiconductor Manufacturing"
