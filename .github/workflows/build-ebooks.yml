@@ -2,7 +2,7 @@ name: Build Ebooks (EPUB & PDF)
 
 on:
   push:
-    branches: [feature-ebook]
+    branches: [master]
     paths:
       - "en/**"
       - "zh-TW/**"

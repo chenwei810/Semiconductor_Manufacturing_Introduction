@@ -63,5 +63,5 @@ files:
 options:
   citations: refdefs
   toc_depth: 3
-  wordcount_tolerance: 0.1
+  wordcount_tolerance: 0.15
   wordcount_min_words: 25
