@@ -163,7 +163,7 @@ Reading in order gives you the full picture, but you can also start with the pat
 
 This is an open project, and help is always welcome:
 
-- **Found a mistake?** Open an [issue](../../../issues) with the "Erratum" template.
+- **Found a mistake?** Open an [issue](https://github.com/chenwei810/Semiconductor_Manufacturing_Introduction/issues) with the "Erratum" template.
 - **Want to add content or figures?** Read the [contributing guide](../CONTRIBUTING.md) and the [style guide](../STYLE_GUIDE.md).
 - **Want to translate the book into another language?** Read the [translation guide](../TRANSLATIONS.md).
 

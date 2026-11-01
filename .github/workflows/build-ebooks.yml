@@ -1,0 +1,89 @@
+name: Build Ebooks (EPUB & PDF)
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "en/**"
+      - "zh-TW/**"
+      - "zh-CN/**"
+      - "ja/**"
+      - "ko/**"
+      - ".github/workflows/build-ebooks.yml"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - lang_dir: en
+            lang_label: English
+          - lang_dir: zh-CN
+            lang_label: 简体中文
+          - lang_dir: zh-TW
+            lang_label: 繁體中文
+          - lang_dir: ja
+            lang_label: 日本語
+          - lang_dir: ko
+            lang_label: 한국어
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install CJK fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk fonts-noto-cjk-extra fontconfig
+          sudo fc-cache -fv
+
+      - name: Install mdbindery and tools
+        run: |
+          pip install "mdbindery[pdf]"
+          mdbindery install-tools
+
+      - name: Create Puppeteer config to disable sandbox
+        run: |
+          mkdir -p ~/.config/puppeteer
+          cat > ~/.config/puppeteer/puppeteer-config.json <<'EOF'
+          {
+            "args": ["--no-sandbox", "--disable-setuid-sandbox"]
+          }
+          EOF
+
+      - name: Build EPUB for ${{ matrix.lang_label }}
+        working-directory: ${{ matrix.lang_dir }}
+        run: |
+          echo "::group::Checking ${{ matrix.lang_dir }}"
+          mdbindery check .
+          echo "::endgroup::"
+          echo "::group::Building EPUB"
+          mdbindery build . --format epub
+          echo "::endgroup::"
+
+      - name: Build PDF for ${{ matrix.lang_label }}
+        working-directory: ${{ matrix.lang_dir }}
+        continue-on-error: true
+        run: |
+          echo "::group::Building PDF"
+          mdbindery build . --format pdf
+          echo "::endgroup::"
+
+      - name: Upload ebooks and reports (${{ matrix.lang_label }})
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: ebooks-${{ matrix.lang_dir }}
+          path: |
+            ${{ matrix.lang_dir }}/dist/*.epub
+            ${{ matrix.lang_dir }}/dist/*.pdf
+          if-no-files-found: warn
+          retention-days: 30
