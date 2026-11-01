@@ -163,7 +163,7 @@ flowchart LR
 
 이 책은 열린 프로젝트입니다. 언제든 함께해 주세요.
 
-- **잘못된 내용을 발견했다면**: [Issues](../../../issues)에서 'Erratum' 템플릿으로 알려 주세요.
+- **잘못된 내용을 발견했다면**: [Issues](https://github.com/chenwei810/Semiconductor_Manufacturing_Introduction/issues)에서 'Erratum' 템플릿으로 알려 주세요.
 - **내용이나 그림을 추가하고 싶다면**: [기여 가이드](../CONTRIBUTING.md)와 [스타일 가이드](../STYLE_GUIDE.md)를 읽어 주세요.
 - **다른 언어로 번역하고 싶다면**: [번역 가이드](../TRANSLATIONS.md)를 읽어 주세요.
 

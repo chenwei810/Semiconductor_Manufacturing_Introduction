@@ -161,7 +161,7 @@ flowchart LR
 
 這本書是開放的專案，歡迎一起把它變得更好：
 
-- **發現錯誤**：請到本專案的 [Issues](../../../issues) 頁面，使用「勘誤回報」範本告訴我們。
+- **發現錯誤**：請到本專案的 [Issues](https://github.com/chenwei810/Semiconductor_Manufacturing_Introduction/issues) 頁面，使用「勘誤回報」範本告訴我們。
 - **補充內容或圖片**：請先閱讀[貢獻指南](../CONTRIBUTING.md)和[寫作規範](../STYLE_GUIDE.md)。
 - **翻譯成其他語言**：請閱讀[翻譯指南](../TRANSLATIONS.md)。
 

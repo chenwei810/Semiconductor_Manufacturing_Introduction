@@ -1,0 +1,67 @@
+# mdbindery configuration: https://github.com/sagol/mdbindery/blob/main/docs/configuration.md
+slug: "Introduction-to-Semiconductor-Manufacturing" # names the EPUB file
+output_dir: "dist"
+# online copy of the book folder: links to files outside the book point here
+source_url: "https://github.com/geoyee/Semiconductor_Manufacturing_Introduction/blob/feature-ebook/ja/"
+
+metadata:
+  title: "Introduction to Semiconductor Manufacturing"
+  subtitle: ""
+  authors: [] # "frist name"
+  lang: "ja"
+  # identifier: left empty, a permanent urn:uuid is written here on the first build
+  identifier:
+  date: "git"
+  rights: "CC BY-NC-SA 4.0"
+  description: "Follow one wafer on its journey from sand to chip"
+
+cover:
+  image: "" # 1600x2560 JPEG recommended; empty = generated
+
+# reading order (found from file names)
+files:
+  - file: "README.md"
+    role: "front"
+
+  - file: "0-before-you-start/README.md"
+  - file: "0-before-you-start/00-overview/README.md"
+  - file: "0-before-you-start/01-how-a-fab-works/README.md"
+  - file: "1-fundamentals/README.md"
+  - file: "1-fundamentals/02-transistor-basics/README.md"
+  - file: "1-fundamentals/03-sand-to-wafer/README.md"
+  - file: "2-process-modules/README.md"
+  - file: "2-process-modules/04-lithography/README.md"
+  - file: "2-process-modules/05-thin-films/README.md"
+  - file: "2-process-modules/06-etching/README.md"
+  - file: "2-process-modules/07-ion-implantation/README.md"
+  - file: "2-process-modules/08-cmp/README.md"
+  - file: "2-process-modules/09-cleaning/README.md"
+  - file: "2-process-modules/10-metallization/README.md"
+  - file: "3-integration/README.md"
+  - file: "3-integration/11-cmos-process-flow/README.md"
+  - file: "3-integration/12-advanced-transistors/README.md"
+  - file: "3-integration/13-memory/README.md"
+  - file: "3-integration/14-process-nodes/README.md"
+  - file: "4-yield-and-quality/README.md"
+  - file: "4-yield-and-quality/15-metrology/README.md"
+  - file: "4-yield-and-quality/16-yield-analysis/README.md"
+  - file: "4-yield-and-quality/17-process-control/README.md"
+  - file: "4-yield-and-quality/18-abnormality-handling/README.md"
+  - file: "5-backend/README.md"
+  - file: "5-backend/19-wafer-test/README.md"
+  - file: "5-backend/20-packaging/README.md"
+  - file: "5-backend/21-advanced-packaging/README.md"
+  - file: "5-backend/22-final-test-and-reliability/README.md"
+  - file: "6-beyond-the-fab/README.md"
+  - file: "6-beyond-the-fab/23-fab-systems/README.md"
+  - file: "6-beyond-the-fab/24-process-and-firmware/README.md"
+  - file: "appendix/README.md"
+  - file: "appendix/fab-jargon.md"
+  - file: "appendix/further-reading.md"
+  - file: "appendix/glossary.md"
+
+options:
+  citations: refdefs
+  toc_depth: 3
+  wordcount_tolerance: 0.1
+  wordcount_min_words: 25

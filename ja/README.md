@@ -163,7 +163,7 @@ flowchart LR
 
 これはオープンなプロジェクトです。いつでも協力を歓迎します。
 
-- **間違いを見つけたら**：[Issues](../../../issues) から「Erratum」テンプレートで報告してください。
+- **間違いを見つけたら**：[Issues](https://github.com/chenwei810/Semiconductor_Manufacturing_Introduction/issues) から「Erratum」テンプレートで報告してください。
 - **内容や図を追加したいとき**：[コントリビューションガイド](../CONTRIBUTING.md) と [スタイルガイド](../STYLE_GUIDE.md) を読んでください。
 - **ほかの言語に翻訳したいとき**：[翻訳ガイド](../TRANSLATIONS.md) を読んでください。
 
