@@ -20,7 +20,7 @@
   # 先試一章
   export HACKMD_TOKEN=xxxxx
   python3 hackmd_import.py --repo ../Semiconductor_Manufacturing_Introduction \
-      --only zh-TW/2-process-modules/04-lithography/README.md
+      --only zh-TW/2-process-modules/05-lithography/README.md
 
   # 整本（預設 zh-TW 與 en）
   python3 hackmd_import.py --repo ../Semiconductor_Manufacturing_Introduction

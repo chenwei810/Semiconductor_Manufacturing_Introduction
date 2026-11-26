@@ -1,4 +1,4 @@
-<!-- source: zh-TW/appendix/fab-jargon.md | sha: 59feb1b72da6 -->
+<!-- source: zh-TW/appendix/fab-jargon.md | sha: 7a302bca4ff3 -->
 
 # Appendix B: Fab Jargon
 
@@ -80,6 +80,7 @@ This appendix lists expressions commonly heard in fabs, with example sentences. 
 |---|---|---|---|
 | Photo | 黃光 ("yellow light") | The lithography area, named after its yellow lighting | "This lot is stuck in photo." |
 | Diffusion | 爐管 | The area of high-temperature batch tools for oxidation and annealing | "Furnace batching is slow today." |
+| PH, DF, TF, ET | Short names of the modules: photo, diffusion (furnace), thin film and etch. IMP, CMP and WET are said as they are | "This step belongs to DF, so ask the furnace engineers." |
 | Wets | Wet | The wet cleaning and wet etching area | "Send it to wets for a clean first." |
 | PE, EE, PIE, YE | PE、EE、PIE、YE | Process, equipment, process integration and yield engineers | "Let the PIE make the call on this one." |
 | Handover | 交接 | Passing on the status of tools and wafers at shift change | "At handover, make it clear this tool is still being watched." |

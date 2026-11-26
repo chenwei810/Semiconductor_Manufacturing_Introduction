@@ -1,4 +1,4 @@
-<!-- source: zh-TW/6-beyond-the-fab/README.md | sha: b4a1e5f802f0 -->
+<!-- source: zh-TW/6-beyond-the-fab/README.md | sha: 697017b83d2d -->
 
 # 第 6 部　走出晶圆厂
 
@@ -6,8 +6,8 @@
 
 | 章节 | 你会读到 |
 |---|---|
-| [第 23 章　工厂如何被系统管理](23-fab-systems/README.md) | MES、设备自动化、防呆与晶圆履历 |
-| [第 24 章　工艺如何影响固件](24-process-and-firmware/README.md) | DRAM 刷新、Row Hammer、ECC、NAND 与芯片改版 |
+| [第 24 章　工厂如何被系统管理](24-fab-systems/README.md) | MES、设备自动化、防呆与晶圆履历 |
+| [第 25 章　工艺如何影响固件](25-process-and-firmware/README.md) | DRAM 刷新、Row Hammer、ECC、NAND 与芯片改版 |
 
 ---
 

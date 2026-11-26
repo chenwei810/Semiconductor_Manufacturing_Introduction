@@ -139,7 +139,7 @@ By contributing, you agree that your contribution is released under the project'
 例如：
 
 ```text
-content: 第 6 章補充高深寬比蝕刻的說明
+content: 第 7 章補充高深寬比蝕刻的說明
 fix: 第 9 章錯字
 i18n(en): sync chapter 6
 ```

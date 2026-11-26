@@ -1,4 +1,4 @@
-<!-- source: zh-TW/1-fundamentals/03-sand-to-wafer/README.md | sha: 4ef45a3e5ab1 -->
+<!-- source: zh-TW/1-fundamentals/03-sand-to-wafer/README.md | sha: e44f07aa7869 -->
 
 # Chapter 3: From Sand to Wafer — Where It All Begins
 
@@ -62,7 +62,7 @@ A 300 mm ingot can be about two meters long and weigh several hundred kilograms.
 5. **Polishing**: The surface is polished until it is as smooth as a mirror.
 6. **Cleaning and inspection**: Flatness, particles and metal contamination are checked. Only wafers that pass are shipped.
 
-A laser also writes an ID number on each wafer (the wafer ID). This number lets the fab track every stop each wafer goes through. See [Chapter 23](../../6-beyond-the-fab/23-fab-systems/README.md).
+A laser also writes an ID number on each wafer (the wafer ID). This number lets the fab track every stop each wafer goes through. See [Chapter 24](../../6-beyond-the-fab/24-fab-systems/README.md).
 
 > [!TIP]
 > **🔧 Know-how | The small notch on the wafer's edge**
@@ -71,7 +71,7 @@ A laser also writes an ID number on each wafer (the wafer ID). This number lets 
 > - **Practice**: Before processing a wafer, a tool first finds the notch and rotates the wafer to a fixed orientation.
 > - **Why**: Silicon crystals behave differently in different directions; for example, etch rates and transistor performance are affected. Every layer of patterns must be aligned to the crystal in the same orientation.
 > - **If you skip it**: If the wafer is oriented incorrectly, the patterns end up in the wrong direction and position, and later alignment fails.
-> - **Related chapters**: [Chapter 4: Lithography](../../2-process-modules/04-lithography/README.md)
+> - **Related chapters**: [Chapter 5: Lithography](../../2-process-modules/05-lithography/README.md)
 
 ---
 
@@ -91,7 +91,7 @@ The larger the wafer, the more dies one wafer can hold. A 300 mm wafer has 2.25 
 
 Besides ordinary polished wafers, there are two common special types:
 
-- **Epitaxial wafers**: A layer of higher-quality single-crystal silicon is grown on top of a polished wafer. See [Chapter 5](../../2-process-modules/05-thin-films/README.md).
+- **Epitaxial wafers**: A layer of higher-quality single-crystal silicon is grown on top of a polished wafer. See [Chapter 6](../../2-process-modules/06-thin-films/README.md).
 - **SOI wafers** (silicon on insulator): An insulating layer is buried under a thin layer of silicon to reduce leakage. They are often used in special products such as RF chips.
 
 > [!TIP]
@@ -101,7 +101,7 @@ Besides ordinary polished wafers, there are two common special types:
 > - **Practice**: Fabs use large numbers of **monitor wafers** to check the condition of tools, for example by measuring film thickness or particles. They also use **dummy wafers** to fill the empty slots of batch tools. Used monitor and dummy wafers can be polished and reused; these are called reclaimed wafers.
 > - **Why**: You cannot risk product wafers to test a tool, and batch tools need to be fully loaded so that temperature and gas flow are uniform.
 > - **If you skip it**: Tool problems are found only after product goes wrong, and the price is a whole lot of scrapped product.
-> - **Related chapters**: [Chapter 5: Thin Films](../../2-process-modules/05-thin-films/README.md), [Chapter 15: Metrology and Inspection](../../4-yield-and-quality/15-metrology/README.md)
+> - **Related chapters**: [Chapter 6: Thin Films](../../2-process-modules/06-thin-films/README.md), [Chapter 16: Metrology and Inspection](../../4-yield-and-quality/16-metrology/README.md)
 
 ---
 
@@ -122,4 +122,4 @@ Besides ordinary polished wafers, there are two common special types:
 
 ---
 
-[← Chapter 2: From Physics to Transistors](../../1-fundamentals/02-transistor-basics/README.md) | [Contents](../../README.md) | [Chapter 4: Lithography →](../../2-process-modules/04-lithography/README.md)
+[← Chapter 2: From Physics to Transistors](../../1-fundamentals/02-transistor-basics/README.md) | [Contents](../../README.md) | [Chapter 4: The Seven Fab Modules →](../../2-process-modules/04-fab-modules/README.md)

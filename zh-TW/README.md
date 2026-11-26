@@ -40,7 +40,7 @@
 | 📖 名詞框 | 定義、現場用法、相關名詞，以及最容易搞混的地方 |
 | 🔧 Know-how 框 | 現場的做法，以及「為什麼要這樣做、沒做會怎樣」 |
 
-例如第 4 章微影裡的一個 Know-how 框：
+例如第 5 章微影裡的一個 Know-how 框：
 
 > [!TIP]
 > **🔧 Know-how｜微影是「可以重來」的最後機會**
@@ -57,18 +57,18 @@
 ```mermaid
 flowchart LR
     S["沙子"] --> W["空白晶圓<br>第 3 章"]
-    subgraph FAB["晶圓廠（第 4～18 章）"]
-        M["製程模組<br>第 4～10 章"] --> Q["量測與控制<br>第 15～18 章"]
+    subgraph FAB["晶圓廠（第 4～19 章）"]
+        M["製程模組<br>第 4～11 章"] --> Q["量測與控制<br>第 16～19 章"]
         Q -- "下一層" --> M
     end
     W --> M
-    Q --> T["晶圓測試<br>第 19 章"]
-    T --> P["封裝<br>第 20～21 章"]
-    P --> F["最終測試<br>第 22 章"]
+    Q --> T["晶圓測試<br>第 20 章"]
+    T --> P["封裝<br>第 21～22 章"]
+    P --> F["最終測試<br>第 23 章"]
     F --> C["晶片出貨"]
 ```
 
-晶圓在晶圓廠裡，會反覆經過「鋪材料、微影、蝕刻或佈植、清洗、量測」的循環，一層一層往上蓋。第 11～14 章把這些模組串成完整的流程，第 23、24 章則從系統和韌體的角度，重新看一次整趟旅程。
+晶圓在晶圓廠裡，會反覆經過「鋪材料、微影、蝕刻或佈植、清洗、量測」的循環，一層一層往上蓋。第 12～15 章把這些模組串成完整的流程，第 24、25 章則從系統和韌體的角度，重新看一次整趟旅程。
 
 ---
 
@@ -92,47 +92,48 @@ flowchart LR
 
 | 章節 | 你會讀到 |
 |---|---|
-| [第 4 章　微影](2-process-modules/04-lithography/README.md) | 光罩、光阻與曝光機，把電路圖「印」到晶圓上 |
-| [第 5 章　薄膜](2-process-modules/05-thin-films/README.md) | 熱氧化、CVD、PVD、ALD 與磊晶 |
-| [第 6 章　蝕刻](2-process-modules/06-etching/README.md) | 乾蝕刻與濕蝕刻、電漿、選擇比與終點偵測 |
-| [第 7 章　離子佈植與熱處理](2-process-modules/07-ion-implantation/README.md) | 劑量、能量、退火與熱預算 |
-| [第 8 章　CMP](2-process-modules/08-cmp/README.md) | 把晶圓磨平：研磨液、碟化、侵蝕與假圖形 |
-| [第 9 章　清洗與污染控制](2-process-modules/09-cleaning/README.md) | RCA 清洗、Q-Time 與交叉污染 |
-| [第 10 章　金屬化](2-process-modules/10-metallization/README.md) | 接觸窗、銅的大馬士革製程與低介電常數材料 |
+| [第 4 章　晶圓廠的七個 Module](2-process-modules/04-fab-modules/README.md) | PH、DF、TF、ET、IMP、CMP、WET 的分工，與爐管負責的製程 |
+| [第 5 章　微影](2-process-modules/05-lithography/README.md) | 光罩、光阻與曝光機，把電路圖「印」到晶圓上 |
+| [第 6 章　薄膜](2-process-modules/06-thin-films/README.md) | 熱氧化、CVD、PVD、ALD 與磊晶 |
+| [第 7 章　蝕刻](2-process-modules/07-etching/README.md) | 乾蝕刻與濕蝕刻、電漿、選擇比與終點偵測 |
+| [第 8 章　離子佈植與熱處理](2-process-modules/08-ion-implantation/README.md) | 劑量、能量、退火與熱預算 |
+| [第 9 章　CMP](2-process-modules/09-cmp/README.md) | 把晶圓磨平：研磨液、碟化、侵蝕與假圖形 |
+| [第 10 章　清洗與污染控制](2-process-modules/10-cleaning/README.md) | RCA 清洗、Q-Time 與交叉污染 |
+| [第 11 章　金屬化](2-process-modules/11-metallization/README.md) | 接觸窗、銅的大馬士革製程與低介電常數材料 |
 
 ### 第 3 部　製程整合
 
 | 章節 | 你會讀到 |
 |---|---|
-| [第 11 章　走一遍完整的 CMOS 流程](3-integration/11-cmos-process-flow/README.md) | FEOL、MOL、BEOL 與光罩層數 |
-| [第 12 章　先進電晶體結構](3-integration/12-advanced-transistors/README.md) | FinFET、GAA 與背面供電 |
-| [第 13 章　記憶體製程](3-integration/13-memory/README.md) | DRAM、3D NAND 與 HBM |
-| [第 14 章　「幾奈米」是什麼意思](3-integration/14-process-nodes/README.md) | 製程節點、間距與電晶體密度 |
+| [第 12 章　走一遍完整的 CMOS 流程](3-integration/12-cmos-process-flow/README.md) | FEOL、MOL、BEOL 與光罩層數 |
+| [第 13 章　先進電晶體結構](3-integration/13-advanced-transistors/README.md) | FinFET、GAA 與背面供電 |
+| [第 14 章　記憶體製程](3-integration/14-memory/README.md) | DRAM、3D NAND 與 HBM |
+| [第 15 章　「幾奈米」是什麼意思](3-integration/15-process-nodes/README.md) | 製程節點、間距與電晶體密度 |
 
 ### 第 4 部　品質與良率
 
 | 章節 | 你會讀到 |
 |---|---|
-| [第 15 章　量測與檢測](4-yield-and-quality/15-metrology/README.md) | 膜厚、線寬、對準與缺陷檢測，以及抽樣 |
-| [第 16 章　良率與故障分析](4-yield-and-quality/16-yield-analysis/README.md) | 晶圓圖判讀、共通性分析與故障分析 |
-| [第 17 章　製程控制](4-yield-and-quality/17-process-control/README.md) | SPC、Cpk、R2R 與 FDC |
-| [第 18 章　異常處理與工程變更](4-yield-and-quality/18-abnormality-handling/README.md) | OCAP、Hold、MRB 與變更管理 |
+| [第 16 章　量測與檢測](4-yield-and-quality/16-metrology/README.md) | 膜厚、線寬、對準與缺陷檢測，以及抽樣 |
+| [第 17 章　良率與故障分析](4-yield-and-quality/17-yield-analysis/README.md) | 晶圓圖判讀、共通性分析與故障分析 |
+| [第 18 章　製程控制](4-yield-and-quality/18-process-control/README.md) | SPC、Cpk、R2R 與 FDC |
+| [第 19 章　異常處理與工程變更](4-yield-and-quality/19-abnormality-handling/README.md) | OCAP、Hold、MRB 與變更管理 |
 
 ### 第 5 部　後段：測試與封裝
 
 | 章節 | 你會讀到 |
 |---|---|
-| [第 19 章　晶圓測試](5-backend/19-wafer-test/README.md) | WAT 與 CP，找出好的晶粒 |
-| [第 20 章　封裝](5-backend/20-packaging/README.md) | 切割、打線、覆晶與常見的封裝形式 |
-| [第 21 章　先進封裝](5-backend/21-advanced-packaging/README.md) | 2.5D、3D 堆疊、混合鍵合與 Chiplet |
-| [第 22 章　最終測試與可靠度](5-backend/22-final-test-and-reliability/README.md) | 預燒、浴缸曲線、可靠度測試與失效機制 |
+| [第 20 章　晶圓測試](5-backend/20-wafer-test/README.md) | WAT 與 CP，找出好的晶粒 |
+| [第 21 章　封裝](5-backend/21-packaging/README.md) | 切割、打線、覆晶與常見的封裝形式 |
+| [第 22 章　先進封裝](5-backend/22-advanced-packaging/README.md) | 2.5D、3D 堆疊、混合鍵合與 Chiplet |
+| [第 23 章　最終測試與可靠度](5-backend/23-final-test-and-reliability/README.md) | 預燒、浴缸曲線、可靠度測試與失效機制 |
 
 ### 第 6 部　走出晶圓廠
 
 | 章節 | 你會讀到 |
 |---|---|
-| [第 23 章　工廠如何被系統管理](6-beyond-the-fab/23-fab-systems/README.md) | MES、機台自動化、防呆與晶圓履歷 |
-| [第 24 章　製程如何影響韌體](6-beyond-the-fab/24-process-and-firmware/README.md) | DRAM 刷新、Row Hammer、ECC、NAND 與晶片改版 |
+| [第 24 章　工廠如何被系統管理](6-beyond-the-fab/24-fab-systems/README.md) | MES、機台自動化、防呆與晶圓履歷 |
+| [第 25 章　製程如何影響韌體](6-beyond-the-fab/25-process-and-firmware/README.md) | DRAM 刷新、Row Hammer、ECC、NAND 與晶片改版 |
 
 ### 附錄
 
@@ -150,10 +151,10 @@ flowchart LR
 
 | 路線 | 建議章節 |
 |---|---|
-| 🚀 快速認識全貌 | 第 0、1、11、14 章 |
-| 💻 軟體與韌體工程師 | 第 0、2、11、13、14、22、23、24 章 |
-| 🏭 準備進入半導體業 | 依序讀完全書，特別留意第 1、11、15～18 章與附錄 B |
-| 📦 對封裝與測試有興趣 | 第 0、11、19～22 章 |
+| 🚀 快速認識全貌 | 第 0、1、12、15 章 |
+| 💻 軟體與韌體工程師 | 第 0、2、12、14、15、23、24、25 章 |
+| 🏭 準備進入半導體業 | 依序讀完全書，特別留意第 1、4、12、16～19 章與附錄 B |
+| 📦 對封裝與測試有興趣 | 第 0、12、20～23 章 |
 
 ---
 

@@ -7,7 +7,7 @@ Check whether translations are in sync with the Traditional Chinese original.
 Every translated file starts with a source marker that records a fingerprint
 (the first 12 hex digits of SHA-256) of the original at translation time:
 
-    <!-- source: zh-TW/2-process-modules/04-lithography/README.md | sha: 1a2b3c4d5e6f -->
+    <!-- source: zh-TW/2-process-modules/05-lithography/README.md | sha: 1a2b3c4d5e6f -->
 
 原文之後只要被修改，指紋就會不同，這個檔案就會被列為「過期」。
 If the original changes later, the fingerprint no longer matches and the file
@@ -19,7 +19,7 @@ is reported as outdated.
     python3 scripts/check_translations.py en --strict  # 有問題時回傳 1 / exit 1 on problems
 
     # 同步完翻譯之後，更新標記中的指紋 / after syncing a translation, update its fingerprint
-    python3 scripts/check_translations.py --stamp en/2-process-modules/04-lithography/README.md
+    python3 scripts/check_translations.py --stamp en/2-process-modules/05-lithography/README.md
     python3 scripts/check_translations.py --stamp en   # 整個語言 / a whole language
 """
 

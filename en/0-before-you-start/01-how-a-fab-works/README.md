@@ -1,4 +1,4 @@
-<!-- source: zh-TW/0-before-you-start/01-how-a-fab-works/README.md | sha: ed90b49484ad -->
+<!-- source: zh-TW/0-before-you-start/01-how-a-fab-works/README.md | sha: 254b2d06f370 -->
 
 # Chapter 1: How a Fab Works — Cleanrooms, Automation, Tools and People
 
@@ -66,7 +66,7 @@ In a 300 mm fab, wafers travel inside sealed boxes called **FOUPs**, each holdin
 
 ## Tools: the stars of the fab
 
-A fab contains more than a thousand tools, usually grouped by process type, such as the lithography (photo) bay, etch, furnaces, thin films, ion implantation, CMP, wet cleaning and metrology.
+A fab contains more than a thousand tools, usually grouped by process type, such as the lithography (photo) bay, etch, furnaces, thin films, ion implantation, CMP, wet cleaning and metrology. For which module runs each area and what processes it does, see [Chapter 4](../../2-process-modules/04-fab-modules/README.md).
 
 Tools fall into two broad types:
 
@@ -82,7 +82,7 @@ A tool does not run all the time. Besides running and waiting, it is regularly s
 > - **Practice**: Run test wafers first and check particles, film thickness, etch rate and so on. Only after the results pass is the tool released for production. People on the floor often call this check a "qual."
 > - **Why**: Maintenance changes the conditions inside the tool, and new parts and freshly cleaned chambers are not always stable right away.
 > - **If you skip it**: If something is actually wrong with the tool, the first lot of product wafers through it may be scrapped.
-> - **Related chapters**: [Chapter 6: Etching](../../2-process-modules/06-etching/README.md), [Chapter 15: Metrology and Inspection](../../4-yield-and-quality/15-metrology/README.md)
+> - **Related chapters**: [Chapter 7: Etching](../../2-process-modules/07-etching/README.md), [Chapter 16: Metrology and Inspection](../../4-yield-and-quality/16-metrology/README.md)
 
 ---
 
@@ -125,7 +125,7 @@ Fabs watch three metrics most closely:
 
 Another important idea is **work in process** (WIP): wafers that are still on the line and not yet finished. The more WIP there is, the longer each wafer waits in line for tools, just as more cars make a highway more congested.
 
-With so many wafers, steps and tools, nobody could keep track of everything by memory. The fab's information systems record every stop each wafer passes through, which tool it used, and what was measured. This is covered in [Chapter 23](../../6-beyond-the-fab/23-fab-systems/README.md).
+With so many wafers, steps and tools, nobody could keep track of everything by memory. The fab's information systems record every stop each wafer passes through, which tool it used, and what was measured. This is covered in [Chapter 24](../../6-beyond-the-fab/24-fab-systems/README.md).
 
 > [!TIP]
 > **🔧 Know-how | The more hot lots, the slower the fab**
@@ -134,7 +134,7 @@ With so many wafers, steps and tools, nobody could keep track of everything by m
 > - **Practice**: Fabs strictly limit how many hot lots there can be.
 > - **Why**: Every time a hot lot jumps the queue, other lots have to wait a little longer. A batch tool may even start a run without waiting to fill up, just for a hot lot, which wastes capacity.
 > - **If you skip it**: If every lot is a hot lot, then no lot is a hot lot, and the cycle time of the whole fab actually gets longer.
-> - **Related chapters**: [Chapter 23: How Systems Run the Fab](../../6-beyond-the-fab/23-fab-systems/README.md)
+> - **Related chapters**: [Chapter 24: How Systems Run the Fab](../../6-beyond-the-fab/24-fab-systems/README.md)
 
 ---
 

@@ -11,7 +11,7 @@ Sections 1–8 cover the Traditional Chinese original. Section 9 covers the Engl
 - **讀者**：理工背景、但不是半導體專業的人，以及準備進入半導體業的新人。
 - **深度**：停在「流程、原理、為什麼」。讀完一章，讀者要能說出這一步在做什麼、為什麼要這樣做、做壞了會怎樣。
 - **不寫公式**。需要說明原理時，用比喻和例子。
-- **長度**：每章大約與[第 4 章 微影](zh-TW/2-process-modules/04-lithography/README.md)相當，約 150 行以內。
+- **長度**：每章大約與[第 5 章 微影](zh-TW/2-process-modules/05-lithography/README.md)相當，約 150 行以內。
 
 ---
 
@@ -124,7 +124,7 @@ Know-how 只寫業界通用的做法與原則，不寫任何公司的實際參�
 
 - 優先使用 SVG；照片或截圖使用 PNG。
 - **圖上不放文字**。需要標示時使用數字編號，在圖下方的說明文字解釋，讓所有語言版本可以共用同一張圖。
-- 檔名格式為「章節編號-描述」，例如 `16-wafer-map-patterns.svg`，統一放在根目錄的 `images/` 資料夾，所有語言共用。
+- 檔名格式為「章節編號-描述」，例如 `17-wafer-map-patterns.svg`，統一放在根目錄的 `images/` 資料夾，所有語言共用。
 - 只能使用自己繪製或授權相容的圖片，不可以直接使用書籍、論文或公司網站的圖。
 - 還沒畫好的圖，先用註解標出位置和內容，例如 `<!-- 圖：CMP 機台示意 -->`。執行 `python3 scripts/list_figures.py` 可以列出所有待補的圖。
 - 簡單的流程圖可以用 Mermaid 繪製，GitHub 會直接顯示，文字也能跟著內文一起翻譯。
@@ -132,7 +132,7 @@ Know-how 只寫業界通用的做法與原則，不寫任何公司的實際參�
 圖片的寫法：
 
 ```markdown
-![替代文字，描述圖片內容](../../../images/16-wafer-map-patterns.svg)
+![替代文字，描述圖片內容](../../../images/17-wafer-map-patterns.svg)
 
 *圖說：說明圖中每個編號代表什麼。*
 ```

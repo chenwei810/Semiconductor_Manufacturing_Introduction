@@ -1,4 +1,4 @@
-<!-- source: zh-TW/0-before-you-start/00-overview/README.md | sha: 3e88352fe582 -->
+<!-- source: zh-TW/0-before-you-start/00-overview/README.md | sha: f60938d48c82 -->
 
 # Chapter 0: The Big Picture — The Life of a Chip
 
@@ -48,13 +48,13 @@ A chip usually goes from idea to product through the hands of several kinds of c
 
 | Stage | What happens | Chapter |
 |---|---|---|
-| Design | Engineers design the circuit with software and turn it into the patterns of each layer | Briefly in [Chapter 14](../../3-integration/14-process-nodes/README.md) |
-| Mask making | The pattern of each layer is made into a mask | [Chapter 4](../../2-process-modules/04-lithography/README.md) |
+| Design | Engineers design the circuit with software and turn it into the patterns of each layer | Briefly in [Chapter 15](../../3-integration/15-process-nodes/README.md) |
+| Mask making | The pattern of each layer is made into a mask | [Chapter 5](../../2-process-modules/05-lithography/README.md) |
 | Wafer start | Blank wafers enter the fab and production officially begins | [Chapter 3](../../1-fundamentals/03-sand-to-wafer/README.md) |
-| Front end | Transistors and metal wiring are built on the wafer layer by layer | [Chapters 4–18](../../2-process-modules/README.md) |
-| Wafer test | Every chip on the wafer is checked to see whether it is good or bad | [Chapter 19](../../5-backend/19-wafer-test/README.md) |
-| Packaging | The wafer is cut apart and the good chips are packaged | [Chapters 20 and 21](../../5-backend/20-packaging/README.md) |
-| Final test | The packaged chips are tested again and checked to make sure they will last for years | [Chapter 22](../../5-backend/22-final-test-and-reliability/README.md) |
+| Front end | Transistors and metal wiring are built on the wafer layer by layer | [Chapters 4–19](../../2-process-modules/README.md) |
+| Wafer test | Every chip on the wafer is checked to see whether it is good or bad | [Chapter 20](../../5-backend/20-wafer-test/README.md) |
+| Packaging | The wafer is cut apart and the good chips are packaged | [Chapters 21 and 22](../../5-backend/21-packaging/README.md) |
+| Final test | The packaged chips are tested again and checked to make sure they will last for years | [Chapter 23](../../5-backend/23-final-test-and-reliability/README.md) |
 
 <!-- Figure: the life of a chip at a glance (design, mask, fab, test, packaging, shipment, in order) -->
 
@@ -73,7 +73,7 @@ The most common way to divide semiconductor manufacturing is into the **front en
 > - **Definition**: The front end is wafer fabrication; the back end is packaging and test.
 > - **On the floor**: "She does process work in the front end." "This chip is stuck in the back end."
 > - **Related terms**: FEOL, BEOL, assembly and test
-> - **Common confusion**: "Front end" and "back end" have two meanings. Besides splitting wafer fabrication from packaging and test, people inside a fab also call the steps that build transistors the front end of line (FEOL) and the steps that build metal wiring the back end of line (BEOL). See [Chapter 11](../../3-integration/11-cmos-process-flow/README.md). Use the context to tell which one is meant.
+> - **Common confusion**: "Front end" and "back end" have two meanings. Besides splitting wafer fabrication from packaging and test, people inside a fab also call the steps that build transistors the front end of line (FEOL) and the steps that build metal wiring the back end of line (BEOL). See [Chapter 12](../../3-integration/12-cmos-process-flow/README.md). Use the context to tell which one is meant.
 
 ---
 

@@ -1,4 +1,4 @@
-<!-- source: zh-TW/README.md | sha: fa04466ddffc -->
+<!-- source: zh-TW/README.md | sha: eec8d1f42823 -->
 
 <div align="center">
 
@@ -42,7 +42,7 @@
 | 📖 用語ボックス | 定義、現場での使い方、関連用語、よくある混同 |
 | 🔧 ノウハウボックス | 現場でのやり方と、なぜそうするのか、やらないとどうなるか |
 
-たとえば第 4 章「リソグラフィ」のノウハウボックスはこうなっています。
+たとえば第 5 章「リソグラフィ」のノウハウボックスはこうなっています。
 
 > [!TIP]
 > **🔧 ノウハウ｜リソグラフィは「やり直せる」最後のチャンス**
@@ -59,18 +59,18 @@
 ```mermaid
 flowchart LR
     S["砂"] --> W["ベアウェーハ<br>第 3 章"]
-    subgraph FAB["ファブ（第 4～18 章）"]
-        M["プロセスモジュール<br>第 4～10 章"] --> Q["計測と制御<br>第 15～18 章"]
+    subgraph FAB["ファブ（第 4～19 章）"]
+        M["プロセスモジュール<br>第 4～11 章"] --> Q["計測と制御<br>第 16～19 章"]
         Q -- "次の層へ" --> M
     end
     W --> M
-    Q --> T["ウェーハテスト<br>第 19 章"]
-    T --> P["パッケージング<br>第 20～21 章"]
-    P --> F["最終テスト<br>第 22 章"]
+    Q --> T["ウェーハテスト<br>第 20 章"]
+    T --> P["パッケージング<br>第 21～22 章"]
+    P --> F["最終テスト<br>第 23 章"]
     F --> C["チップ出荷"]
 ```
 
-ファブの中で、ウェーハは「材料を成膜する、リソグラフィでパターンを作る、エッチングまたはイオン注入、洗浄、計測」というループを何度も繰り返し、1 層ずつ積み上げられていきます。第 11～14 章ではこれらのモジュールを一つの流れにつなげ、第 23 章と第 24 章では、工場のシステムとファームウェアの視点から旅全体をもう一度見直します。
+ファブの中で、ウェーハは「材料を成膜する、リソグラフィでパターンを作る、エッチングまたはイオン注入、洗浄、計測」というループを何度も繰り返し、1 層ずつ積み上げられていきます。第 12～15 章ではこれらのモジュールを一つの流れにつなげ、第 24 章と第 25 章では、工場のシステムとファームウェアの視点から旅全体をもう一度見直します。
 
 ---
 
@@ -94,47 +94,48 @@ flowchart LR
 
 | 章 | 内容 |
 |---|---|
-| [第 4 章　リソグラフィ](2-process-modules/04-lithography/README.md) | マスク、レジスト、露光装置で回路をウェーハに「印刷」する |
-| [第 5 章　薄膜](2-process-modules/05-thin-films/README.md) | 熱酸化、CVD、PVD、ALD、エピタキシー |
-| [第 6 章　エッチング](2-process-modules/06-etching/README.md) | ドライとウェット、プラズマ、選択比、終点検出 |
-| [第 7 章　イオン注入と熱処理](2-process-modules/07-ion-implantation/README.md) | ドーズ、エネルギー、アニール、熱履歴 |
-| [第 8 章　CMP](2-process-modules/08-cmp/README.md) | ウェーハを平らに磨く：スラリー、ディッシング、エロージョン、ダミーパターン |
-| [第 9 章　洗浄と汚染管理](2-process-modules/09-cleaning/README.md) | RCA 洗浄、Q タイム、クロスコンタミネーション |
-| [第 10 章　メタライゼーション](2-process-modules/10-metallization/README.md) | コンタクト、銅ダマシン、Low-k 材料 |
+| [第 4 章　ファブの 7 つのモジュール](2-process-modules/04-fab-modules/README.md) | PH、DF、TF、ET、IMP、CMP、WET の分担と、炉が受け持つプロセス |
+| [第 5 章　リソグラフィ](2-process-modules/05-lithography/README.md) | マスク、レジスト、露光装置で回路をウェーハに「印刷」する |
+| [第 6 章　薄膜](2-process-modules/06-thin-films/README.md) | 熱酸化、CVD、PVD、ALD、エピタキシー |
+| [第 7 章　エッチング](2-process-modules/07-etching/README.md) | ドライとウェット、プラズマ、選択比、終点検出 |
+| [第 8 章　イオン注入と熱処理](2-process-modules/08-ion-implantation/README.md) | ドーズ、エネルギー、アニール、熱履歴 |
+| [第 9 章　CMP](2-process-modules/09-cmp/README.md) | ウェーハを平らに磨く：スラリー、ディッシング、エロージョン、ダミーパターン |
+| [第 10 章　洗浄と汚染管理](2-process-modules/10-cleaning/README.md) | RCA 洗浄、Q タイム、クロスコンタミネーション |
+| [第 11 章　メタライゼーション](2-process-modules/11-metallization/README.md) | コンタクト、銅ダマシン、Low-k 材料 |
 
 ### 第 3 部　プロセスインテグレーション
 
 | 章 | 内容 |
 |---|---|
-| [第 11 章　CMOS プロセスフローを一通り](3-integration/11-cmos-process-flow/README.md) | FEOL、MOL、BEOL とマスク枚数 |
-| [第 12 章　先端トランジスタ構造](3-integration/12-advanced-transistors/README.md) | FinFET、GAA、裏面電源供給 |
-| [第 13 章　メモリのプロセス](3-integration/13-memory/README.md) | DRAM、3D NAND、HBM |
-| [第 14 章　「何ナノ」とは何か](3-integration/14-process-nodes/README.md) | プロセスノード、ピッチ、トランジスタ密度 |
+| [第 12 章　CMOS プロセスフローを一通り](3-integration/12-cmos-process-flow/README.md) | FEOL、MOL、BEOL とマスク枚数 |
+| [第 13 章　先端トランジスタ構造](3-integration/13-advanced-transistors/README.md) | FinFET、GAA、裏面電源供給 |
+| [第 14 章　メモリのプロセス](3-integration/14-memory/README.md) | DRAM、3D NAND、HBM |
+| [第 15 章　「何ナノ」とは何か](3-integration/15-process-nodes/README.md) | プロセスノード、ピッチ、トランジスタ密度 |
 
 ### 第 4 部　品質と歩留まり
 
 | 章 | 内容 |
 |---|---|
-| [第 15 章　計測と検査](4-yield-and-quality/15-metrology/README.md) | 膜厚、CD、重ね合わせ、欠陥検査、サンプリング |
-| [第 16 章　歩留まりと故障解析](4-yield-and-quality/16-yield-analysis/README.md) | ウェーハマップの読み方、共通性解析、故障解析 |
-| [第 17 章　プロセス制御](4-yield-and-quality/17-process-control/README.md) | SPC、Cpk、R2R、FDC |
-| [第 18 章　異常処置と変更管理](4-yield-and-quality/18-abnormality-handling/README.md) | OCAP、ホールド、MRB、変更管理 |
+| [第 16 章　計測と検査](4-yield-and-quality/16-metrology/README.md) | 膜厚、CD、重ね合わせ、欠陥検査、サンプリング |
+| [第 17 章　歩留まりと故障解析](4-yield-and-quality/17-yield-analysis/README.md) | ウェーハマップの読み方、共通性解析、故障解析 |
+| [第 18 章　プロセス制御](4-yield-and-quality/18-process-control/README.md) | SPC、Cpk、R2R、FDC |
+| [第 19 章　異常処置と変更管理](4-yield-and-quality/19-abnormality-handling/README.md) | OCAP、ホールド、MRB、変更管理 |
 
 ### 第 5 部　後工程：テストとパッケージング
 
 | 章 | 内容 |
 |---|---|
-| [第 19 章　ウェーハテスト](5-backend/19-wafer-test/README.md) | WAT と CP で良品ダイを見つける |
-| [第 20 章　パッケージング](5-backend/20-packaging/README.md) | ダイシング、ワイヤボンディング、フリップチップ、主なパッケージ |
-| [第 21 章　先端パッケージング](5-backend/21-advanced-packaging/README.md) | 2.5D、3D 積層、ハイブリッドボンディング、チップレット |
-| [第 22 章　最終テストと信頼性](5-backend/22-final-test-and-reliability/README.md) | バーンイン、バスタブ曲線、信頼性試験、故障メカニズム |
+| [第 20 章　ウェーハテスト](5-backend/20-wafer-test/README.md) | WAT と CP で良品ダイを見つける |
+| [第 21 章　パッケージング](5-backend/21-packaging/README.md) | ダイシング、ワイヤボンディング、フリップチップ、主なパッケージ |
+| [第 22 章　先端パッケージング](5-backend/22-advanced-packaging/README.md) | 2.5D、3D 積層、ハイブリッドボンディング、チップレット |
+| [第 23 章　最終テストと信頼性](5-backend/23-final-test-and-reliability/README.md) | バーンイン、バスタブ曲線、信頼性試験、故障メカニズム |
 
 ### 第 6 部　ファブの外へ
 
 | 章 | 内容 |
 |---|---|
-| [第 23 章　システムによるファブ運営](6-beyond-the-fab/23-fab-systems/README.md) | MES、装置自動化、インターロック、ウェーハの履歴 |
-| [第 24 章　プロセスとファームウェア](6-beyond-the-fab/24-process-and-firmware/README.md) | DRAM リフレッシュ、Row Hammer、ECC、NAND、チップの改版 |
+| [第 24 章　システムによるファブ運営](6-beyond-the-fab/24-fab-systems/README.md) | MES、装置自動化、インターロック、ウェーハの履歴 |
+| [第 25 章　プロセスとファームウェア](6-beyond-the-fab/25-process-and-firmware/README.md) | DRAM リフレッシュ、Row Hammer、ECC、NAND、チップの改版 |
 
 ### 付録
 
@@ -152,10 +153,10 @@ flowchart LR
 
 | ルート | おすすめの章 |
 |---|---|
-| 🚀 全体をざっと知りたい | 第 0、1、11、14 章 |
-| 💻 ソフトウェア・ファームウェアエンジニア | 第 0、2、11、13、14、22、23、24 章 |
-| 🏭 半導体業界に入る準備 | 全章を順に。特に第 1、11、15～18 章と付録 B |
-| 📦 パッケージングとテストに関心がある | 第 0、11、19～22 章 |
+| 🚀 全体をざっと知りたい | 第 0、1、12、15 章 |
+| 💻 ソフトウェア・ファームウェアエンジニア | 第 0、2、12、14、15、23、24、25 章 |
+| 🏭 半導体業界に入る準備 | 全章を順に。特に第 1、4、12、16～19 章と付録 B |
+| 📦 パッケージングとテストに関心がある | 第 0、12、20～23 章 |
 
 ---
 

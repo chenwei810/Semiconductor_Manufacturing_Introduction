@@ -60,7 +60,7 @@
 5. **拋光**：把表面拋光到像鏡子一樣平滑。
 6. **清洗與檢驗**：檢查平坦度、微粒和金屬污染，合格後才出貨。
 
-每片晶圓上還會用雷射刻上一組編號（Wafer ID）。這組編號讓工廠能追蹤每一片晶圓走過的每一站，見[第 23 章](../../6-beyond-the-fab/23-fab-systems/README.md)。
+每片晶圓上還會用雷射刻上一組編號（Wafer ID）。這組編號讓工廠能追蹤每一片晶圓走過的每一站，見[第 24 章](../../6-beyond-the-fab/24-fab-systems/README.md)。
 
 > [!TIP]
 > **🔧 Know-how｜晶圓邊緣的小缺口**
@@ -69,7 +69,7 @@
 > - **做法**：機台在處理晶圓前，會先找到 Notch，把晶圓轉到固定的方向。
 > - **為什麼**：矽晶體在不同方向上的性質不同，例如蝕刻速度和電晶體的表現都會受影響。每一層圖形都必須以相同的方向對齊晶格。
 > - **沒做會怎樣**：晶圓方向放錯，圖形的方向和位置就會錯，後續的對準也會失敗。
-> - **相關章節**：[第 4 章 微影](../../2-process-modules/04-lithography/README.md)
+> - **相關章節**：[第 5 章 微影](../../2-process-modules/05-lithography/README.md)
 
 ---
 
@@ -89,7 +89,7 @@
 
 除了一般的拋光晶圓，還有兩種常見的特殊晶圓：
 
-- **磊晶晶圓**：在拋光晶圓表面再長一層品質更好的單晶矽，見[第 5 章](../../2-process-modules/05-thin-films/README.md)。
+- **磊晶晶圓**：在拋光晶圓表面再長一層品質更好的單晶矽，見[第 6 章](../../2-process-modules/06-thin-films/README.md)。
 - **SOI 晶圓**（絕緣層上覆矽）：在一層薄矽下面埋一層絕緣層，可以減少漏電，常用在射頻等特殊產品。
 
 > [!TIP]
@@ -99,7 +99,7 @@
 > - **做法**：工廠會使用大量**控片**（Monitor Wafer）檢查機台狀態，例如量測膜厚或微粒；也會用**擋片**（Dummy Wafer）填滿批次式機台的空位。用過的控片和擋片可以研磨後回收再用，稱為再生晶圓。
 > - **為什麼**：不能拿產品晶圓去冒險測試機台，而批次式機台需要放滿晶圓，溫度和氣流才會均勻。
 > - **沒做會怎樣**：機台的問題要等到產品出事才發現，代價是整批產品報廢。
-> - **相關章節**：[第 5 章 薄膜](../../2-process-modules/05-thin-films/README.md)、[第 15 章 量測與檢測](../../4-yield-and-quality/15-metrology/README.md)
+> - **相關章節**：[第 6 章 薄膜](../../2-process-modules/06-thin-films/README.md)、[第 16 章 量測與檢測](../../4-yield-and-quality/16-metrology/README.md)
 
 ---
 
@@ -120,4 +120,4 @@
 
 ---
 
-[← 上一章：第 2 章 從物理到電晶體](../../1-fundamentals/02-transistor-basics/README.md) ｜ [目錄](../../README.md) ｜ [下一章：第 4 章 微影 →](../../2-process-modules/04-lithography/README.md)
+[← 上一章：第 2 章 從物理到電晶體](../../1-fundamentals/02-transistor-basics/README.md) ｜ [目錄](../../README.md) ｜ [下一章：第 4 章 晶圓廠的七個 Module →](../../2-process-modules/04-fab-modules/README.md)

@@ -1,4 +1,4 @@
-<!-- source: zh-TW/README.md | sha: fa04466ddffc -->
+<!-- source: zh-TW/README.md | sha: eec8d1f42823 -->
 
 <div align="center">
 
@@ -42,7 +42,7 @@
 | 📖 용어 상자 | 정의, 현장에서 쓰는 법, 관련 용어, 흔한 혼동 |
 | 🔧 노하우 상자 | 현장의 방법과, 왜 그렇게 하는지, 안 하면 어떻게 되는지 |
 
-예를 들어 제4장 '리소그래피'의 노하우 상자는 이렇습니다.
+예를 들어 제5장 '리소그래피'의 노하우 상자는 이렇습니다.
 
 > [!TIP]
 > **🔧 노하우｜리소그래피는 '다시 할 수 있는' 마지막 기회**
@@ -59,18 +59,18 @@
 ```mermaid
 flowchart LR
     S["모래"] --> W["빈 웨이퍼<br>제3장"]
-    subgraph FAB["팹（제4～18장）"]
-        M["공정 모듈<br>제4～10장"] --> Q["계측과 제어<br>제15～18장"]
+    subgraph FAB["팹（제4～19장）"]
+        M["공정 모듈<br>제4～11장"] --> Q["계측과 제어<br>제16～19장"]
         Q -- "다음 층으로" --> M
     end
     W --> M
-    Q --> T["웨이퍼 테스트<br>제19장"]
-    T --> P["패키징<br>제20～21장"]
-    P --> F["최종 테스트<br>제22장"]
+    Q --> T["웨이퍼 테스트<br>제20장"]
+    T --> P["패키징<br>제21～22장"]
+    P --> F["최종 테스트<br>제23장"]
     F --> C["칩 출하"]
 ```
 
-팹 안에서 웨이퍼는 '재료 증착, 리소그래피로 패턴 형성, 식각 또는 이온 주입, 세정, 계측'이라는 루프를 계속 반복하며 한 층씩 쌓아 올려집니다. 제11～14장에서는 이 모듈들을 하나의 흐름으로 연결하고, 제23장과 제24장에서는 공장 시스템과 펌웨어의 관점에서 여정 전체를 다시 살펴봅니다.
+팹 안에서 웨이퍼는 '재료 증착, 리소그래피로 패턴 형성, 식각 또는 이온 주입, 세정, 계측'이라는 루프를 계속 반복하며 한 층씩 쌓아 올려집니다. 제12～15장에서는 이 모듈들을 하나의 흐름으로 연결하고, 제24장과 제25장에서는 공장 시스템과 펌웨어의 관점에서 여정 전체를 다시 살펴봅니다.
 
 ---
 
@@ -94,47 +94,48 @@ flowchart LR
 
 | 장 | 내용 |
 |---|---|
-| [제4장 리소그래피](2-process-modules/04-lithography/README.md) | 마스크, 감광액, 노광 장비로 회로를 웨이퍼에 '인쇄'하기 |
-| [제5장 박막](2-process-modules/05-thin-films/README.md) | 열산화, CVD, PVD, ALD, 에피택시 |
-| [제6장 식각](2-process-modules/06-etching/README.md) | 건식과 습식, 플라즈마, 선택비, 종점 검출 |
-| [제7장 이온 주입과 열처리](2-process-modules/07-ion-implantation/README.md) | 도즈, 에너지, 어닐링, 열 예산 |
-| [제8장 CMP](2-process-modules/08-cmp/README.md) | 웨이퍼를 평평하게 연마하기: 슬러리, 디싱, 이로전, 더미 패턴 |
-| [제9장 세정과 오염 관리](2-process-modules/09-cleaning/README.md) | RCA 세정, Q-타임, 교차 오염 |
-| [제10장 금속 배선](2-process-modules/10-metallization/README.md) | 콘택, 구리 다마신, Low-k 소재 |
+| [제4장 팹의 7개 모듈](2-process-modules/04-fab-modules/README.md) | PH, DF, TF, ET, IMP, CMP, WET의 분담과 퍼니스가 맡는 공정 |
+| [제5장 리소그래피](2-process-modules/05-lithography/README.md) | 마스크, 감광액, 노광 장비로 회로를 웨이퍼에 '인쇄'하기 |
+| [제6장 박막](2-process-modules/06-thin-films/README.md) | 열산화, CVD, PVD, ALD, 에피택시 |
+| [제7장 식각](2-process-modules/07-etching/README.md) | 건식과 습식, 플라즈마, 선택비, 종점 검출 |
+| [제8장 이온 주입과 열처리](2-process-modules/08-ion-implantation/README.md) | 도즈, 에너지, 어닐링, 열 예산 |
+| [제9장 CMP](2-process-modules/09-cmp/README.md) | 웨이퍼를 평평하게 연마하기: 슬러리, 디싱, 이로전, 더미 패턴 |
+| [제10장 세정과 오염 관리](2-process-modules/10-cleaning/README.md) | RCA 세정, Q-타임, 교차 오염 |
+| [제11장 금속 배선](2-process-modules/11-metallization/README.md) | 콘택, 구리 다마신, Low-k 소재 |
 
 ### 제3부 공정 통합
 
 | 장 | 내용 |
 |---|---|
-| [제11장 CMOS 공정 흐름 한눈에 보기](3-integration/11-cmos-process-flow/README.md) | FEOL, MOL, BEOL과 마스크 수 |
-| [제12장 첨단 트랜지스터 구조](3-integration/12-advanced-transistors/README.md) | FinFET, GAA, 후면 전력 공급 |
-| [제13장 메모리 공정](3-integration/13-memory/README.md) | DRAM, 3D NAND, HBM |
-| [제14장 '몇 나노'란 무엇인가](3-integration/14-process-nodes/README.md) | 공정 노드, 피치, 트랜지스터 밀도 |
+| [제12장 CMOS 공정 흐름 한눈에 보기](3-integration/12-cmos-process-flow/README.md) | FEOL, MOL, BEOL과 마스크 수 |
+| [제13장 첨단 트랜지스터 구조](3-integration/13-advanced-transistors/README.md) | FinFET, GAA, 후면 전력 공급 |
+| [제14장 메모리 공정](3-integration/14-memory/README.md) | DRAM, 3D NAND, HBM |
+| [제15장 '몇 나노'란 무엇인가](3-integration/15-process-nodes/README.md) | 공정 노드, 피치, 트랜지스터 밀도 |
 
 ### 제4부 품질과 수율
 
 | 장 | 내용 |
 |---|---|
-| [제15장 계측과 검사](4-yield-and-quality/15-metrology/README.md) | 막 두께, CD, 오버레이, 결함 검사, 샘플링 |
-| [제16장 수율과 불량 분석](4-yield-and-quality/16-yield-analysis/README.md) | 웨이퍼 맵 읽기, 공통성 분석, 불량 분석 |
-| [제17장 공정 제어](4-yield-and-quality/17-process-control/README.md) | SPC, Cpk, R2R, FDC |
-| [제18장 이상 처리와 엔지니어링 변경](4-yield-and-quality/18-abnormality-handling/README.md) | OCAP, 홀드, MRB, 변경 관리 |
+| [제16장 계측과 검사](4-yield-and-quality/16-metrology/README.md) | 막 두께, CD, 오버레이, 결함 검사, 샘플링 |
+| [제17장 수율과 불량 분석](4-yield-and-quality/17-yield-analysis/README.md) | 웨이퍼 맵 읽기, 공통성 분석, 불량 분석 |
+| [제18장 공정 제어](4-yield-and-quality/18-process-control/README.md) | SPC, Cpk, R2R, FDC |
+| [제19장 이상 처리와 엔지니어링 변경](4-yield-and-quality/19-abnormality-handling/README.md) | OCAP, 홀드, MRB, 변경 관리 |
 
 ### 제5부 후공정: 테스트와 패키징
 
 | 장 | 내용 |
 |---|---|
-| [제19장 웨이퍼 테스트](5-backend/19-wafer-test/README.md) | WAT와 CP로 양품 다이 찾기 |
-| [제20장 패키징](5-backend/20-packaging/README.md) | 다이싱, 와이어 본딩, 플립칩, 주요 패키지 형태 |
-| [제21장 첨단 패키징](5-backend/21-advanced-packaging/README.md) | 2.5D, 3D 적층, 하이브리드 본딩, 칩렛 |
-| [제22장 최종 테스트와 신뢰성](5-backend/22-final-test-and-reliability/README.md) | 번인, 욕조 곡선, 신뢰성 시험, 고장 메커니즘 |
+| [제20장 웨이퍼 테스트](5-backend/20-wafer-test/README.md) | WAT와 CP로 양품 다이 찾기 |
+| [제21장 패키징](5-backend/21-packaging/README.md) | 다이싱, 와이어 본딩, 플립칩, 주요 패키지 형태 |
+| [제22장 첨단 패키징](5-backend/22-advanced-packaging/README.md) | 2.5D, 3D 적층, 하이브리드 본딩, 칩렛 |
+| [제23장 최종 테스트와 신뢰성](5-backend/23-final-test-and-reliability/README.md) | 번인, 욕조 곡선, 신뢰성 시험, 고장 메커니즘 |
 
 ### 제6부 팹 밖으로
 
 | 장 | 내용 |
 |---|---|
-| [제23장 시스템이 팹을 운영하는 방법](6-beyond-the-fab/23-fab-systems/README.md) | MES, 장비 자동화, 인터록, 웨이퍼 이력 |
-| [제24장 공정이 펌웨어에 미치는 영향](6-beyond-the-fab/24-process-and-firmware/README.md) | DRAM 리프레시, Row Hammer, ECC, NAND, 칩 리비전 |
+| [제24장 시스템이 팹을 운영하는 방법](6-beyond-the-fab/24-fab-systems/README.md) | MES, 장비 자동화, 인터록, 웨이퍼 이력 |
+| [제25장 공정이 펌웨어에 미치는 영향](6-beyond-the-fab/25-process-and-firmware/README.md) | DRAM 리프레시, Row Hammer, ECC, NAND, 칩 리비전 |
 
 ### 부록
 
@@ -152,10 +153,10 @@ flowchart LR
 
 | 경로 | 추천 장 |
 |---|---|
-| 🚀 전체를 빠르게 훑어보기 | 제0, 1, 11, 14장 |
-| 💻 소프트웨어·펌웨어 엔지니어 | 제0, 2, 11, 13, 14, 22, 23, 24장 |
-| 🏭 반도체 업계 입문 준비 | 전체를 차례로. 특히 제1, 11, 15～18장과 부록 B |
-| 📦 패키징과 테스트에 관심 | 제0, 11, 19～22장 |
+| 🚀 전체를 빠르게 훑어보기 | 제0, 1, 12, 15장 |
+| 💻 소프트웨어·펌웨어 엔지니어 | 제0, 2, 12, 14, 15, 23, 24, 25장 |
+| 🏭 반도체 업계 입문 준비 | 전체를 차례로. 특히 제1, 4, 12, 16～19장과 부록 B |
+| 📦 패키징과 테스트에 관심 | 제0, 12, 20～23장 |
 
 ---
 

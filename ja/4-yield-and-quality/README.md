@@ -1,4 +1,4 @@
-<!-- source: zh-TW/4-yield-and-quality/README.md | sha: 185065cc312e -->
+<!-- source: zh-TW/4-yield-and-quality/README.md | sha: a37443156116 -->
 
 # 第 4 部　品質と歩留まり
 
@@ -6,10 +6,10 @@
 
 | 章 | 内容 |
 |---|---|
-| [第 15 章　計測と検査](15-metrology/README.md) | 膜厚、CD、重ね合わせ、欠陥検査、サンプリング |
-| [第 16 章　歩留まりと故障解析](16-yield-analysis/README.md) | ウェーハマップの読み方、共通性解析、故障解析 |
-| [第 17 章　プロセス制御](17-process-control/README.md) | SPC、Cpk、R2R、FDC |
-| [第 18 章　異常処置と変更管理](18-abnormality-handling/README.md) | OCAP、ホールド、MRB、変更管理 |
+| [第 16 章　計測と検査](16-metrology/README.md) | 膜厚、CD、重ね合わせ、欠陥検査、サンプリング |
+| [第 17 章　歩留まりと故障解析](17-yield-analysis/README.md) | ウェーハマップの読み方、共通性解析、故障解析 |
+| [第 18 章　プロセス制御](18-process-control/README.md) | SPC、Cpk、R2R、FDC |
+| [第 19 章　異常処置と変更管理](19-abnormality-handling/README.md) | OCAP、ホールド、MRB、変更管理 |
 
 ---
 

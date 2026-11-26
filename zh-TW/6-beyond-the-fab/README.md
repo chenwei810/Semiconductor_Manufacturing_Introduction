@@ -4,8 +4,8 @@
 
 | 章節 | 你會讀到 |
 |---|---|
-| [第 23 章　工廠如何被系統管理](23-fab-systems/README.md) | MES、機台自動化、防呆與晶圓履歷 |
-| [第 24 章　製程如何影響韌體](24-process-and-firmware/README.md) | DRAM 刷新、Row Hammer、ECC、NAND 與晶片改版 |
+| [第 24 章　工廠如何被系統管理](24-fab-systems/README.md) | MES、機台自動化、防呆與晶圓履歷 |
+| [第 25 章　製程如何影響韌體](25-process-and-firmware/README.md) | DRAM 刷新、Row Hammer、ECC、NAND 與晶片改版 |
 
 ---
 

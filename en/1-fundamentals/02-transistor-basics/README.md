@@ -1,4 +1,4 @@
-<!-- source: zh-TW/1-fundamentals/02-transistor-basics/README.md | sha: be0efec00abf -->
+<!-- source: zh-TW/1-fundamentals/02-transistor-basics/README.md | sha: 8b432ac52143 -->
 
 # Chapter 2: From Physics to Transistors — Meet What We Are Building
 
@@ -44,7 +44,7 @@ Even one impurity atom for every few million silicon atoms changes the conductiv
 > - **Definition**: Deliberately adding small amounts of specific elements to a semiconductor to change how it conducts.
 > - **On the floor**: "The doping concentration in this region is on the high side." "This layer is N-type doped."
 > - **Related terms**: N-type, P-type, ion implantation, anneal
-> - **Common confusion**: Doping is deliberate and precisely controlled. Unwanted impurities, such as metals, getting into the wafer are contamination. See [Chapter 9](../../2-process-modules/09-cleaning/README.md).
+> - **Common confusion**: Doping is deliberate and precisely controlled. Unwanted impurities, such as metals, getting into the wafer are contamination. See [Chapter 10](../../2-process-modules/10-cleaning/README.md).
 
 Where a P-type region meets an N-type region, a **PN junction** forms. A PN junction lets current flow easily in one direction but hardly at all in the other. This is how a diode works, and it is also an essential part of a transistor.
 
@@ -85,7 +85,7 @@ There are two kinds of MOSFET:
 
 Using NMOS and PMOS in pairs is called **CMOS** (complementary metal-oxide-semiconductor). When a CMOS circuit is not switching, one transistor in each pair is always off, so it uses almost no power. This is why CMOS became the mainstream technology for modern chips.
 
-For manufacturing, CMOS means two kinds of transistors must be built on the same wafer: NMOS in P-type regions (P-wells) and PMOS in N-type regions (N-wells). This requires several rounds of lithography and ion implantation to treat each region separately. See [Chapter 7](../../2-process-modules/07-ion-implantation/README.md) and [Chapter 11](../../3-integration/11-cmos-process-flow/README.md).
+For manufacturing, CMOS means two kinds of transistors must be built on the same wafer: NMOS in P-type regions (P-wells) and PMOS in N-type regions (N-wells). This requires several rounds of lithography and ion implantation to treat each region separately. See [Chapter 8](../../2-process-modules/08-ion-implantation/README.md) and [Chapter 12](../../3-integration/12-cmos-process-flow/README.md).
 
 ---
 
@@ -101,7 +101,7 @@ So the work of a fab falls into two big stages: first build the transistors at t
 
 For decades, the number of transistors on a chip roughly doubled every two years. This trend is known as **Moore's law**. Smaller transistors can be faster and use less power, more of them fit in the same area, and each transistor costs less.
 
-But once transistors shrink past a certain point, problems appear. The gate finds it harder and harder to fully control the channel, and current keeps leaking through even when the transistor is off, like a faucet that will not shut tight. To solve this, the transistor structure moved from planar to three-dimensional. See [Chapter 12](../../3-integration/12-advanced-transistors/README.md).
+But once transistors shrink past a certain point, problems appear. The gate finds it harder and harder to fully control the channel, and current keeps leaking through even when the transistor is off, like a faucet that will not shut tight. To solve this, the transistor structure moved from planar to three-dimensional. See [Chapter 13](../../3-integration/13-advanced-transistors/README.md).
 
 > [!TIP]
 > **🔧 Know-how | One process can make both fast and power-saving transistors**
@@ -110,7 +110,7 @@ But once transistors shrink past a certain point, problems appear. The gate find
 > - **Practice**: A process usually offers several transistor types with different Vt. Low-Vt transistors switch fast but leak more; high-Vt transistors switch slower but save a lot of power. Designers mix them on the same chip.
 > - **Why**: Different circuits have different needs. Compute cores need speed, while standby circuits need low power.
 > - **If you skip it**: You would have to choose between "fast but power-hungry everywhere" and "low-power but slow everywhere." The trade-off is that each extra Vt type adds a few lithography and implant steps, which adds cost.
-> - **Related chapters**: [Chapter 7: Ion Implantation and Thermal Processing](../../2-process-modules/07-ion-implantation/README.md)
+> - **Related chapters**: [Chapter 8: Ion Implantation and Thermal Processing](../../2-process-modules/08-ion-implantation/README.md)
 
 > [!TIP]
 > **🔧 Know-how | A small process shift means a small electrical shift**
@@ -119,7 +119,7 @@ But once transistors shrink past a certain point, problems appear. The gate find
 > - **Practice**: After every wafer finishes the front end, its transistors' electrical parameters are measured, such as Vt, drive current and leakage current.
 > - **Why**: Any small change in line width, oxide thickness or doping concentration changes the electrical behavior of the transistor. Electrical parameters are the most direct report card of the process.
 > - **If you skip it**: The process slowly drifts without anyone noticing, and in the end the chips fail to meet their speed or power specs, or problems show up only at the customer.
-> - **Related chapters**: [Chapter 19: Wafer Test](../../5-backend/19-wafer-test/README.md)
+> - **Related chapters**: [Chapter 20: Wafer Test](../../5-backend/20-wafer-test/README.md)
 
 ---
 

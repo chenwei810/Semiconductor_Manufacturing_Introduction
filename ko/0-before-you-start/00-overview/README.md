@@ -1,4 +1,4 @@
-<!-- source: zh-TW/0-before-you-start/00-overview/README.md | sha: 3e88352fe582 -->
+<!-- source: zh-TW/0-before-you-start/00-overview/README.md | sha: f60938d48c82 -->
 
 # 제0장 반도체 제조의 전체 그림: 칩의 일생
 
@@ -48,13 +48,13 @@
 
 | 단계 | 하는 일 | 관련 장 |
 |---|---|---|
-| 설계 | 엔지니어가 소프트웨어로 회로를 설계하고, 각 층의 패턴으로 바꾼다 | [제14장](../../3-integration/14-process-nodes/README.md)에서 간단히 |
-| 마스크 제작 | 각 층의 패턴을 마스크로 만든다 | [제4장](../../2-process-modules/04-lithography/README.md) |
+| 설계 | 엔지니어가 소프트웨어로 회로를 설계하고, 각 층의 패턴으로 바꾼다 | [제15장](../../3-integration/15-process-nodes/README.md)에서 간단히 |
+| 마스크 제작 | 각 층의 패턴을 마스크로 만든다 | [제5장](../../2-process-modules/05-lithography/README.md) |
 | 웨이퍼 투입 | 빈 웨이퍼가 팹에 들어가 정식으로 생산이 시작된다 | [제3장](../../1-fundamentals/03-sand-to-wafer/README.md) |
-| 전공정 | 웨이퍼 위에 트랜지스터와 금속 배선을 한 층씩 만든다 | [제4～18장](../../2-process-modules/README.md) |
-| 웨이퍼 테스트 | 웨이퍼 위의 칩 하나하나가 양품인지 불량인지 확인한다 | [제19장](../../5-backend/19-wafer-test/README.md) |
-| 패키징 | 웨이퍼를 잘라 양품 칩을 패키징한다 | [제20장과 제21장](../../5-backend/20-packaging/README.md) |
-| 최종 테스트 | 패키징된 칩을 다시 테스트하고, 몇 년 동안 쓸 수 있는지 확인한다 | [제22장](../../5-backend/22-final-test-and-reliability/README.md) |
+| 전공정 | 웨이퍼 위에 트랜지스터와 금속 배선을 한 층씩 만든다 | [제4～19장](../../2-process-modules/README.md) |
+| 웨이퍼 테스트 | 웨이퍼 위의 칩 하나하나가 양품인지 불량인지 확인한다 | [제20장](../../5-backend/20-wafer-test/README.md) |
+| 패키징 | 웨이퍼를 잘라 양품 칩을 패키징한다 | [제21장과 제22장](../../5-backend/21-packaging/README.md) |
+| 최종 테스트 | 패키징된 칩을 다시 테스트하고, 몇 년 동안 쓸 수 있는지 확인한다 | [제23장](../../5-backend/23-final-test-and-reliability/README.md) |
 
 <!-- Figure: 칩의 일생 한눈에 보기（설계, 마스크, 팹, 테스트, 패키징, 출하 순서） -->
 
@@ -73,7 +73,7 @@
 > - **정의**: 전공정은 웨이퍼 제조, 후공정은 패키징과 테스트를 말한다.
 > - **현장에서는**: "그 사람은 전공정에서 공정 일을 한다." "이 칩은 후공정에서 막혀 있다."
 > - **관련 용어**: FEOL, BEOL, 패키징·테스트
-> - **흔한 혼동**: '전공정'과 '후공정'에는 두 가지 뜻이 있다. 웨이퍼 제조와 패키징·테스트를 나누는 뜻 말고도, 팹 안에서는 트랜지스터를 만드는 단계를 FEOL, 금속 배선을 만드는 단계를 BEOL이라고 부른다. [제11장](../../3-integration/11-cmos-process-flow/README.md)을 참고하자. 어느 뜻인지는 문맥으로 판단한다.
+> - **흔한 혼동**: '전공정'과 '후공정'에는 두 가지 뜻이 있다. 웨이퍼 제조와 패키징·테스트를 나누는 뜻 말고도, 팹 안에서는 트랜지스터를 만드는 단계를 FEOL, 금속 배선을 만드는 단계를 BEOL이라고 부른다. [제12장](../../3-integration/12-cmos-process-flow/README.md)을 참고하자. 어느 뜻인지는 문맥으로 판단한다.
 
 ---
 

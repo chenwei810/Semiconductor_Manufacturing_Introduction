@@ -1,4 +1,4 @@
-<!-- source: zh-TW/5-backend/README.md | sha: 0e8d4f2d716b -->
+<!-- source: zh-TW/5-backend/README.md | sha: 3208f48c1a36 -->
 
 # 제5부 후공정: 테스트와 패키징
 
@@ -6,10 +6,10 @@
 
 | 장 | 내용 |
 |---|---|
-| [제19장 웨이퍼 테스트](19-wafer-test/README.md) | WAT와 CP로 양품 다이 찾기 |
-| [제20장 패키징](20-packaging/README.md) | 다이싱, 와이어 본딩, 플립칩, 주요 패키지 형태 |
-| [제21장 첨단 패키징](21-advanced-packaging/README.md) | 2.5D, 3D 적층, 하이브리드 본딩, 칩렛 |
-| [제22장 최종 테스트와 신뢰성](22-final-test-and-reliability/README.md) | 번인, 욕조 곡선, 신뢰성 시험, 고장 메커니즘 |
+| [제20장 웨이퍼 테스트](20-wafer-test/README.md) | WAT와 CP로 양품 다이 찾기 |
+| [제21장 패키징](21-packaging/README.md) | 다이싱, 와이어 본딩, 플립칩, 주요 패키지 형태 |
+| [제22장 첨단 패키징](22-advanced-packaging/README.md) | 2.5D, 3D 적층, 하이브리드 본딩, 칩렛 |
+| [제23장 최종 테스트와 신뢰성](23-final-test-and-reliability/README.md) | 번인, 욕조 곡선, 신뢰성 시험, 고장 메커니즘 |
 
 ---
 

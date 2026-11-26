@@ -1,4 +1,4 @@
-<!-- source: zh-TW/README.md | sha: fa04466ddffc -->
+<!-- source: zh-TW/README.md | sha: eec8d1f42823 -->
 
 <div align="center">
 
@@ -42,7 +42,7 @@ No background in semiconductor physics or chemistry is needed. High-school scien
 | 📖 Term box | Definition, how the term is used in the fab, related terms, and what it is often confused with |
 | 🔧 Know-how box | What the fab actually does, why, and what goes wrong if you skip it |
 
-Here is a know-how box from Chapter 4, Lithography:
+Here is a know-how box from Chapter 5, Lithography:
 
 > [!TIP]
 > **🔧 Know-how | Lithography is the last chance to start over**
@@ -59,18 +59,18 @@ Here is a know-how box from Chapter 4, Lithography:
 ```mermaid
 flowchart LR
     S["Sand"] --> W["Blank wafer<br>Ch. 3"]
-    subgraph FAB["The fab (Ch. 4–18)"]
-        M["Process modules<br>Ch. 4–10"] --> Q["Metrology and control<br>Ch. 15–18"]
+    subgraph FAB["The fab (Ch. 4–19)"]
+        M["Process modules<br>Ch. 4–11"] --> Q["Metrology and control<br>Ch. 16–19"]
         Q -- "next layer" --> M
     end
     W --> M
-    Q --> T["Wafer test<br>Ch. 19"]
-    T --> P["Packaging<br>Ch. 20–21"]
-    P --> F["Final test<br>Ch. 22"]
+    Q --> T["Wafer test<br>Ch. 20"]
+    T --> P["Packaging<br>Ch. 21–22"]
+    P --> F["Final test<br>Ch. 23"]
     F --> C["Chips shipped"]
 ```
 
-Inside the fab, the wafer goes around the same loop again and again: deposit a material, pattern it with lithography, etch or implant, clean, and measure. Each loop builds one more layer. Chapters 11 to 14 connect these modules into a complete flow, and Chapters 23 and 24 look at the whole journey again from the point of view of factory systems and firmware.
+Inside the fab, the wafer goes around the same loop again and again: deposit a material, pattern it with lithography, etch or implant, clean, and measure. Each loop builds one more layer. Chapters 12 to 15 connect these modules into a complete flow, and Chapters 24 and 25 look at the whole journey again from the point of view of factory systems and firmware.
 
 ---
 
@@ -94,47 +94,48 @@ Inside the fab, the wafer goes around the same loop again and again: deposit a m
 
 | Chapter | What you will read |
 |---|---|
-| [Chapter 4: Lithography](2-process-modules/04-lithography/README.md) | Masks, photoresist and scanners: printing the circuit onto the wafer |
-| [Chapter 5: Thin Films](2-process-modules/05-thin-films/README.md) | Thermal oxidation, CVD, PVD, ALD and epitaxy |
-| [Chapter 6: Etching](2-process-modules/06-etching/README.md) | Dry and wet etching, plasma, selectivity and endpoint detection |
-| [Chapter 7: Ion Implantation and Thermal Processing](2-process-modules/07-ion-implantation/README.md) | Dose, energy, annealing and thermal budget |
-| [Chapter 8: CMP](2-process-modules/08-cmp/README.md) | Polishing the wafer flat: slurry, dishing, erosion and dummy fill |
-| [Chapter 9: Cleaning and Contamination Control](2-process-modules/09-cleaning/README.md) | RCA cleaning, Q-time and cross-contamination |
-| [Chapter 10: Metallization](2-process-modules/10-metallization/README.md) | Contacts, copper damascene and low-k dielectrics |
+| [Chapter 4: The Seven Fab Modules](2-process-modules/04-fab-modules/README.md) | How PH, DF, TF, ET, IMP, CMP and WET divide the work, and what the furnace does |
+| [Chapter 5: Lithography](2-process-modules/05-lithography/README.md) | Masks, photoresist and scanners: printing the circuit onto the wafer |
+| [Chapter 6: Thin Films](2-process-modules/06-thin-films/README.md) | Thermal oxidation, CVD, PVD, ALD and epitaxy |
+| [Chapter 7: Etching](2-process-modules/07-etching/README.md) | Dry and wet etching, plasma, selectivity and endpoint detection |
+| [Chapter 8: Ion Implantation and Thermal Processing](2-process-modules/08-ion-implantation/README.md) | Dose, energy, annealing and thermal budget |
+| [Chapter 9: CMP](2-process-modules/09-cmp/README.md) | Polishing the wafer flat: slurry, dishing, erosion and dummy fill |
+| [Chapter 10: Cleaning and Contamination Control](2-process-modules/10-cleaning/README.md) | RCA cleaning, Q-time and cross-contamination |
+| [Chapter 11: Metallization](2-process-modules/11-metallization/README.md) | Contacts, copper damascene and low-k dielectrics |
 
 ### Part 3: Process Integration
 
 | Chapter | What you will read |
 |---|---|
-| [Chapter 11: A Complete CMOS Process Flow](3-integration/11-cmos-process-flow/README.md) | FEOL, MOL, BEOL and the number of mask layers |
-| [Chapter 12: Advanced Transistor Structures](3-integration/12-advanced-transistors/README.md) | FinFET, GAA and backside power delivery |
-| [Chapter 13: Memory Processes](3-integration/13-memory/README.md) | DRAM, 3D NAND and HBM |
-| [Chapter 14: What Does "3 nm" Really Mean?](3-integration/14-process-nodes/README.md) | Process nodes, pitches and transistor density |
+| [Chapter 12: A Complete CMOS Process Flow](3-integration/12-cmos-process-flow/README.md) | FEOL, MOL, BEOL and the number of mask layers |
+| [Chapter 13: Advanced Transistor Structures](3-integration/13-advanced-transistors/README.md) | FinFET, GAA and backside power delivery |
+| [Chapter 14: Memory Processes](3-integration/14-memory/README.md) | DRAM, 3D NAND and HBM |
+| [Chapter 15: What Does "3 nm" Really Mean?](3-integration/15-process-nodes/README.md) | Process nodes, pitches and transistor density |
 
 ### Part 4: Quality and Yield
 
 | Chapter | What you will read |
 |---|---|
-| [Chapter 15: Metrology and Inspection](4-yield-and-quality/15-metrology/README.md) | Film thickness, CD, overlay, defect inspection and sampling |
-| [Chapter 16: Yield and Failure Analysis](4-yield-and-quality/16-yield-analysis/README.md) | Reading wafer maps, commonality analysis and failure analysis |
-| [Chapter 17: Process Control](4-yield-and-quality/17-process-control/README.md) | SPC, Cpk, R2R and FDC |
-| [Chapter 18: Handling Abnormalities and Engineering Changes](4-yield-and-quality/18-abnormality-handling/README.md) | OCAP, holds, MRB and change management |
+| [Chapter 16: Metrology and Inspection](4-yield-and-quality/16-metrology/README.md) | Film thickness, CD, overlay, defect inspection and sampling |
+| [Chapter 17: Yield and Failure Analysis](4-yield-and-quality/17-yield-analysis/README.md) | Reading wafer maps, commonality analysis and failure analysis |
+| [Chapter 18: Process Control](4-yield-and-quality/18-process-control/README.md) | SPC, Cpk, R2R and FDC |
+| [Chapter 19: Handling Abnormalities and Engineering Changes](4-yield-and-quality/19-abnormality-handling/README.md) | OCAP, holds, MRB and change management |
 
 ### Part 5: Back End — Test and Packaging
 
 | Chapter | What you will read |
 |---|---|
-| [Chapter 19: Wafer Test](5-backend/19-wafer-test/README.md) | WAT and CP: finding the good dies |
-| [Chapter 20: Packaging](5-backend/20-packaging/README.md) | Dicing, wire bonding, flip chip and common package types |
-| [Chapter 21: Advanced Packaging](5-backend/21-advanced-packaging/README.md) | 2.5D, 3D stacking, hybrid bonding and chiplets |
-| [Chapter 22: Final Test and Reliability](5-backend/22-final-test-and-reliability/README.md) | Burn-in, the bathtub curve, reliability tests and failure mechanisms |
+| [Chapter 20: Wafer Test](5-backend/20-wafer-test/README.md) | WAT and CP: finding the good dies |
+| [Chapter 21: Packaging](5-backend/21-packaging/README.md) | Dicing, wire bonding, flip chip and common package types |
+| [Chapter 22: Advanced Packaging](5-backend/22-advanced-packaging/README.md) | 2.5D, 3D stacking, hybrid bonding and chiplets |
+| [Chapter 23: Final Test and Reliability](5-backend/23-final-test-and-reliability/README.md) | Burn-in, the bathtub curve, reliability tests and failure mechanisms |
 
 ### Part 6: Beyond the Fab
 
 | Chapter | What you will read |
 |---|---|
-| [Chapter 23: How Systems Run the Fab](6-beyond-the-fab/23-fab-systems/README.md) | MES, equipment automation, interlocks and wafer history |
-| [Chapter 24: How the Process Shapes Firmware](6-beyond-the-fab/24-process-and-firmware/README.md) | DRAM refresh, Row Hammer, ECC, NAND and chip revisions |
+| [Chapter 24: How Systems Run the Fab](6-beyond-the-fab/24-fab-systems/README.md) | MES, equipment automation, interlocks and wafer history |
+| [Chapter 25: How the Process Shapes Firmware](6-beyond-the-fab/25-process-and-firmware/README.md) | DRAM refresh, Row Hammer, ECC, NAND and chip revisions |
 
 ### Appendices
 
@@ -152,10 +153,10 @@ Reading in order gives you the full picture, but you can also start with the pat
 
 | Path | Suggested chapters |
 |---|---|
-| 🚀 Quick overview | Chapters 0, 1, 11 and 14 |
-| 💻 Software and firmware engineers | Chapters 0, 2, 11, 13, 14, 22, 23 and 24 |
-| 🏭 Joining the industry | The whole book in order, with extra attention to Chapters 1, 11 and 15–18 and Appendix B |
-| 📦 Interested in packaging and test | Chapters 0, 11 and 19–22 |
+| 🚀 Quick overview | Chapters 0, 1, 12 and 15 |
+| 💻 Software and firmware engineers | Chapters 0, 2, 12, 14, 15, 23, 24 and 25 |
+| 🏭 Joining the industry | The whole book in order, with extra attention to Chapters 1, 4, 12 and 16–19 and Appendix B |
+| 📦 Interested in packaging and test | Chapters 0, 12 and 20–23 |
 
 ---
 

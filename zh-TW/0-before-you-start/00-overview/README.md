@@ -46,13 +46,13 @@
 
 | 階段 | 發生什麼事 | 本書章節 |
 |---|---|---|
-| 設計 | 工程師用軟體設計電路，最後轉成每一層的圖形 | [第 14 章](../../3-integration/14-process-nodes/README.md)稍有提及 |
-| 光罩製作 | 把每一層圖形做成一片光罩 | [第 4 章](../../2-process-modules/04-lithography/README.md) |
+| 設計 | 工程師用軟體設計電路，最後轉成每一層的圖形 | [第 15 章](../../3-integration/15-process-nodes/README.md)稍有提及 |
+| 光罩製作 | 把每一層圖形做成一片光罩 | [第 5 章](../../2-process-modules/05-lithography/README.md) |
 | 投片 | 空白晶圓放進工廠，正式開始生產 | [第 3 章](../../1-fundamentals/03-sand-to-wafer/README.md) |
-| 前段製程 | 在晶圓上一層一層做出電晶體和金屬導線 | [第 4～18 章](../../2-process-modules/README.md) |
-| 晶圓測試 | 檢查晶圓上每一顆晶片的好壞 | [第 19 章](../../5-backend/19-wafer-test/README.md) |
-| 封裝 | 把晶圓切開，把好的晶片包裝起來 | [第 20、21 章](../../5-backend/20-packaging/README.md) |
-| 最終測試 | 封裝後再測一次，並確保晶片能用很多年 | [第 22 章](../../5-backend/22-final-test-and-reliability/README.md) |
+| 前段製程 | 在晶圓上一層一層做出電晶體和金屬導線 | [第 4～19 章](../../2-process-modules/README.md) |
+| 晶圓測試 | 檢查晶圓上每一顆晶片的好壞 | [第 20 章](../../5-backend/20-wafer-test/README.md) |
+| 封裝 | 把晶圓切開，把好的晶片包裝起來 | [第 21、22 章](../../5-backend/21-packaging/README.md) |
+| 最終測試 | 封裝後再測一次，並確保晶片能用很多年 | [第 23 章](../../5-backend/23-final-test-and-reliability/README.md) |
 
 <!-- 圖：晶片的一生全景圖（設計、光罩、晶圓廠、測試、封裝、出貨，依序排列） -->
 
@@ -71,7 +71,7 @@
 > - **定義**：前段指晶圓製造，後段指封裝與測試。
 > - **現場用法**：「他在前段做製程」「這顆晶片卡在後段」。
 > - **相關名詞**：FEOL、BEOL、封測
-> - **常見混淆**：「前段、後段」有兩種意思。除了晶圓製造與封測的分法，晶圓廠內部也會把製造電晶體的步驟叫前段（FEOL），把做金屬導線的步驟叫後段（BEOL），見[第 11 章](../../3-integration/11-cmos-process-flow/README.md)。聽到時要看上下文判斷。
+> - **常見混淆**：「前段、後段」有兩種意思。除了晶圓製造與封測的分法，晶圓廠內部也會把製造電晶體的步驟叫前段（FEOL），把做金屬導線的步驟叫後段（BEOL），見[第 12 章](../../3-integration/12-cmos-process-flow/README.md)。聽到時要看上下文判斷。
 
 ---
 

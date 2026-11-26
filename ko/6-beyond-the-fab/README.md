@@ -1,4 +1,4 @@
-<!-- source: zh-TW/6-beyond-the-fab/README.md | sha: b4a1e5f802f0 -->
+<!-- source: zh-TW/6-beyond-the-fab/README.md | sha: 697017b83d2d -->
 
 # 제6부 팹 밖으로
 
@@ -6,8 +6,8 @@
 
 | 장 | 내용 |
 |---|---|
-| [제23장 시스템이 팹을 운영하는 방법](23-fab-systems/README.md) | MES, 장비 자동화, 인터록, 웨이퍼 이력 |
-| [제24장 공정이 펌웨어에 미치는 영향](24-process-and-firmware/README.md) | DRAM 리프레시, Row Hammer, ECC, NAND, 칩 리비전 |
+| [제24장 시스템이 팹을 운영하는 방법](24-fab-systems/README.md) | MES, 장비 자동화, 인터록, 웨이퍼 이력 |
+| [제25장 공정이 펌웨어에 미치는 영향](25-process-and-firmware/README.md) | DRAM 리프레시, Row Hammer, ECC, NAND, 칩 리비전 |
 
 ---
 

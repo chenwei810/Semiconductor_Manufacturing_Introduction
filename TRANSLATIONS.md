@@ -29,13 +29,13 @@ images/          figures shared by every language
 Every translated file starts with a marker that records a fingerprint of the original at the time of translation:
 
 ```markdown
-<!-- source: zh-TW/2-process-modules/04-lithography/README.md | sha: 1a2b3c4d5e6f -->
+<!-- source: zh-TW/2-process-modules/05-lithography/README.md | sha: 1a2b3c4d5e6f -->
 ```
 
 When you finish translating or syncing a file, update its fingerprint:
 
 ```bash
-python3 scripts/check_translations.py --stamp ja/2-process-modules/04-lithography/README.md
+python3 scripts/check_translations.py --stamp ja/2-process-modules/05-lithography/README.md
 ```
 
 If the original changes later, the fingerprint no longer matches and the file is reported as outdated:
@@ -83,13 +83,13 @@ images/          所有語言共用的圖片
 每個翻譯檔的第一行都有來源標記，記錄翻譯時原文的「指紋」：
 
 ```markdown
-<!-- source: zh-TW/2-process-modules/04-lithography/README.md | sha: 1a2b3c4d5e6f -->
+<!-- source: zh-TW/2-process-modules/05-lithography/README.md | sha: 1a2b3c4d5e6f -->
 ```
 
 翻譯或同步完一個檔案之後，更新它的指紋：
 
 ```bash
-python3 scripts/check_translations.py --stamp en/2-process-modules/04-lithography/README.md
+python3 scripts/check_translations.py --stamp en/2-process-modules/05-lithography/README.md
 ```
 
 之後只要原文被修改，指紋就會對不上，這個檔案會被列為「過期」：

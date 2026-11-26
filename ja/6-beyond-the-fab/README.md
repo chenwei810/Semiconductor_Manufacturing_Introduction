@@ -1,4 +1,4 @@
-<!-- source: zh-TW/6-beyond-the-fab/README.md | sha: b4a1e5f802f0 -->
+<!-- source: zh-TW/6-beyond-the-fab/README.md | sha: 697017b83d2d -->
 
 # 第 6 部　ファブの外へ
 
@@ -6,8 +6,8 @@
 
 | 章 | 内容 |
 |---|---|
-| [第 23 章　システムによるファブ運営](23-fab-systems/README.md) | MES、装置自動化、インターロック、ウェーハの履歴 |
-| [第 24 章　プロセスとファームウェア](24-process-and-firmware/README.md) | DRAM リフレッシュ、Row Hammer、ECC、NAND、チップの改版 |
+| [第 24 章　システムによるファブ運営](24-fab-systems/README.md) | MES、装置自動化、インターロック、ウェーハの履歴 |
+| [第 25 章　プロセスとファームウェア](25-process-and-firmware/README.md) | DRAM リフレッシュ、Row Hammer、ECC、NAND、チップの改版 |
 
 ---
 

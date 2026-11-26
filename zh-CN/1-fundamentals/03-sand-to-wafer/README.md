@@ -1,4 +1,4 @@
-<!-- source: zh-TW/1-fundamentals/03-sand-to-wafer/README.md | sha: 4ef45a3e5ab1 -->
+<!-- source: zh-TW/1-fundamentals/03-sand-to-wafer/README.md | sha: e44f07aa7869 -->
 
 # 第 3 章　从沙子到晶圆：一切的起点
 
@@ -62,7 +62,7 @@
 5. **抛光**：把表面抛光到像镜子一样平滑。
 6. **清洗与检验**：检查平坦度、微粒和金属污染，合格后才出货。
 
-每片晶圆上还会用激光刻上一组编号（Wafer ID）。这组编号让工厂能追踪每一片晶圆走过的每一站，见[第 23 章](../../6-beyond-the-fab/23-fab-systems/README.md)。
+每片晶圆上还会用激光刻上一组编号（Wafer ID）。这组编号让工厂能追踪每一片晶圆走过的每一站，见[第 24 章](../../6-beyond-the-fab/24-fab-systems/README.md)。
 
 > [!TIP]
 > **🔧 Know-how｜晶圆边缘的小缺口**
@@ -71,7 +71,7 @@
 > - **做法**：设备在处理晶圆前，会先找到 Notch，把晶圆转到固定的方向。
 > - **为什么**：硅晶体在不同方向上的性质不同，例如刻蚀速度和晶体管的表现都会受影响。每一层图形都必须以相同的方向对齐晶格。
 > - **没做会怎样**：晶圆方向放错，图形的方向和位置就会错，后续的对准也会失败。
-> - **相关章节**：[第 4 章 光刻](../../2-process-modules/04-lithography/README.md)
+> - **相关章节**：[第 5 章 光刻](../../2-process-modules/05-lithography/README.md)
 
 ---
 
@@ -91,7 +91,7 @@
 
 除了一般的抛光晶圆，还有两种常见的特殊晶圆：
 
-- **外延晶圆**：在抛光晶圆表面再长一层质量更好的单晶硅，见[第 5 章](../../2-process-modules/05-thin-films/README.md)。
+- **外延晶圆**：在抛光晶圆表面再长一层质量更好的单晶硅，见[第 6 章](../../2-process-modules/06-thin-films/README.md)。
 - **SOI 晶圆**（绝缘体上硅）：在一层薄硅下面埋一层绝缘层，可以减少漏电，常用在射频等特殊产品。
 
 > [!TIP]
@@ -101,7 +101,7 @@
 > - **做法**：工厂会使用大量**控片**（Monitor Wafer）检查设备状态，例如测量膜厚或微粒；也会用**挡片**（Dummy Wafer）填满批式设备的空位。用过的控片和挡片可以研磨后回收再用，称为再生晶圆。
 > - **为什么**：不能拿产品晶圆去冒险测试设备，而批式设备需要放满晶圆，温度和气流才会均匀。
 > - **没做会怎样**：设备的问题要等到产品出事才发现，代价是整批产品报废。
-> - **相关章节**：[第 5 章 薄膜](../../2-process-modules/05-thin-films/README.md)、[第 15 章 测量与检测](../../4-yield-and-quality/15-metrology/README.md)
+> - **相关章节**：[第 6 章 薄膜](../../2-process-modules/06-thin-films/README.md)、[第 16 章 测量与检测](../../4-yield-and-quality/16-metrology/README.md)
 
 ---
 
@@ -122,4 +122,4 @@
 
 ---
 
-[← 上一章：第 2 章 从物理到晶体管](../../1-fundamentals/02-transistor-basics/README.md) ｜ [目录](../../README.md) ｜ [下一章：第 4 章 光刻 →](../../2-process-modules/04-lithography/README.md)
+[← 上一章：第 2 章 从物理到晶体管](../../1-fundamentals/02-transistor-basics/README.md) ｜ [目录](../../README.md) ｜ [下一章：第 4 章 晶圆厂的七个 Module →](../../2-process-modules/04-fab-modules/README.md)

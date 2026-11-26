@@ -1,4 +1,4 @@
-<!-- source: zh-TW/0-before-you-start/00-overview/README.md | sha: 3e88352fe582 -->
+<!-- source: zh-TW/0-before-you-start/00-overview/README.md | sha: f60938d48c82 -->
 
 # 第 0 章　半导体制造全景：一颗芯片的一生
 
@@ -48,13 +48,13 @@
 
 | 阶段 | 发生什么事 | 本书章节 |
 |---|---|---|
-| 设计 | 工程师用软件设计电路，最后转成每一层的图形 | [第 14 章](../../3-integration/14-process-nodes/README.md)稍有提及 |
-| 掩模版制作 | 把每一层图形做成一片掩模版 | [第 4 章](../../2-process-modules/04-lithography/README.md) |
+| 设计 | 工程师用软件设计电路，最后转成每一层的图形 | [第 15 章](../../3-integration/15-process-nodes/README.md)稍有提及 |
+| 掩模版制作 | 把每一层图形做成一片掩模版 | [第 5 章](../../2-process-modules/05-lithography/README.md) |
 | 投片 | 空白晶圆放进工厂，正式开始生产 | [第 3 章](../../1-fundamentals/03-sand-to-wafer/README.md) |
-| 前段工艺 | 在晶圆上一层一层做出晶体管和金属导线 | [第 4～18 章](../../2-process-modules/README.md) |
-| 晶圆测试 | 检查晶圆上每一颗芯片的好坏 | [第 19 章](../../5-backend/19-wafer-test/README.md) |
-| 封装 | 把晶圆切开，把好的芯片包装起来 | [第 20、21 章](../../5-backend/20-packaging/README.md) |
-| 最终测试 | 封装后再测一次，并确保芯片能用很多年 | [第 22 章](../../5-backend/22-final-test-and-reliability/README.md) |
+| 前段工艺 | 在晶圆上一层一层做出晶体管和金属导线 | [第 4～19 章](../../2-process-modules/README.md) |
+| 晶圆测试 | 检查晶圆上每一颗芯片的好坏 | [第 20 章](../../5-backend/20-wafer-test/README.md) |
+| 封装 | 把晶圆切开，把好的芯片包装起来 | [第 21、22 章](../../5-backend/21-packaging/README.md) |
+| 最终测试 | 封装后再测一次，并确保芯片能用很多年 | [第 23 章](../../5-backend/23-final-test-and-reliability/README.md) |
 
 <!-- 图：芯片的一生全景图（设计、掩模版、晶圆厂、测试、封装、出货，依序排列） -->
 
@@ -73,7 +73,7 @@
 > - **定义**：前段指晶圆制造，后段指封装与测试。
 > - **现场用法**：「他在前段做工艺」「这颗芯片卡在后段」。
 > - **相关名词**：FEOL、BEOL、封测
-> - **常见混淆**：「前段、后段」有两种意思。除了晶圆制造与封测的分法，晶圆厂内部也会把制造晶体管的步骤叫前段（FEOL），把做金属导线的步骤叫后段（BEOL），见[第 11 章](../../3-integration/11-cmos-process-flow/README.md)。听到时要看上下文判断。
+> - **常见混淆**：「前段、后段」有两种意思。除了晶圆制造与封测的分法，晶圆厂内部也会把制造晶体管的步骤叫前段（FEOL），把做金属导线的步骤叫后段（BEOL），见[第 12 章](../../3-integration/12-cmos-process-flow/README.md)。听到时要看上下文判断。
 
 ---
 

@@ -1,4 +1,4 @@
-<!-- source: zh-TW/4-yield-and-quality/README.md | sha: 185065cc312e -->
+<!-- source: zh-TW/4-yield-and-quality/README.md | sha: a37443156116 -->
 
 # Part 4: Quality and Yield
 
@@ -6,10 +6,10 @@ Being able to make a chip is not enough. Every wafer has to come out equally goo
 
 | Chapter | What you will read |
 |---|---|
-| [Chapter 15: Metrology and Inspection](15-metrology/README.md) | Film thickness, CD, overlay, defect inspection and sampling |
-| [Chapter 16: Yield and Failure Analysis](16-yield-analysis/README.md) | Reading wafer maps, commonality analysis and failure analysis |
-| [Chapter 17: Process Control](17-process-control/README.md) | SPC, Cpk, R2R and FDC |
-| [Chapter 18: Handling Abnormalities and Engineering Changes](18-abnormality-handling/README.md) | OCAP, holds, MRB and change management |
+| [Chapter 16: Metrology and Inspection](16-metrology/README.md) | Film thickness, CD, overlay, defect inspection and sampling |
+| [Chapter 17: Yield and Failure Analysis](17-yield-analysis/README.md) | Reading wafer maps, commonality analysis and failure analysis |
+| [Chapter 18: Process Control](18-process-control/README.md) | SPC, Cpk, R2R and FDC |
+| [Chapter 19: Handling Abnormalities and Engineering Changes](19-abnormality-handling/README.md) | OCAP, holds, MRB and change management |
 
 ---
 

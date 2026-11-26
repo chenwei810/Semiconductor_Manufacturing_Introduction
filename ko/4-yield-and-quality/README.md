@@ -1,4 +1,4 @@
-<!-- source: zh-TW/4-yield-and-quality/README.md | sha: 185065cc312e -->
+<!-- source: zh-TW/4-yield-and-quality/README.md | sha: a37443156116 -->
 
 # 제4부 품질과 수율
 
@@ -6,10 +6,10 @@
 
 | 장 | 내용 |
 |---|---|
-| [제15장 계측과 검사](15-metrology/README.md) | 막 두께, CD, 오버레이, 결함 검사, 샘플링 |
-| [제16장 수율과 불량 분석](16-yield-analysis/README.md) | 웨이퍼 맵 읽기, 공통성 분석, 불량 분석 |
-| [제17장 공정 제어](17-process-control/README.md) | SPC, Cpk, R2R, FDC |
-| [제18장 이상 처리와 엔지니어링 변경](18-abnormality-handling/README.md) | OCAP, 홀드, MRB, 변경 관리 |
+| [제16장 계측과 검사](16-metrology/README.md) | 막 두께, CD, 오버레이, 결함 검사, 샘플링 |
+| [제17장 수율과 불량 분석](17-yield-analysis/README.md) | 웨이퍼 맵 읽기, 공통성 분석, 불량 분석 |
+| [제18장 공정 제어](18-process-control/README.md) | SPC, Cpk, R2R, FDC |
+| [제19장 이상 처리와 엔지니어링 변경](19-abnormality-handling/README.md) | OCAP, 홀드, MRB, 변경 관리 |
 
 ---
 
